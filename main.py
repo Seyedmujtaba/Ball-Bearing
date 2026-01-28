@@ -16,12 +16,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("بلبرینگ")
 
         # ===== Central Widget =====
-        central = QWidget()
-        central.setObjectName("central")
-        self.setCentralWidget(central)
+        self.central = QWidget()
+        self.central.setObjectName("central")
+        self.setCentralWidget(self.central)
 
-        # بک‌گراند فقط برای central
-        central.setStyleSheet("""
+        self.central.setStyleSheet("""
         #central {
             background-image: url(assets/background.jpg);
             background-repeat: no-repeat;
@@ -29,18 +28,86 @@ class MainWindow(QMainWindow):
         }
         """)
 
-        screen = QApplication.primaryScreen().size()
-        sw, sh = screen.width(), screen.height()
+        self.screen = QApplication.primaryScreen().size()
+        self.font_label = QFont("Vazirmatn", 14)
+        self.font_input = QFont("Vazirmatn", 16)
 
-        main_layout = QHBoxLayout(central)
-        main_layout.setContentsMargins(0, 0, 0, 0)
+        self.show_start_screen()
+
+    # ================= Start Screen =================
+    def show_start_screen(self):
+        self.clear_layout()
+
+        layout = QVBoxLayout(self.central)
+        layout.setAlignment(Qt.AlignCenter)
+
+        card = QWidget()
+        card.setFixedSize(
+            int(self.screen.width() * 0.25),
+            int(self.screen.height() * 0.3)
+        )
+        card.setStyleSheet("""
+        QWidget {
+            background-color: rgba(0, 0, 0, 180);
+            border-radius: 30px;
+        }
+        """)
+
+        card_layout = QVBoxLayout(card)
+        card_layout.setContentsMargins(40, 40, 40, 40)
+        card_layout.setSpacing(30)
+
+        title = QLabel("انتخاب نوع")
+        title.setFont(QFont("Vazirmatn", 18))
+        title.setStyleSheet("color: white;")
+        title.setAlignment(Qt.AlignCenter)
+
+        bearing_btn = QPushButton("بلبرینگ")
+        bearing_btn.setFont(self.font_input)
+        bearing_btn.setFixedHeight(60)
+        bearing_btn.setStyleSheet("""
+        QPushButton {
+            background-color: #3498db;
+            border-radius: 20px;
+            color: white;
+        }
+        QPushButton:hover {
+            background-color: #2980b9;
+        }
+        """)
+        bearing_btn.clicked.connect(self.show_bearing_ui)
+
+        bearing2_btn = QPushButton("یاتاقان")
+        bearing2_btn.setFont(self.font_input)
+        bearing2_btn.setFixedHeight(60)
+        bearing2_btn.setStyleSheet("""
+        QPushButton {
+            background-color: #9b59b6;
+            border-radius: 20px;
+            color: white;
+        }
+        QPushButton:hover {
+            background-color: #8e44ad;
+        }
+        """)
+
+        card_layout.addWidget(title)
+        card_layout.addWidget(bearing_btn)
+        card_layout.addWidget(bearing2_btn)
+
+        layout.addWidget(card)
+
+    # ================= Bearing UI =================
+    def show_bearing_ui(self):
+        self.clear_layout()
+
+        sw, sh = self.screen.width(), self.screen.height()
+
+        main_layout = QHBoxLayout(self.central)
         main_layout.setSpacing(40)
         main_layout.setAlignment(Qt.AlignCenter)
 
-        font_label = QFont("Vazirmatn", 14)
-        font_input = QFont("Vazirmatn", 16)
-
-        # ================= Right Card (Inputs) =================
+        # -------- Right Card (Inputs)
         right_card = QWidget()
         right_card.setFixedSize(int(sw * 0.25), int(sh * 0.55))
         right_card.setStyleSheet("""
@@ -55,15 +122,13 @@ class MainWindow(QMainWindow):
         right_layout.setSpacing(22)
 
         self.inputs = []
-        labels = ["حلقه بیرون", "حلقه درون", "ضخامت"]
-
-        for text in labels:
+        for text in ["حلقه بیرون", "حلقه درون", "ضخامت"]:
             lbl = QLabel(text)
-            lbl.setFont(font_label)
+            lbl.setFont(self.font_label)
             lbl.setStyleSheet("color: white;")
 
             inp = QLineEdit()
-            inp.setFont(font_input)
+            inp.setFont(self.font_input)
             inp.setFixedHeight(55)
             inp.setValidator(QIntValidator())
             inp.setStyleSheet("""
@@ -74,7 +139,6 @@ class MainWindow(QMainWindow):
                 padding: 10px;
             }
             """)
-
             inp.installEventFilter(self)
             self.inputs.append(inp)
 
@@ -83,14 +147,11 @@ class MainWindow(QMainWindow):
 
         clear_btn = QPushButton("پاک کردن")
         clear_btn.setFixedHeight(55)
-        clear_btn.setFont(font_input)
+        clear_btn.setFont(self.font_input)
         clear_btn.setStyleSheet("""
         QPushButton {
             background-color: #f1c40f;
             border-radius: 18px;
-        }
-        QPushButton:hover {
-            background-color: #f39c12;
         }
         """)
         clear_btn.clicked.connect(self.clear_inputs)
@@ -98,7 +159,7 @@ class MainWindow(QMainWindow):
         right_layout.addStretch()
         right_layout.addWidget(clear_btn)
 
-        # ================= Left Card (Output) =================
+        # -------- Left Card (Output)
         left_card = QWidget()
         left_card.setFixedSize(int(sw * 0.25), int(sh * 0.55))
         left_card.setStyleSheet("""
@@ -110,11 +171,12 @@ class MainWindow(QMainWindow):
 
         left_layout = QVBoxLayout(left_card)
         left_layout.setContentsMargins(30, 30, 30, 30)
-        left_layout.setSpacing(22)
+        left_layout.setSpacing(18)
 
         self.output = QTextEdit()
         self.output.setReadOnly(True)
-        self.output.setFont(font_input)
+        self.output.setFixedHeight(int(sh * 0.28))  # کوچیک‌تر شد
+        self.output.setFont(self.font_input)
         self.output.setStyleSheet("""
         QTextEdit {
             background-color: rgba(0, 0, 0, 220);
@@ -126,14 +188,11 @@ class MainWindow(QMainWindow):
 
         self.check_btn = QPushButton("بررسی")
         self.check_btn.setFixedHeight(60)
-        self.check_btn.setFont(font_input)
+        self.check_btn.setFont(self.font_input)
         self.check_btn.setStyleSheet("""
         QPushButton {
             background-color: #2ecc71;
             border-radius: 20px;
-        }
-        QPushButton:hover {
-            background-color: #27ae60;
         }
         """)
         self.check_btn.clicked.connect(self.check_result)
@@ -141,13 +200,21 @@ class MainWindow(QMainWindow):
         left_layout.addWidget(self.output)
         left_layout.addWidget(self.check_btn)
 
-        # ================= Add Cards =================
         main_layout.addWidget(left_card)
         main_layout.addWidget(right_card)
 
         self.inputs[0].setFocus()
 
-    # ===== Keyboard handling =====
+    # ================= Helpers =================
+    def clear_layout(self):
+        layout = self.central.layout()
+        if layout:
+            while layout.count():
+                item = layout.takeAt(0)
+                if item.widget():
+                    item.widget().deleteLater()
+            QWidget().setLayout(layout)
+
     def eventFilter(self, obj, event):
         if event.type() == event.KeyPress and obj in self.inputs:
             if event.key() == Qt.Key_Space:
@@ -160,7 +227,6 @@ class MainWindow(QMainWindow):
                 return True
         return super().eventFilter(obj, event)
 
-    # ===== Logic =====
     def clear_inputs(self):
         for i in self.inputs:
             i.clear()
