@@ -1,61 +1,63 @@
 import sys
 from PyQt5.QtWidgets import (
-    QApplication, QWidget, QLabel, QLineEdit, QPushButton,
-    QVBoxLayout, QHBoxLayout, QTextEdit
+    QApplication, QMainWindow, QWidget, QLabel, QLineEdit,
+    QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit
 )
 from PyQt5.QtGui import QFont, QIntValidator
 from PyQt5.QtCore import Qt
 
 
-class MainWindow(QWidget):
+class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("بلبرینگ")  # عنوان پنجره
+        self.setWindowTitle("بلبرینگ")
 
-        # اندازه صفحه در init فقط برای محاسبه کارت‌ها
-        screen = QApplication.primaryScreen().size()
-        self.screen_width = screen.width()
-        self.screen_height = screen.height()
+        # ===== Central Widget =====
+        central = QWidget()
+        central.setObjectName("central")
+        self.setCentralWidget(central)
 
-        # ===== Background =====
-        self.setStyleSheet("""
-        QWidget {
+        # بک‌گراند فقط برای central
+        central.setStyleSheet("""
+        #central {
             background-image: url(assets/background.jpg);
             background-repeat: no-repeat;
             background-position: center;
         }
         """)
 
-        main_layout = QHBoxLayout()
+        screen = QApplication.primaryScreen().size()
+        sw, sh = screen.width(), screen.height()
+
+        main_layout = QHBoxLayout(central)
         main_layout.setContentsMargins(0, 0, 0, 0)
-        main_layout.setSpacing(40)  # فاصله کارت‌ها کم
-
-        # ================= Right Card (Inputs) =================
-        right_card = QWidget()
-        right_card_width = int(self.screen_width * 0.25)
-        right_card_height = int(self.screen_height * 0.55)
-        right_card.setFixedSize(right_card_width, right_card_height)
-        right_card.setStyleSheet("""
-        QWidget {
-            background-color: rgba(0, 0, 0, 170);
-            border-radius: 25px;
-        }
-        """)
-
-        right_layout = QVBoxLayout()
-        right_layout.setContentsMargins(30, 30, 30, 30)
-        right_layout.setSpacing(20)
+        main_layout.setSpacing(40)
+        main_layout.setAlignment(Qt.AlignCenter)
 
         font_label = QFont("Vazirmatn", 14)
         font_input = QFont("Vazirmatn", 16)
 
-        self.inputs = []
-        labels = ["حلقه بیرون", "حلقه دورن", "ضخامت"]
+        # ================= Right Card (Inputs) =================
+        right_card = QWidget()
+        right_card.setFixedSize(int(sw * 0.25), int(sh * 0.55))
+        right_card.setStyleSheet("""
+        QWidget {
+            background-color: rgba(0, 0, 0, 180);
+            border-radius: 25px;
+        }
+        """)
 
-        for i, text in enumerate(labels):
+        right_layout = QVBoxLayout(right_card)
+        right_layout.setContentsMargins(30, 30, 30, 30)
+        right_layout.setSpacing(22)
+
+        self.inputs = []
+        labels = ["حلقه بیرون", "حلقه درون", "ضخامت"]
+
+        for text in labels:
             lbl = QLabel(text)
             lbl.setFont(font_label)
             lbl.setStyleSheet("color: white;")
@@ -66,15 +68,16 @@ class MainWindow(QWidget):
             inp.setValidator(QIntValidator())
             inp.setStyleSheet("""
             QLineEdit {
-                background-color: rgba(0, 0, 0, 210);
+                background-color: rgba(0, 0, 0, 220);
                 color: white;
                 border-radius: 15px;
                 padding: 10px;
             }
             """)
 
-            inp.installEventFilter(self)  # Space → بعدی
+            inp.installEventFilter(self)
             self.inputs.append(inp)
+
             right_layout.addWidget(lbl)
             right_layout.addWidget(inp)
 
@@ -94,30 +97,27 @@ class MainWindow(QWidget):
 
         right_layout.addStretch()
         right_layout.addWidget(clear_btn)
-        right_card.setLayout(right_layout)
 
         # ================= Left Card (Output) =================
         left_card = QWidget()
-        left_card_width = int(self.screen_width * 0.25)
-        left_card_height = int(self.screen_height * 0.55)
-        left_card.setFixedSize(left_card_width, left_card_height)
+        left_card.setFixedSize(int(sw * 0.25), int(sh * 0.55))
         left_card.setStyleSheet("""
         QWidget {
-            background-color: rgba(0, 0, 0, 170);
+            background-color: rgba(0, 0, 0, 180);
             border-radius: 25px;
         }
         """)
 
-        left_layout = QVBoxLayout()
+        left_layout = QVBoxLayout(left_card)
         left_layout.setContentsMargins(30, 30, 30, 30)
-        left_layout.setSpacing(20)
+        left_layout.setSpacing(22)
 
         self.output = QTextEdit()
         self.output.setReadOnly(True)
         self.output.setFont(font_input)
         self.output.setStyleSheet("""
         QTextEdit {
-            background-color: rgba(0, 0, 0, 210);
+            background-color: rgba(0, 0, 0, 220);
             color: white;
             border-radius: 18px;
             padding: 15px;
@@ -140,26 +140,22 @@ class MainWindow(QWidget):
 
         left_layout.addWidget(self.output)
         left_layout.addWidget(self.check_btn)
-        left_card.setLayout(left_layout)
 
-        # ================= Add Cards to Layout =================
+        # ================= Add Cards =================
         main_layout.addWidget(left_card)
         main_layout.addWidget(right_card)
-        main_layout.setAlignment(Qt.AlignCenter)
-        self.setLayout(main_layout)
 
-        # فوکوس اولیه روی اولین باکس
         self.inputs[0].setFocus()
 
-    # ===== Space handling =====
+    # ===== Keyboard handling =====
     def eventFilter(self, obj, event):
         if event.type() == event.KeyPress and obj in self.inputs:
             if event.key() == Qt.Key_Space:
-                index = self.inputs.index(obj)
-                if index < len(self.inputs) - 1:
-                    self.inputs[index + 1].setFocus()
+                i = self.inputs.index(obj)
+                if i < len(self.inputs) - 1:
+                    self.inputs[i + 1].setFocus()
                 return True
-            if event.key() == Qt.Key_Return or event.key() == Qt.Key_Enter:
+            if event.key() in (Qt.Key_Return, Qt.Key_Enter):
                 self.check_btn.click()
                 return True
         return super().eventFilter(obj, event)
@@ -182,7 +178,6 @@ class MainWindow(QWidget):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.show()             # پنجره ساخته می‌شود
-    window.showMaximized()     # بعد از show → ماکزیمایز واقعی
+    window.show()
+    window.showMaximized()
     sys.exit(app.exec_())
-
