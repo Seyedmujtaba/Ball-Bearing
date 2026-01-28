@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QLineEdit,
-    QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit
+    QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit, QSizePolicy
 )
 from PyQt5.QtGui import QFont, QIntValidator, QPixmap
 from PyQt5.QtCore import Qt
@@ -22,20 +22,19 @@ class MainWindow(QMainWindow):
         self.central = QWidget()
         self.setCentralWidget(self.central)
 
-        # ---------- پس‌زمینه پویا ----------
+        # پس‌زمینه
         self.bg_label = QLabel(self.central)
         self.bg_pixmap = QPixmap("assets/background.jpg")
         self.bg_label.setPixmap(self.bg_pixmap)
         self.bg_label.setScaledContents(True)
         self.bg_label.setGeometry(0, 0, self.width(), self.height())
-
-        # هنگام Resize پنجره، پس‌زمینه کل پنجره را می‌پوشاند
         self.central.resizeEvent = lambda event: self.bg_label.setGeometry(0, 0, self.central.width(), self.central.height())
 
         self.screen = QApplication.primaryScreen().size()
         self.show_start_screen()
         self.showMaximized()
 
+    # ---------- صفحه شروع ----------
     def show_start_screen(self):
         self.clear_layout()
         layout = QVBoxLayout(self.central)
@@ -71,29 +70,46 @@ class MainWindow(QMainWindow):
         card_layout.addWidget(yataqan_btn)
         layout.addWidget(card)
 
+    # ---------- صفحات بلبرینگ و یاتاقان ----------
     def show_bearing_ui(self):
         self._show_bearing_or_yataqan(inputs=["حلقه بیرون","حلقه درون","ضخامت"])
 
     def show_yataqan_ui(self):
         self._show_bearing_or_yataqan(inputs=["اندازه داخلی"], single_input=True)
 
+    # ---------- ساختار کارت‌ها ----------
     def _show_bearing_or_yataqan(self, inputs, single_input=False):
         self.clear_layout()
         sw, sh = self.screen.width(), self.screen.height()
-        main_layout = QHBoxLayout(self.central)
-        main_layout.setSpacing(40)
-        main_layout.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
 
-        # -------- Left Card (Output) --------
+        main_v_layout = QVBoxLayout(self.central)
+        main_v_layout.setSpacing(0)
+        main_v_layout.setAlignment(Qt.AlignCenter)
+
+        # ---------- کارت‌های ورودی و خروجی ----------
+        main_h_layout = QHBoxLayout()
+        main_h_layout.setSpacing(40)  # فاصله بین ورودی و خروجی
+        main_h_layout.setAlignment(Qt.AlignCenter)
+
+        card_width = int(sw*0.25)
+        card_height = int(sh*0.45)
+
+        # کارت خروجی
         left_card = QWidget()
-        left_card.setFixedSize(int(sw*0.25), int(sh*0.55))
+        left_card.setFixedSize(card_width, card_height)
         left_card.setStyleSheet(CARD_STYLE)
+
         left_layout = QVBoxLayout(left_card)
         left_layout.setContentsMargins(30,30,30,30)
         left_layout.setSpacing(15)
-        left_layout.setAlignment(Qt.AlignVCenter)
+        left_layout.setAlignment(Qt.AlignCenter)
 
-        output_height = int(sh*0.55 * 0.6)
+        output_label = QLabel("مدل‌های مطابق")
+        output_label.setFont(QFont("Vazirmatn",14))
+        output_label.setStyleSheet("color:white; background: transparent; border: none;")
+        output_label.setAlignment(Qt.AlignCenter)
+
+        output_height = int(card_height * 0.6)
         font_size_out = max(12, output_height // 6)
         self.output = QTextEdit()
         self.output.setReadOnly(True)
@@ -109,38 +125,40 @@ class MainWindow(QMainWindow):
             }}
         """)
 
-        self.check_btn = QPushButton("بررسی")
-        self.check_btn.setFixedHeight(60)
-        self.check_btn.setFont(QFont("Vazirmatn",16))
-        self.check_btn.setStyleSheet("background-color:#2ecc71;border-radius:20px;")
-
+        left_layout.addStretch(1)
+        left_layout.addWidget(output_label)
         left_layout.addWidget(self.output)
-        left_layout.addWidget(self.check_btn, alignment=Qt.AlignHCenter)
+        left_layout.addStretch(1)
 
-        # -------- Right Card (Inputs) --------
+        # کارت ورودی
         right_card = QWidget()
-        right_card.setFixedSize(int(sw*0.25), int(sh*0.55))
+        right_card.setFixedSize(card_width, card_height)
         right_card.setStyleSheet(CARD_STYLE)
+
         right_layout = QVBoxLayout(right_card)
         right_layout.setContentsMargins(30,30,30,30)
-        right_layout.setSpacing(15)
-        right_layout.setAlignment(Qt.AlignVCenter)
+        right_layout.setSpacing(10)
+        right_layout.setAlignment(Qt.AlignTop | Qt.AlignHCenter)
 
         self.inputs = []
-
-        # ارتفاع و فونت باکس‌ها
         n_inputs = len(inputs)
         if single_input:
             box_height = output_height
         else:
-            available_height = int(sh*0.55 - 150)
+            available_height = int(card_height - 50)
             box_height = int((available_height // n_inputs) * 0.9)
         font_size = max(12, box_height // 3)
+
+        total_input_height = n_inputs * (box_height + 25)
+        total_output_height = output_height + output_label.sizeHint().height()
+        top_spacing = max((total_output_height - total_input_height)//2, 0)
+        right_layout.addSpacing(top_spacing)
 
         for text in inputs:
             lbl = QLabel(text)
             lbl.setFont(QFont("Vazirmatn",14))
             lbl.setStyleSheet("color:white; background: transparent; border: none;")
+            lbl.setAlignment(Qt.AlignCenter)
             inp = QLineEdit()
             inp.setFont(QFont("Vazirmatn", font_size))
             inp.setFixedHeight(box_height)
@@ -160,31 +178,52 @@ class MainWindow(QMainWindow):
             right_layout.addWidget(lbl)
             right_layout.addWidget(inp)
 
-        # دکمه‌ها
+        main_h_layout.addWidget(left_card)
+        main_h_layout.addWidget(right_card)
+        main_v_layout.addLayout(main_h_layout)
+
+        # ---------- فاصله کارت دکمه‌ها هم‌اندازه با فاصله بین کارت‌ها ----------
+        card_spacing = main_h_layout.spacing()
+        main_v_layout.addSpacing(card_spacing)
+
+        # کارت دکمه‌ها (عرض برابر با مجموع دو کارت + فاصله)
+        total_width = card_width * 2 + main_h_layout.spacing()
+        button_card = QWidget()
+        button_card.setFixedSize(total_width, 80)
+        button_card.setStyleSheet(CARD_STYLE)
+
+        button_layout = QHBoxLayout(button_card)
+        button_layout.setContentsMargins(20,15,20,15)
+        button_layout.setSpacing(20)
+
         clear_btn = QPushButton("پاک کردن")
-        clear_btn.setFixedHeight(55)
         clear_btn.setFont(QFont("Vazirmatn",16))
         clear_btn.setStyleSheet("background-color:#f1c40f;border-radius:18px;")
+        clear_btn.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         clear_btn.clicked.connect(self.clear_inputs)
 
         menu_btn = QPushButton("منو")
-        menu_btn.setFixedHeight(55)
         menu_btn.setFont(QFont("Vazirmatn",16))
         menu_btn.setStyleSheet("background-color:#3498db;border-radius:18px;")
+        menu_btn.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         menu_btn.clicked.connect(self.show_start_screen)
 
-        buttons_layout = QHBoxLayout()
-        buttons_layout.setSpacing(15)
-        buttons_layout.addWidget(clear_btn)
-        buttons_layout.addWidget(menu_btn)
-        right_layout.addLayout(buttons_layout)
+        self.check_btn = QPushButton("بررسی")
+        self.check_btn.setFont(QFont("Vazirmatn",16))
+        self.check_btn.setStyleSheet("background-color:#2ecc71;border-radius:18px;")
+        self.check_btn.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        self.check_btn.clicked.connect(self.check_result)
 
-        main_layout.addWidget(left_card)
-        main_layout.addWidget(right_card)
+        button_layout.addWidget(clear_btn)
+        button_layout.addWidget(menu_btn)
+        button_layout.addWidget(self.check_btn)
+
+        # کارت دکمه‌ها دقیقا وسط دو کارت بالا
+        main_v_layout.addWidget(button_card, alignment=Qt.AlignCenter)
 
         self.inputs[0].setFocus()
 
-    # ================= Helpers =================
+    # ---------- Helpers ----------
     def clear_layout(self):
         layout = self.central.layout()
         if layout:
