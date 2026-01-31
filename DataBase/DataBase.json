@@ -93,7 +93,7 @@
     { "model": "6207", "inner_diameter": 35, "outer_diameter": 72, "width": 17 },
     { "model": "6207 ETN9", "inner_diameter": 35, "outer_diameter": 72, "width": 17 },
     { "model": "6307", "inner_diameter": 35, "outer_diameter": 80, "width": 21 },
-    { "model": "6407", "inner_diameter": 35, "outer_diameter": 100, "width": 25 }
+    { "model": "6407", "inner_diameter": 35, "outer_diameter": 100, "width": 25 },
     { "model": "61808", "inner_diameter": 40, "outer_diameter": 52, "width": 7 },
     { "model": "61908", "inner_diameter": 40, "outer_diameter": 62, "width": 12 },
     { "model": "16008", "inner_diameter": 40, "outer_diameter": 68, "width": 9 },
@@ -128,7 +128,7 @@
     { "model": "6012", "inner_diameter": 60, "outer_diameter": 95, "width": 18 },
     { "model": "6212", "inner_diameter": 60, "outer_diameter": 110, "width": 22 },
     { "model": "6312", "inner_diameter": 60, "outer_diameter": 130, "width": 31 },
-    { "model": "6412", "inner_diameter": 60, "outer_diameter": 150, "width": 35 }
+    { "model": "6412", "inner_diameter": 60, "outer_diameter": 150, "width": 35 },
     { "model": "61813", "inner_diameter": 65, "outer_diameter": 85, "width": 10 },
     { "model": "61913", "inner_diameter": 65, "outer_diameter": 90, "width": 13 },
     { "model": "16013", "inner_diameter": 65, "outer_diameter": 100, "width": 11 },
@@ -178,7 +178,7 @@
     { "model": "16020", "inner_diameter": 100, "outer_diameter": 150, "width": 16 },
     { "model": "6020", "inner_diameter": 100, "outer_diameter": 150, "width": 24 },
     { "model": "6220", "inner_diameter": 100, "outer_diameter": 180, "width": 34 },
-    { "model": "6320", "inner_diameter": 100, "outer_diameter": 215, "width": 47 }
+    { "model": "6320", "inner_diameter": 100, "outer_diameter": 215, "width": 47 },
     { "model": "61821", "inner_diameter": 105, "outer_diameter": 130, "width": 13 },
     { "model": "61921", "inner_diameter": 105, "outer_diameter": 145, "width": 20 },
     { "model": "16021", "inner_diameter": 105, "outer_diameter": 160, "width": 18 },
@@ -220,7 +220,7 @@
     { "model": "16032", "inner_diameter": 160, "outer_diameter": 240, "width": 25 },
     { "model": "6032", "inner_diameter": 160, "outer_diameter": 240, "width": 38 },
     { "model": "6232", "inner_diameter": 160, "outer_diameter": 290, "width": 48 },
-    { "model": "6332", "inner_diameter": 160, "outer_diameter": 340, "width": 68 }
+    { "model": "6332", "inner_diameter": 160, "outer_diameter": 340, "width": 68 },
     { "model": "61834", "inner_diameter": 170, "outer_diameter": 215, "width": 22 },
     { "model": "61934", "inner_diameter": 170, "outer_diameter": 230, "width": 28 },
     { "model": "16034", "inner_diameter": 170, "outer_diameter": 260, "width": 28 },
@@ -264,7 +264,7 @@
     { "model": "61876", "inner_diameter": 380, "outer_diameter": 480, "width": 46 },
     { "model": "61880", "inner_diameter": 400, "outer_diameter": 500, "width": 46 },
     { "model": "61884", "inner_diameter": 420, "outer_diameter": 520, "width": 46 },
-    { "model": "61888", "inner_diameter": 440, "outer_diameter": 540, "width": 46 }
+    { "model": "61888", "inner_diameter": 440, "outer_diameter": 540, "width": 46 },
     { "model": "61892", "inner_diameter": 460, "outer_diameter": 580, "width": 56 },
     { "model": "61896", "inner_diameter": 480, "outer_diameter": 600, "width": 56 },
     { "model": "618/500", "inner_diameter": 500, "outer_diameter": 620, "width": 56 },
@@ -296,7 +296,7 @@
     { "model": "317", "inner_diameter": 85, "outer_diameter": 180, "width": 41 },
     { "model": "318", "inner_diameter": 90, "outer_diameter": 190, "width": 43 },
     { "model": "319", "inner_diameter": 95, "outer_diameter": 200, "width": 45 },
-    { "model": "320", "inner_diameter": 100, "outer_diameter": 215, "width": 47 }
+    { "model": "320", "inner_diameter": 100, "outer_diameter": 215, "width": 47 },
     { "model": "4200 ATN9", "inner_diameter": 10, "outer_diameter": 30, "width": 14 },
     { "model": "4300 ATN9", "inner_diameter": 10, "outer_diameter": 35, "width": 17 },
     { "model": "4201 ATN9", "inner_diameter": 12, "outer_diameter": 32, "width": 14 },
@@ -327,7 +327,7 @@
     { "model": "4313 ATN9", "inner_diameter": 65, "outer_diameter": 140, "width": 48 },
     { "model": "4214 ATN9", "inner_diameter": 70, "outer_diameter": 125, "width": 31 },
     { "model": "4215 ATN9", "inner_diameter": 75, "outer_diameter": 130, "width": 31 },
-    { "model": "4216 ATN9", "inner_diameter": 80, "outer_diameter": 140, "width": 33 }
+    { "model": "4216 ATN9", "inner_diameter": 80, "outer_diameter": 140, "width": 33 },
     { "model": "W 618/1.5", "inner_diameter": 1.5, "outer_diameter": 4, "width": 1.2 },
     { "model": "W 619/1.5", "inner_diameter": 1.5, "outer_diameter": 5, "width": 2 },
     { "model": "W 618/2", "inner_diameter": 2, "outer_diameter": 5, "width": 1.5 },
@@ -370,7 +370,7 @@
     { "model": "7001 ACD", "inner_diameter": 12, "outer_diameter": 28, "width": 8 },
     { "model": "7201 BE", "inner_diameter": 12, "outer_diameter": 32, "width": 10 },
     { "model": "7002 ACD", "inner_diameter": 15, "outer_diameter": 32, "width": 9 },
-    { "model": "7202 BE", "inner_diameter": 15, "outer_diameter": 35, "width": 11 }
+    { "model": "7202 BE", "inner_diameter": 15, "outer_diameter": 35, "width": 11 },
     { "model": "7003 ACD", "inner_diameter": 17, "outer_diameter": 35, "width": 10 },
     { "model": "7203 BE", "inner_diameter": 17, "outer_diameter": 40, "width": 12 },
     { "model": "7303 BE", "inner_diameter": 17, "outer_diameter": 47, "width": 14 },
@@ -405,7 +405,7 @@
     { "model": "7011 ACD", "inner_diameter": 55, "outer_diameter": 90, "width": 18 },
     { "model": "7211 BE", "inner_diameter": 55, "outer_diameter": 100, "width": 21 },
     { "model": "7311 BE", "inner_diameter": 55, "outer_diameter": 120, "width": 29 },
-    { "model": "7411 BCBM", "inner_diameter": 55, "outer_diameter": 140, "width": 33 }
+    { "model": "7411 BCBM", "inner_diameter": 55, "outer_diameter": 140, "width": 33 },
     { "model": "7012 ACD", "inner_diameter": 60, "outer_diameter": 95, "width": 18 },
     { "model": "7212 BE", "inner_diameter": 60, "outer_diameter": 110, "width": 22 },
     { "model": "7312 BE", "inner_diameter": 60, "outer_diameter": 130, "width": 31 },
@@ -441,7 +441,7 @@
     { "model": "7222 BE", "inner_diameter": 110, "outer_diameter": 200, "width": 38 },
     { "model": "7322 BE", "inner_diameter": 110, "outer_diameter": 240, "width": 50 },
     { "model": "7224 BE", "inner_diameter": 120, "outer_diameter": 215, "width": 40 },
-    { "model": "7324 BE", "inner_diameter": 120, "outer_diameter": 260, "width": 55 }
+    { "model": "7324 BE", "inner_diameter": 120, "outer_diameter": 260, "width": 55 },
     { "model": "7226 BE", "inner_diameter": 130, "outer_diameter": 230, "width": 40 },
     { "model": "7326 BE", "inner_diameter": 130, "outer_diameter": 280, "width": 58 },
     { "model": "7228 BE", "inner_diameter": 140, "outer_diameter": 250, "width": 42 },
@@ -475,7 +475,7 @@
     { "model": "3209 A", "inner_diameter": 45, "outer_diameter": 85, "width": 30.2 },
     { "model": "3309 A", "inner_diameter": 45, "outer_diameter": 100, "width": 39.7 },
     { "model": "3210 A", "inner_diameter": 50, "outer_diameter": 90, "width": 30.2 },
-    { "model": "3310 A", "inner_diameter": 50, "outer_diameter": 110, "width": 44.4 }
+    { "model": "3310 A", "inner_diameter": 50, "outer_diameter": 110, "width": 44.4 },
     { "model": "3211 A", "inner_diameter": 55, "outer_diameter": 100, "width": 33.3 },
     { "model": "3311 A", "inner_diameter": 55, "outer_diameter": 120, "width": 49.2 },
     { "model": "3212 A", "inner_diameter": 60, "outer_diameter": 110, "width": 36.5 },
@@ -507,7 +507,7 @@
     { "model": "QJ 211 N2", "inner_diameter": 55, "outer_diameter": 100, "width": 21 },
     { "model": "QJ 311 N2", "inner_diameter": 55, "outer_diameter": 120, "width": 29 },
     { "model": "QJ 212 N2", "inner_diameter": 60, "outer_diameter": 110, "width": 22 },
-    { "model": "QJ 312 N2", "inner_diameter": 60, "outer_diameter": 130, "width": 31 }
+    { "model": "QJ 312 N2", "inner_diameter": 60, "outer_diameter": 130, "width": 31 },
     { "model": "QJ 213 N2", "inner_diameter": 65, "outer_diameter": 120, "width": 23 },
     { "model": "QJ 313 N2", "inner_diameter": 65, "outer_diameter": 140, "width": 33 },
     { "model": "QJ 214 N2", "inner_diameter": 70, "outer_diameter": 125, "width": 24 },
@@ -538,7 +538,7 @@
     { "model": "1206 EKTN9", "inner_diameter": 30, "outer_diameter": 62, "width": 16 },
     { "model": "1306 EKTN9", "inner_diameter": 30, "outer_diameter": 72, "width": 19 },
     { "model": "2206 EKTN9", "inner_diameter": 30, "outer_diameter": 62, "width": 20 },
-    { "model": "2306 EKTN9", "inner_diameter": 30, "outer_diameter": 72, "width": 27 }
+    { "model": "2306 EKTN9", "inner_diameter": 30, "outer_diameter": 72, "width": 27 },
     { "model": "1207 EKTN9", "inner_diameter": 35, "outer_diameter": 72, "width": 17 },
     { "model": "1307 EKTN9", "inner_diameter": 35, "outer_diameter": 80, "width": 21 },
     { "model": "2207 EKTN9", "inner_diameter": 35, "outer_diameter": 72, "width": 23 },
@@ -570,7 +570,7 @@
     { "model": "NU 204 ECP", "inner_diameter": 20, "outer_diameter": 47, "width": 14 },
     { "model": "NJ 204 ECP", "inner_diameter": 20, "outer_diameter": 47, "width": 14 },
     { "model": "NUP 204 ECP", "inner_diameter": 20, "outer_diameter": 47, "width": 14 },
-    { "model": "NU 304 ECP", "inner_diameter": 20, "outer_diameter": 52, "width": 15 }
+    { "model": "NU 304 ECP", "inner_diameter": 20, "outer_diameter": 52, "width": 15 },
     { "model": "NU 205 ECP", "inner_diameter": 25, "outer_diameter": 52, "width": 15 },
     { "model": "NJ 205 ECP", "inner_diameter": 25, "outer_diameter": 52, "width": 15 },
     { "model": "NUP 205 ECP", "inner_diameter": 25, "outer_diameter": 52, "width": 15 },
@@ -604,7 +604,7 @@
     { "model": "NU 210 ECP", "inner_diameter": 50, "outer_diameter": 90, "width": 20 },
     { "model": "NJ 210 ECP", "inner_diameter": 50, "outer_diameter": 90, "width": 20 },
     { "model": "NU 310 ECP", "inner_diameter": 50, "outer_diameter": 110, "width": 27 },
-    { "model": "NJ 310 ECP", "inner_diameter": 50, "outer_diameter": 110, "width": 27 }
+    { "model": "NJ 310 ECP", "inner_diameter": 50, "outer_diameter": 110, "width": 27 },
     { "model": "NU 211 ECP", "inner_diameter": 55, "outer_diameter": 100, "width": 21 },
     { "model": "NJ 211 ECP", "inner_diameter": 55, "outer_diameter": 100, "width": 21 },
     { "model": "NU 311 ECP", "inner_diameter": 55, "outer_diameter": 120, "width": 29 },
@@ -625,3 +625,5 @@
     { "model": "NJ 215 ECP", "inner_diameter": 75, "outer_diameter": 130, "width": 25 },
     { "model": "NU 315 ECP", "inner_diameter": 75, "outer_diameter": 160, "width": 37 },
     { "model": "NJ 315 ECP", "inner_diameter": 75, "outer_diameter": 160, "width": 37 }
+  ]
+}
