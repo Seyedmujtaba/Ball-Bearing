@@ -1,4 +1,5 @@
 import sys
+import json  # اضافه شده برای کار با دیتابیس
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QLineEdit,
     QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit, QSizePolicy
@@ -44,210 +45,128 @@ class MainWindow(QMainWindow):
 
     def _clear_layout_recursive(self, layout):
         while layout.count():
-            item = layout.takeAt(0)
-            if item.widget():
-                item.widget().deleteLater()
-            elif item.layout():
-                self._clear_layout_recursive(item.layout())
+            child = layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+            elif child.layout():
+                self._clear_layout_recursive(child.layout())
 
     # ---------- صفحه شروع ----------
     def show_start_screen(self):
         self.clear_layout()
-        layout = QVBoxLayout(self.central)
-        layout.setAlignment(Qt.AlignCenter)
-
-        card = QWidget()
-        card.setFixedSize(
-            int(self.screen.width() * 0.25),
-            int(self.screen.height() * 0.3)
-        )
-        card.setStyleSheet(CARD_STYLE)
-
-        card_layout = QVBoxLayout(card)
-        card_layout.setContentsMargins(40, 40, 40, 40)
-        card_layout.setSpacing(30)
-
-        title = QLabel("انتخاب نوع")
-        title.setFont(QFont("Vazirmatn", 18))
-        title.setStyleSheet("color:white")
-        title.setAlignment(Qt.AlignCenter)
-
-        bearing_btn = QPushButton("بلبرینگ")
-        bearing_btn.setFont(QFont("Vazirmatn", 16))
-        bearing_btn.setFixedHeight(60)
-        bearing_btn.setStyleSheet(
-            "background:#3498db;border-radius:20px;color:white;"
-        )
-        bearing_btn.clicked.connect(self.show_bearing_ui)
-
-        yataqan_btn = QPushButton("یاتاقان")
-        yataqan_btn.setFont(QFont("Vazirmatn", 16))
-        yataqan_btn.setFixedHeight(60)
-        yataqan_btn.setStyleSheet(
-            "background:#9b59b6;border-radius:20px;color:white;"
-        )
-        yataqan_btn.clicked.connect(self.show_yataqan_ui)
-
-        card_layout.addWidget(title)
-        card_layout.addWidget(bearing_btn)
-        card_layout.addWidget(yataqan_btn)
-
-        layout.addWidget(card)
-
-    # ---------- صفحات ----------
-    def show_bearing_ui(self):
-        self._show_bearing_or_yataqan(
-            ["حلقه بیرون", "حلقه درون", "ضخامت"]
-        )
-
-    def show_yataqan_ui(self):
-        self._show_bearing_or_yataqan(
-            ["اندازه داخلی"], single_input=True
-        )
-
-    # ---------- UI اصلی ----------
-    def _show_bearing_or_yataqan(self, inputs, single_input=False):
-        self.clear_layout()
-
-        sw, sh = self.screen.width(), self.screen.height()
         main_v = QVBoxLayout(self.central)
-        main_v.setSpacing(0)
+        main_v.addStretch(1)
 
-        main_h = QHBoxLayout()
-        main_h.setSpacing(40)
+        start_card = QWidget()
+        start_card.setStyleSheet(CARD_STYLE)
+        start_card.setFixedSize(500, 300)
+        
+        card_v = QVBoxLayout(start_card)
+        card_v.setContentsMargins(30, 30, 30, 30)
 
-        # همتراز کردن کارت‌ها برای یاتاقان
-        if single_input:
-            main_h.setAlignment(Qt.AlignCenter)
-        else:
-            main_h.setAlignment(Qt.AlignCenter)
+        title = QLabel("سیستم جستجوی بلبرینگ")
+        title.setFont(QFont("B Nazanin", 26, QFont.Bold))
+        title.setStyleSheet("color: white; border: none; background: transparent;")
+        title.setAlignment(Qt.AlignCenter)
+        card_v.addWidget(title)
 
-        card_width = int(sw * 0.25)
-        card_height = int(sh * 0.45)
+        card_v.addStretch(1)
 
-        # ===== کارت خروجی =====
-        left_card = QWidget()
-        left_card.setFixedSize(card_width, card_height)
-        left_card.setStyleSheet(CARD_STYLE)
+        start_btn = QPushButton("ورود به بخش جستجو")
+        start_btn.setCursor(Qt.PointingHandCursor)
+        start_btn.setFont(QFont("B Nazanin", 16))
+        start_btn.setStyleSheet("background: #3498db; color: white; border-radius: 15px; padding: 15px;")
+        start_btn.clicked.connect(self.show_search_screen)
+        card_v.addWidget(start_btn)
 
-        left_layout = QVBoxLayout(left_card)
-        left_layout.setContentsMargins(30, 30, 30, 30)
-        left_layout.setAlignment(Qt.AlignTop | Qt.AlignHCenter if not single_input else Qt.AlignCenter)
+        main_v.addWidget(start_card, alignment=Qt.AlignCenter)
+        main_v.addStretch(1)
 
-        output_label = QLabel("مدل‌های مطابق")
-        output_label.setFont(QFont("Vazirmatn", 14))
-        output_label.setStyleSheet("color:white;border:none;")
-        output_label.setAlignment(Qt.AlignCenter)
+    # ---------- صفحه جستجو ----------
+    def show_search_screen(self):
+        self.clear_layout()
+        main_v = QVBoxLayout(self.central)
+        main_v.setContentsMargins(40, 40, 40, 40)
 
-        output_height = int(card_height * 0.6)
-        font_out = max(12, output_height // 6)
+        # ===== هدر =====
+        header_h = QHBoxLayout()
+        back_btn = QPushButton("⬅ بازگشت")
+        back_btn.setFixedSize(120, 45)
+        back_btn.setCursor(Qt.PointingHandCursor)
+        back_btn.setStyleSheet("background: #e74c3c; color: white; border-radius: 12px;")
+        back_btn.clicked.connect(self.show_start_screen)
+        header_h.addWidget(back_btn)
+        header_h.addStretch()
+        main_v.addLayout(header_h)
 
+        main_v.addStretch(1)
+
+        # ===== کارت ورودی‌ها =====
+        input_card = QWidget()
+        input_card.setStyleSheet(CARD_STYLE)
+        input_card.setFixedWidth(min(800, self.screen.width() - 100))
+        
+        input_layout = QVBoxLayout(input_card)
+        input_layout.setContentsMargins(35, 35, 35, 35)
+        input_layout.setSpacing(25)
+
+        fields_h = QHBoxLayout()
+        self.inputs = []
+        labels = [("d (Internal)", "قطر داخلی"), ("D (Outer)", "قطر خارجی"), ("B (Width)", "عرض")]
+        
+        for eng, per in labels:
+            box = QVBoxLayout()
+            l = QLabel(f"{per}\n({eng})")
+            l.setFont(QFont("B Nazanin", 11))
+            l.setStyleSheet("color: #ecf0f1; border: none; background: transparent;")
+            l.setAlignment(Qt.AlignCenter)
+            
+            edit = QLineEdit()
+            edit.setPlaceholderText("00.0")
+            edit.setAlignment(Qt.AlignCenter)
+            edit.setFont(QFont("Arial", 18, QFont.Bold))
+            edit.setFixedSize(160, 60)
+            edit.setStyleSheet("background: white; color: #2c3e50; border-radius: 15px; border: 2px solid #3498db;")
+            edit.installEventFilter(self)
+            
+            box.addWidget(l)
+            box.addWidget(edit)
+            fields_h.addLayout(box)
+            self.inputs.append(edit)
+
+        input_layout.addLayout(fields_h)
+
+        # ===== خروجی =====
         self.output = QTextEdit()
         self.output.setReadOnly(True)
-        self.output.setFixedHeight(output_height)
-        self.output.setFont(QFont("Vazirmatn", font_out))
-        self.output.setStyleSheet(f"""
-            QTextEdit {{
-                background: rgba(0,0,0,220);
-                color:white;
-                border-radius:18px;
-                padding:15px;
-                font-size:{font_out}px;
-            }}
-        """)
+        self.output.setPlaceholderText("مدل بلبرینگ در اینجا نمایش داده می‌شود...")
+        self.output.setFont(QFont("Arial", 16))
+        self.output.setAlignment(Qt.AlignCenter)
+        self.output.setFixedHeight(120)
+        self.output.setStyleSheet("background: rgba(255,255,255,0.1); color: #f1c40f; border-radius: 15px; border: 1px dashed #f1c40f; padding: 10px;")
+        input_layout.addWidget(self.output)
 
-        left_layout.addStretch()
-        left_layout.addWidget(output_label)
-        left_layout.addWidget(self.output)
-        left_layout.addStretch()
-
-        # ===== کارت ورودی =====
-        right_card = QWidget()
-        right_card.setFixedSize(card_width, card_height)
-        right_card.setStyleSheet(CARD_STYLE)
-
-        right_layout = QVBoxLayout(right_card)
-        right_layout.setContentsMargins(30, 30, 30, 30)
-        right_layout.setAlignment(Qt.AlignTop | Qt.AlignHCenter if not single_input else Qt.AlignCenter)
-
-        self.inputs = []
-        n = len(inputs)
-        if single_input:
-            box_height = output_height
-        else:
-            box_height = int(((card_height - 50) // n) * 0.6)  # ارتفاع کوتاه‌تر
-        font_in = max(12, box_height // 3)
-
-        for text in inputs:
-            lbl = QLabel(text)
-            lbl.setFont(QFont("Vazirmatn", 14))
-            lbl.setStyleSheet("color:white;border:none;")
-            lbl.setAlignment(Qt.AlignCenter)
-
-            inp = QLineEdit()
-            inp.setFont(QFont("Vazirmatn", font_in))
-            inp.setFixedHeight(box_height)
-            inp.setValidator(QIntValidator())
-            inp.setStyleSheet(f"""
-                QLineEdit {{
-                    background: rgba(0,0,0,220);
-                    color:white;
-                    border-radius:18px;
-                    border:none;
-                    padding:15px;
-                    font-size:{font_in}px;
-                }}
-            """)
-            inp.installEventFilter(self)
-
-            self.inputs.append(inp)
-            right_layout.addWidget(lbl)
-            right_layout.addWidget(inp)
-
-        main_h.addWidget(left_card)
-        main_h.addWidget(right_card)
-
-        # ===== Stretch بالا =====
-        main_v.addStretch(1)
-        main_v.addLayout(main_h)
-
-        # ===== فاصله عمودی کارت دکمه‌ها برابر فاصله افقی =====
-        main_v.addSpacing(main_h.spacing())
-
-        # ===== کارت دکمه‌ها =====
-        btn_card = QWidget()
-        btn_card.setFixedSize(card_width * 2 + main_h.spacing(), 90)  # ارتفاع کارت دکمه‌ها افزایش
-        btn_card.setStyleSheet(CARD_STYLE)
-
-        btn_layout = QHBoxLayout(btn_card)
-        btn_layout.setContentsMargins(20, 15, 20, 15)
-        btn_layout.setSpacing(20)
-
+        # ===== دکمه‌ها =====
+        btn_layout = QHBoxLayout()
         clear_btn = QPushButton("پاک کردن")
-        clear_btn.setFont(QFont("Vazirmatn", 16))
-        clear_btn.setFixedHeight(55)  # ارتفاع دکمه‌ها افزایش
-        clear_btn.setStyleSheet("background:#f1c40f;border-radius:18px;")
         clear_btn.clicked.connect(self.clear_inputs)
+        clear_btn.setStyleSheet("background:#95a5a6; border-radius:18px; padding:12px; color:white;")
+        
+        menu_btn = QPushButton("راهنما")
+        menu_btn.setStyleSheet("background:#34495e; border-radius:18px; padding:12px; color:white;")
 
-        menu_btn = QPushButton("منو")
-        menu_btn.setFont(QFont("Vazirmatn", 16))
-        menu_btn.setFixedHeight(55)
-        menu_btn.setStyleSheet("background:#3498db;border-radius:18px;")
-        menu_btn.clicked.connect(self.show_start_screen)
-
-        self.check_btn = QPushButton("بررسی")
-        self.check_btn.setFont(QFont("Vazirmatn", 16))
-        self.check_btn.setFixedHeight(55)
-        self.check_btn.setStyleSheet("background:#2ecc71;border-radius:18px;")
+        self.check_btn = QPushButton("بررسی (Check)")
+        self.check_btn.setFont(QFont("B Nazanin", 14, QFont.Bold))
+        self.check_btn.setCursor(Qt.PointingHandCursor)
+        self.check_btn.setStyleSheet("background:#2ecc71; border-radius:18px; padding:12px; color:white;")
         self.check_btn.clicked.connect(self.check_result)
 
         for b in (clear_btn, menu_btn, self.check_btn):
             b.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
             btn_layout.addWidget(b)
 
-        main_v.addWidget(btn_card, alignment=Qt.AlignCenter)
-
-        # ===== Stretch پایین =====
+        input_layout.addLayout(btn_layout)
+        main_v.addWidget(input_card, alignment=Qt.AlignCenter)
         main_v.addStretch(1)
 
         self.inputs[0].setFocus()
@@ -271,16 +190,40 @@ class MainWindow(QMainWindow):
         self.output.clear()
         self.inputs[0].setFocus()
 
+    # تابع تغییر یافته برای جستجو در ۶۳۰ ردیف دیتابیس
     def check_result(self):
-        vals = [i.text() for i in self.inputs if i.text()]
-        if not vals:
-            self.output.setText("⚠️ هیچ مقداری وارد نشده")
-        else:
-            self.output.setText("ورودی‌های وارد شده:\n" + "\n".join(vals))
+        d_val = self.inputs[0].text().strip()
+        D_val = self.inputs[1].text().strip()
+        B_val = self.inputs[2].text().strip()
 
+        if not all([d_val, D_val, B_val]):
+            self.output.setText("⚠️ لطفاً d و D و B را وارد کنید")
+            return
+
+        try:
+            with open('DataBase.json', 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            results = []
+            for item in data['bearings']:
+                # مقایسه به صورت رشته برای جلوگیری از تضاد عدد و متن
+                if (str(item['inner_diameter']) == d_val and 
+                    str(item['outer_diameter']) == D_val and 
+                    str(item['width']) == B_val):
+                    results.append(item['model'])
+
+            if results:
+                self.output.setText(f"✅ مدل‌های یافت شده:\n" + " | ".join(results))
+            else:
+                self.output.setText(f"❌ موردی با ابعاد {d_val}x{D_val}x{B_val} یافت نشد")
+        
+        except FileNotFoundError:
+            self.output.setText("❌ خطا: فایل DataBase.json پیدا نشد")
+        except Exception as e:
+            self.output.setText(f"خطای سیستم: {str(e)}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    w = MainWindow()
-    w.show()
+    window = MainWindow()
+    window.show()
     sys.exit(app.exec_())
