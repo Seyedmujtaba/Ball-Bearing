@@ -1,5 +1,5 @@
 import sys
-import json  # اضافه شده برای کار با دیتابیس
+import json  # تنها کتابخانه اضافه شده برای خواندن دیتابیس
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QLineEdit,
     QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit, QSizePolicy
@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
 
         main_v.addStretch(1)
 
-        # ===== کارت ورودی‌ها =====
+        # ===== کارت ورودی‌ها (دیزاین اصلی تو) =====
         input_card = QWidget()
         input_card.setStyleSheet(CARD_STYLE)
         input_card.setFixedWidth(min(800, self.screen.width() - 100))
@@ -148,6 +148,10 @@ class MainWindow(QMainWindow):
 
         # ===== دکمه‌ها =====
         btn_layout = QHBoxLayout()
+        btn_card = QWidget()
+        btn_card.setStyleSheet("background: transparent; border: none;")
+        btn_h = QHBoxLayout(btn_card)
+
         clear_btn = QPushButton("پاک کردن")
         clear_btn.clicked.connect(self.clear_inputs)
         clear_btn.setStyleSheet("background:#95a5a6; border-radius:18px; padding:12px; color:white;")
@@ -163,9 +167,9 @@ class MainWindow(QMainWindow):
 
         for b in (clear_btn, menu_btn, self.check_btn):
             b.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-            btn_layout.addWidget(b)
+            btn_h.addWidget(b)
 
-        input_layout.addLayout(btn_layout)
+        input_layout.addWidget(btn_card)
         main_v.addWidget(input_card, alignment=Qt.AlignCenter)
         main_v.addStretch(1)
 
@@ -190,7 +194,7 @@ class MainWindow(QMainWindow):
         self.output.clear()
         self.inputs[0].setFocus()
 
-    # تابع تغییر یافته برای جستجو در ۶۳۰ ردیف دیتابیس
+    # ---------- بخش منطق جستجو (تنها تغییر محتوایی) ----------
     def check_result(self):
         d_val = self.inputs[0].text().strip()
         D_val = self.inputs[1].text().strip()
@@ -201,12 +205,13 @@ class MainWindow(QMainWindow):
             return
 
         try:
-            with open('DataBase.json', 'r', encoding='utf-8') as f:
+            # اصلاح مسیر فایل به دایرکتوری درست
+            with open('DataBase/DataBase.json', 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
             results = []
             for item in data['bearings']:
-                # مقایسه به صورت رشته برای جلوگیری از تضاد عدد و متن
+                # دقت کن که نام متغیرها با بالا یکی باشه
                 if (str(item['inner_diameter']) == d_val and 
                     str(item['outer_diameter']) == D_val and 
                     str(item['width']) == B_val):
@@ -218,7 +223,7 @@ class MainWindow(QMainWindow):
                 self.output.setText(f"❌ موردی با ابعاد {d_val}x{D_val}x{B_val} یافت نشد")
         
         except FileNotFoundError:
-            self.output.setText("❌ خطا: فایل DataBase.json پیدا نشد")
+            self.output.setText("❌ خطا: فایل DataBase.json در مسیر DataBase/ پیدا نشد")
         except Exception as e:
             self.output.setText(f"خطای سیستم: {str(e)}")
 
