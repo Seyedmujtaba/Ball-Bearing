@@ -42,11 +42,8 @@
     { "model": "16002", "inner_diameter": 15, "outer_diameter": 32, "width": 8 },
     { "model": "6002", "inner_diameter": 15, "outer_diameter": 32, "width": 9 },
     { "model": "6202", "inner_diameter": 15, "outer_diameter": 35, "width": 11 },
-    { "model": "6302", "inner_diameter": 15, "outer_diameter": 42, "width": 13 }
-  ],
-  "housings": []
-}
-{ "model": "61803", "inner_diameter": 17, "outer_diameter": 26, "width": 5 },
+    { "model": "6302", "inner_diameter": 15, "outer_diameter": 42, "width": 13 },
+    { "model": "61803", "inner_diameter": 17, "outer_diameter": 26, "width": 5 },
     { "model": "61903", "inner_diameter": 17, "outer_diameter": 30, "width": 7 },
     { "model": "16003", "inner_diameter": 17, "outer_diameter": 35, "width": 8 },
     { "model": "6003", "inner_diameter": 17, "outer_diameter": 35, "width": 10 },
