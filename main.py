@@ -59,6 +59,10 @@ class MainWindow(QMainWindow):
         self.central = QWidget()
         self.setCentralWidget(self.central)
 
+        # ایجاد layout مرکزی یک بار
+        self.main_layout = QVBoxLayout(self.central)
+        self.central.setLayout(self.main_layout)
+
         # Background
         self.bg_label = QLabel(self.central)
         self.bg_pixmap = QPixmap("assets/background.jpg")
@@ -85,8 +89,7 @@ class MainWindow(QMainWindow):
     # ---------- Language Screen ----------
     def show_language_screen(self):
         self.clear_layout()
-        main_v = QVBoxLayout(self.central)
-        main_v.addStretch(1)
+        self.main_layout.addStretch(1)
 
         card = QWidget()
         card.setStyleSheet(CARD_STYLE)
@@ -119,8 +122,8 @@ class MainWindow(QMainWindow):
         en_btn.clicked.connect(lambda: self.set_language("en"))
 
         v.addLayout(h)
-        main_v.addWidget(card, alignment=Qt.AlignCenter)
-        main_v.addStretch(1)
+        self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
+        self.main_layout.addStretch(1)
 
     def set_language(self, lang):
         self.lang = lang
@@ -130,8 +133,7 @@ class MainWindow(QMainWindow):
     # ---------- Start Screen ----------
     def show_start_screen(self):
         self.clear_layout()
-        main_v = QVBoxLayout(self.central)
-        main_v.addStretch(1)
+        self.main_layout.addStretch(1)
 
         card = QWidget()
         card.setStyleSheet(CARD_STYLE)
@@ -161,8 +163,8 @@ class MainWindow(QMainWindow):
         bearing_btn.clicked.connect(lambda: self.start_search("bearing"))
         housing_btn.clicked.connect(lambda: self.start_search("housing"))
 
-        main_v.addWidget(card, alignment=Qt.AlignCenter)
-        main_v.addStretch(1)
+        self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
+        self.main_layout.addStretch(1)
 
     def start_search(self, mode):
         self.search_type = mode
@@ -171,8 +173,7 @@ class MainWindow(QMainWindow):
     # ---------- Search Screen ----------
     def show_search_screen(self):
         self.clear_layout()
-        main_v = QVBoxLayout(self.central)
-        main_v.setContentsMargins(40, 40, 40, 40)
+        self.main_layout.setContentsMargins(40, 40, 40, 40)
 
         card = QWidget()
         card.setStyleSheet(CARD_STYLE)
@@ -235,7 +236,7 @@ class MainWindow(QMainWindow):
         btn.clicked.connect(self.check_result)
         v.addWidget(btn)
 
-        main_v.addWidget(card, alignment=Qt.AlignCenter)
+        self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
 
     # ---------- Logic ----------
     def check_result(self):
