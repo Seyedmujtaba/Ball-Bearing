@@ -24,13 +24,16 @@ TEXTS = {
         "bearing": "🔵 بلبرینگ",
         "housing": "🟠 یاتاقان",
         "check": "بررسی",
+        "clear": "پاک کردن",
+        "back": "بازگشت",
         "inner": "قطر داخلی",
         "outer": "قطر خارجی",
         "width": "عرض",
         "enter_all": "⚠️ لطفاً d و D و B را وارد کنید",
         "enter_d": "⚠️ لطفاً قطر داخلی را وارد کنید",
         "not_found": "❌ موردی یافت نشد",
-        "db_missing": "❌ فایل DataBase.json پیدا نشد"
+        "db_missing": "❌ فایل DataBase.json پیدا نشد",
+        "select_lang": "انتخاب زبان"
     },
     "en": {
         "app_title": "Bearing / Housing",
@@ -39,13 +42,16 @@ TEXTS = {
         "bearing": "🔵 Bearing",
         "housing": "🟠 Housing",
         "check": "Check",
+        "clear": "Clear",
+        "back": "Back",
         "inner": "Inner Diameter",
         "outer": "Outer Diameter",
         "width": "Width",
         "enter_all": "⚠️ Please enter d, D and B",
         "enter_d": "⚠️ Please enter inner diameter",
         "not_found": "❌ No result found",
-        "db_missing": "❌ DataBase.json not found"
+        "db_missing": "❌ DataBase.json not found",
+        "select_lang": "Select Language"
     }
 }
 
@@ -59,7 +65,7 @@ class MainWindow(QMainWindow):
         self.central = QWidget()
         self.setCentralWidget(self.central)
 
-        # ایجاد layout مرکزی یک بار
+        # Layout مرکزی
         self.main_layout = QVBoxLayout(self.central)
         self.central.setLayout(self.main_layout)
 
@@ -93,14 +99,14 @@ class MainWindow(QMainWindow):
 
         card = QWidget()
         card.setStyleSheet(CARD_STYLE)
-        card.setFixedSize(420, 260)
+        card.setFixedSize(420*1.4, 260*1.4)  # 40% بزرگتر
 
         v = QVBoxLayout(card)
-        v.setContentsMargins(30, 30, 30, 30)
-        v.setSpacing(25)
+        v.setContentsMargins(30*1.4, 30*1.4, 30*1.4, 30*1.4)
+        v.setSpacing(25*1.4)
 
         title = QLabel("Choose Language / انتخاب زبان")
-        title.setFont(QFont("B Nazanin", 20, QFont.Bold))
+        title.setFont(QFont("B Nazanin", 20*1.4, QFont.Bold))
         title.setStyleSheet("color:white;")
         title.setAlignment(Qt.AlignCenter)
         v.addWidget(title)
@@ -110,8 +116,8 @@ class MainWindow(QMainWindow):
         en_btn = QPushButton("En")
 
         for btn in (fa_btn, en_btn):
-            btn.setFont(QFont("Arial", 18, QFont.Bold))
-            btn.setFixedSize(120, 80)
+            btn.setFont(QFont("Arial", 18*1.4, QFont.Bold))
+            btn.setFixedSize(120*1.4, 80*1.4)
             btn.setCursor(Qt.PointingHandCursor)
             btn.setStyleSheet(
                 "background:#34495e; color:white; border-radius:15px;"
@@ -137,14 +143,14 @@ class MainWindow(QMainWindow):
 
         card = QWidget()
         card.setStyleSheet(CARD_STYLE)
-        card.setFixedSize(520, 320)
+        card.setFixedSize(520*1.4, 320*1.4)  # 40% بزرگتر
 
         v = QVBoxLayout(card)
-        v.setContentsMargins(30, 30, 30, 30)
-        v.setSpacing(25)
+        v.setContentsMargins(30*1.4, 30*1.4, 30*1.4, 30*1.4)
+        v.setSpacing(25*1.4)
 
         title = QLabel(self.t("choose_search"))
-        title.setFont(QFont("B Nazanin", 24, QFont.Bold))
+        title.setFont(QFont("B Nazanin", 24*1.4, QFont.Bold))
         title.setStyleSheet("color:white;")
         title.setAlignment(Qt.AlignCenter)
         v.addWidget(title)
@@ -153,12 +159,22 @@ class MainWindow(QMainWindow):
         housing_btn = QPushButton(self.t("housing"))
 
         for btn in (bearing_btn, housing_btn):
-            btn.setFont(QFont("B Nazanin", 16))
+            btn.setFont(QFont("B Nazanin", 16*1.4))
             btn.setCursor(Qt.PointingHandCursor)
             btn.setStyleSheet(
                 "background:#3498db; color:white; border-radius:15px; padding:15px;"
             )
             v.addWidget(btn)
+
+        # دکمه برگشت به انتخاب زبان
+        lang_btn = QPushButton(self.t("select_lang"))
+        lang_btn.setFont(QFont("B Nazanin", 14*1.4))
+        lang_btn.setCursor(Qt.PointingHandCursor)
+        lang_btn.setStyleSheet(
+            "background:#e67e22; color:white; border-radius:15px; padding:12px;"
+        )
+        lang_btn.clicked.connect(self.show_language_screen)
+        v.addWidget(lang_btn)
 
         bearing_btn.clicked.connect(lambda: self.start_search("bearing"))
         housing_btn.clicked.connect(lambda: self.start_search("housing"))
@@ -173,15 +189,15 @@ class MainWindow(QMainWindow):
     # ---------- Search Screen ----------
     def show_search_screen(self):
         self.clear_layout()
-        self.main_layout.setContentsMargins(40, 40, 40, 40)
+        self.main_layout.setContentsMargins(40*1.4, 40*1.4, 40*1.4, 40*1.4)
 
         card = QWidget()
         card.setStyleSheet(CARD_STYLE)
-        card.setFixedWidth(850)
+        card.setFixedWidth(850*1.4)
 
         v = QVBoxLayout(card)
-        v.setContentsMargins(35, 35, 35, 35)
-        v.setSpacing(25)
+        v.setContentsMargins(35*1.4, 35*1.4, 35*1.4, 35*1.4)
+        v.setSpacing(25*1.4)
 
         fields = [
             ("d", self.t("inner")),
@@ -195,13 +211,13 @@ class MainWindow(QMainWindow):
         for eng, title in fields:
             box = QVBoxLayout()
             lbl = QLabel(f"{title} ({eng})")
-            lbl.setFont(QFont("B Nazanin", 11))
+            lbl.setFont(QFont("B Nazanin", 11*1.4))
             lbl.setStyleSheet("color:white;")
             lbl.setAlignment(Qt.AlignCenter)
 
             edit = QLineEdit()
-            edit.setFont(QFont("Arial", 16))
-            edit.setFixedSize(170, 55)
+            edit.setFont(QFont("Arial", 16*1.4))
+            edit.setFixedSize(170*1.4, 55*1.4)
             edit.setAlignment(Qt.AlignCenter)
             edit.setStyleSheet(
                 "background:white; color:#2c3e50; border-radius:12px;"
@@ -219,23 +235,44 @@ class MainWindow(QMainWindow):
 
         self.output = QTextEdit()
         self.output.setReadOnly(True)
-        self.output.setFont(QFont("Arial", 14))
-        self.output.setFixedHeight(150)
+        self.output.setFont(QFont("Arial", 14*1.4))
+        self.output.setFixedHeight(150*1.4)
         self.output.setStyleSheet(
             "background:rgba(255,255,255,0.1); color:#f1c40f; "
             "border-radius:15px; padding:10px;"
         )
         v.addWidget(self.output)
 
-        btn = QPushButton(self.t("check"))
-        btn.setFont(QFont("B Nazanin", 14, QFont.Bold))
-        btn.setCursor(Qt.PointingHandCursor)
-        btn.setStyleSheet(
+        btn_h = QHBoxLayout()
+
+        check_btn = QPushButton(self.t("check"))
+        check_btn.setFont(QFont("B Nazanin", 14*1.4, QFont.Bold))
+        check_btn.setCursor(Qt.PointingHandCursor)
+        check_btn.setStyleSheet(
             "background:#2ecc71; color:white; border-radius:15px; padding:12px;"
         )
-        btn.clicked.connect(self.check_result)
-        v.addWidget(btn)
+        check_btn.clicked.connect(self.check_result)
+        btn_h.addWidget(check_btn)
 
+        clear_btn = QPushButton(self.t("clear"))
+        clear_btn.setFont(QFont("B Nazanin", 14*1.4))
+        clear_btn.setCursor(Qt.PointingHandCursor)
+        clear_btn.setStyleSheet(
+            "background:#c0392b; color:white; border-radius:15px; padding:12px;"
+        )
+        clear_btn.clicked.connect(lambda: [i.clear() for i in self.inputs])
+        btn_h.addWidget(clear_btn)
+
+        back_btn = QPushButton(self.t("back"))
+        back_btn.setFont(QFont("B Nazanin", 14*1.4))
+        back_btn.setCursor(Qt.PointingHandCursor)
+        back_btn.setStyleSheet(
+            "background:#e67e22; color:white; border-radius:15px; padding:12px;"
+        )
+        back_btn.clicked.connect(self.show_start_screen)
+        btn_h.addWidget(back_btn)
+
+        v.addLayout(btn_h)
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
 
     # ---------- Logic ----------
