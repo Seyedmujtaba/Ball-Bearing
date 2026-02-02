@@ -2,10 +2,11 @@ import sys
 import json
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QLabel, QLineEdit,
-    QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit, QSizePolicy
+    QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit
 )
 from PyQt5.QtGui import QFont, QPixmap
 from PyQt5.QtCore import Qt
+
 
 CARD_STYLE = """
 QWidget {
@@ -15,16 +16,50 @@ QWidget {
 }
 """
 
+TEXTS = {
+    "fa": {
+        "app_title": "بلبرینگ / یاتاقان",
+        "choose_lang": "انتخاب زبان",
+        "choose_search": "انتخاب نوع جستجو",
+        "bearing": "🔵 بلبرینگ",
+        "housing": "🟠 یاتاقان",
+        "check": "بررسی",
+        "inner": "قطر داخلی",
+        "outer": "قطر خارجی",
+        "width": "عرض",
+        "enter_all": "⚠️ لطفاً d و D و B را وارد کنید",
+        "enter_d": "⚠️ لطفاً قطر داخلی را وارد کنید",
+        "not_found": "❌ موردی یافت نشد",
+        "db_missing": "❌ فایل DataBase.json پیدا نشد"
+    },
+    "en": {
+        "app_title": "Bearing / Housing",
+        "choose_lang": "Choose Language",
+        "choose_search": "Select Search Type",
+        "bearing": "🔵 Bearing",
+        "housing": "🟠 Housing",
+        "check": "Check",
+        "inner": "Inner Diameter",
+        "outer": "Outer Diameter",
+        "width": "Width",
+        "enter_all": "⚠️ Please enter d, D and B",
+        "enter_d": "⚠️ Please enter inner diameter",
+        "not_found": "❌ No result found",
+        "db_missing": "❌ DataBase.json not found"
+    }
+}
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("بلبرینگ / یاتاقان")
+        self.lang = None
         self.search_type = None
 
         self.central = QWidget()
         self.setCentralWidget(self.central)
 
-        # پس‌زمینه
+        # Background
         self.bg_label = QLabel(self.central)
         self.bg_pixmap = QPixmap("assets/background.jpg")
         self.bg_label.setPixmap(self.bg_pixmap)
@@ -33,10 +68,12 @@ class MainWindow(QMainWindow):
             0, 0, self.central.width(), self.central.height()
         )
 
-        self.show_start_screen()
+        self.show_language_screen()
         self.showMaximized()
 
-    # ---------- پاک‌سازی Layout ----------
+    def t(self, key):
+        return TEXTS[self.lang].get(key, key)
+
     def clear_layout(self):
         layout = self.central.layout()
         if layout:
@@ -45,7 +82,52 @@ class MainWindow(QMainWindow):
                 if item.widget():
                     item.widget().deleteLater()
 
-    # ---------- صفحه انتخاب ----------
+    # ---------- Language Screen ----------
+    def show_language_screen(self):
+        self.clear_layout()
+        main_v = QVBoxLayout(self.central)
+        main_v.addStretch(1)
+
+        card = QWidget()
+        card.setStyleSheet(CARD_STYLE)
+        card.setFixedSize(420, 260)
+
+        v = QVBoxLayout(card)
+        v.setContentsMargins(30, 30, 30, 30)
+        v.setSpacing(25)
+
+        title = QLabel("Choose Language / انتخاب زبان")
+        title.setFont(QFont("B Nazanin", 20, QFont.Bold))
+        title.setStyleSheet("color:white;")
+        title.setAlignment(Qt.AlignCenter)
+        v.addWidget(title)
+
+        h = QHBoxLayout()
+        fa_btn = QPushButton("فا")
+        en_btn = QPushButton("En")
+
+        for btn in (fa_btn, en_btn):
+            btn.setFont(QFont("Arial", 18, QFont.Bold))
+            btn.setFixedSize(120, 80)
+            btn.setCursor(Qt.PointingHandCursor)
+            btn.setStyleSheet(
+                "background:#34495e; color:white; border-radius:15px;"
+            )
+            h.addWidget(btn)
+
+        fa_btn.clicked.connect(lambda: self.set_language("fa"))
+        en_btn.clicked.connect(lambda: self.set_language("en"))
+
+        v.addLayout(h)
+        main_v.addWidget(card, alignment=Qt.AlignCenter)
+        main_v.addStretch(1)
+
+    def set_language(self, lang):
+        self.lang = lang
+        self.setWindowTitle(self.t("app_title"))
+        self.show_start_screen()
+
+    # ---------- Start Screen ----------
     def show_start_screen(self):
         self.clear_layout()
         main_v = QVBoxLayout(self.central)
@@ -59,14 +141,14 @@ class MainWindow(QMainWindow):
         v.setContentsMargins(30, 30, 30, 30)
         v.setSpacing(25)
 
-        title = QLabel("انتخاب نوع جستجو")
+        title = QLabel(self.t("choose_search"))
         title.setFont(QFont("B Nazanin", 24, QFont.Bold))
-        title.setStyleSheet("color: white;")
+        title.setStyleSheet("color:white;")
         title.setAlignment(Qt.AlignCenter)
         v.addWidget(title)
 
-        bearing_btn = QPushButton("🔵 بلبرینگ")
-        housing_btn = QPushButton("🟠 یاتاقان")
+        bearing_btn = QPushButton(self.t("bearing"))
+        housing_btn = QPushButton(self.t("housing"))
 
         for btn in (bearing_btn, housing_btn):
             btn.setFont(QFont("B Nazanin", 16))
@@ -86,32 +168,32 @@ class MainWindow(QMainWindow):
         self.search_type = mode
         self.show_search_screen()
 
-    # ---------- صفحه جستجو ----------
+    # ---------- Search Screen ----------
     def show_search_screen(self):
         self.clear_layout()
         main_v = QVBoxLayout(self.central)
         main_v.setContentsMargins(40, 40, 40, 40)
 
-        input_card = QWidget()
-        input_card.setStyleSheet(CARD_STYLE)
-        input_card.setFixedWidth(850)
+        card = QWidget()
+        card.setStyleSheet(CARD_STYLE)
+        card.setFixedWidth(850)
 
-        v = QVBoxLayout(input_card)
+        v = QVBoxLayout(card)
         v.setContentsMargins(35, 35, 35, 35)
         v.setSpacing(25)
 
         fields = [
-            ("d", "قطر داخلی"),
-            ("D", "قطر خارجی"),
-            ("B", "عرض")
+            ("d", self.t("inner")),
+            ("D", self.t("outer")),
+            ("B", self.t("width"))
         ]
 
         self.inputs = []
         h = QHBoxLayout()
 
-        for eng, per in fields:
+        for eng, title in fields:
             box = QVBoxLayout()
-            lbl = QLabel(f"{per} ({eng})")
+            lbl = QLabel(f"{title} ({eng})")
             lbl.setFont(QFont("B Nazanin", 11))
             lbl.setStyleSheet("color:white;")
             lbl.setAlignment(Qt.AlignCenter)
@@ -144,7 +226,7 @@ class MainWindow(QMainWindow):
         )
         v.addWidget(self.output)
 
-        btn = QPushButton("بررسی")
+        btn = QPushButton(self.t("check"))
         btn.setFont(QFont("B Nazanin", 14, QFont.Bold))
         btn.setCursor(Qt.PointingHandCursor)
         btn.setStyleSheet(
@@ -153,9 +235,9 @@ class MainWindow(QMainWindow):
         btn.clicked.connect(self.check_result)
         v.addWidget(btn)
 
-        main_v.addWidget(input_card, alignment=Qt.AlignCenter)
+        main_v.addWidget(card, alignment=Qt.AlignCenter)
 
-    # ---------- منطق جستجو ----------
+    # ---------- Logic ----------
     def check_result(self):
         try:
             with open("DataBase/DataBase.json", "r", encoding="utf-8") as f:
@@ -164,14 +246,10 @@ class MainWindow(QMainWindow):
             self.output.clear()
             found = False
 
-            # ===== بلبرینگ =====
             if self.search_type == "bearing":
-                d = self.inputs[0].text().strip()
-                D = self.inputs[1].text().strip()
-                B = self.inputs[2].text().strip()
-
+                d, D, B = [i.text().strip() for i in self.inputs]
                 if not all([d, D, B]):
-                    self.output.setText("⚠️ لطفاً d و D و B را وارد کنید")
+                    self.output.setText(self.t("enter_all"))
                     return
 
                 for item in data["bearings"]:
@@ -183,12 +261,10 @@ class MainWindow(QMainWindow):
                         self.output.append(item["model"])
                         found = True
 
-            # ===== یاتاقان =====
             elif self.search_type == "housing":
                 d = self.inputs[0].text().strip()
-
                 if not d:
-                    self.output.setText("⚠️ لطفاً قطر داخلی را وارد کنید")
+                    self.output.setText(self.t("enter_d"))
                     return
 
                 for item in data["housings"]:
@@ -197,12 +273,12 @@ class MainWindow(QMainWindow):
                         found = True
 
             if not found:
-                self.output.setText("❌ موردی یافت نشد")
+                self.output.setText(self.t("not_found"))
 
         except FileNotFoundError:
-            self.output.setText("❌ فایل DataBase.json پیدا نشد")
+            self.output.setText(self.t("db_missing"))
         except Exception as e:
-            self.output.setText(f"خطای سیستم: {str(e)}")
+            self.output.setText(str(e))
 
 
 if __name__ == "__main__":
