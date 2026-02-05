@@ -201,6 +201,13 @@ class MainWindow(QMainWindow):
 
         v.addLayout(fields_layout)
 
+        # اتومات فوکوس روی اولین تکست باکس
+        if self.inputs:
+            self.inputs[0].setFocus()
+            # اتصال کلید Enter: رفتن به فیلد بعدی یا اجرای جستجو اگر آخرین فیلد باشد
+            for i, inp in enumerate(self.inputs):
+                inp.returnPressed.connect(lambda i=i: self.on_return_pressed(i))
+
         self.output = QTextEdit()
         self.output.setReadOnly(True)
         self.output.setMinimumHeight(250)
@@ -229,6 +236,13 @@ class MainWindow(QMainWindow):
     def start_search(self, mode):
         self.search_type = mode
         self.show_search_screen()
+
+    def on_return_pressed(self, index):
+        # اگر فیلد بعدی وجود دارد، فوکوس به آن منتقل شود، وگرنه جستجو اجرا شود
+        if index < len(self.inputs) - 1:
+            self.inputs[index + 1].setFocus()
+        else:
+            self.check_result()
 
     # --- منطق جستجوی فوق هوشمند (حل مشکل Type و Key) ---
     def safe_float(self, value):
@@ -267,7 +281,7 @@ class MainWindow(QMainWindow):
                 self.output.setText(self.t("enter_all") if self.search_type == "bearing" else self.t("enter_d"))
                 return
 
-            found_models = []
+            found_models = []  # list of (model, description)
             for item in items:
                 if not isinstance(item, dict): continue
                 
@@ -276,11 +290,9 @@ class MainWindow(QMainWindow):
                 
                 # کمکی: تلاش برای گرفتن مقدار از میان چند نام ممکن (synonyms)
                 def get_any(possible_keys):
-                    # possible_keys باید لیستی از اسامی به صورت lowercase باشد
                     for k in possible_keys:
                         if k in norm_item and norm_item[k] is not None:
                             return norm_item[k]
-                    # fallback: چک کردن کلیدهای اوریجینال (در صورت وجود اختلاف فرمت)
                     for k0, v0 in item.items():
                         if str(k0).strip().lower() in possible_keys:
                             return v0
@@ -295,21 +307,26 @@ class MainWindow(QMainWindow):
                         abs(D_val - user_vals[1]) < 0.1 and 
                         abs(B_val - user_vals[2]) < 0.1):
                         model = get_any(['model']) or item.get("Model") or "N/A"
-                        found_models.append(str(model))
+                        desc = get_any(['special_features','special','features','description']) or item.get('special_features') or ""
+                        found_models.append((str(model), str(desc)))
 
                 elif self.search_type == "housing":
                     if abs(d_val - user_vals[0]) < 0.1:
                         model = get_any(['model']) or item.get("Model") or "N/A"
-                        found_models.append(str(model))
+                        desc = get_any(['special_features','special','features','description']) or item.get('special_features') or ""
+                        found_models.append((str(model), str(desc)))
 
             if found_models:
-                res = "✅ Results Found:\n" + "\n".join([f"• {{m}}" for m in sorted(set(found_models))])
+                # حذف تکراری‌ها و مرتب‌سازی بر اساس مدل
+                unique = sorted(set(found_models), key=lambda x: x[0])
+                lines = [f"• {m} — {desc}" if desc else f"• {m}" for m, desc in unique]
+                res = "✅ Results Found:\n" + "\n".join(lines)
                 self.output.setText(res)
             else:
                 self.output.setText(self.t("not_found"))
 
         except Exception as e:
-            self.output.setText(f"Critical Error: {{str(e)}}")
+            self.output.setText(f"Critical Error: {str(e)}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
