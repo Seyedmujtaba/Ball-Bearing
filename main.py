@@ -216,7 +216,7 @@ class MainWindow(QMainWindow):
         ]:
             b = QPushButton(text)
             b.setMinimumHeight(70)
-            b.setFont(QFont("B Nazanin", 16, QFont.Bold))
+            b.setFont(QFont("Arial", 16, QFont.Bold))
             b.setStyleSheet(f"background:{color}; color:white; border-radius:15px;")
             b.clicked.connect(func)
             btn_h.addWidget(b)
@@ -250,13 +250,13 @@ class MainWindow(QMainWindow):
             with open(db_path, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
 
-            # استخراج لیست داده‌ها (مدیریت خطا ارور 'list' object has no attribute 'get')
+            # استخراج لیست داده‌ها
             if isinstance(raw_data, list):
                 items = raw_data
             elif isinstance(raw_data, dict):
                 key = "bearings" if self.search_type == "bearing" else "housings"
                 items = raw_data.get(key, [])
-                if not items: # اگر کلید پیدا نشد، اولین لیست موجود در دیکشنری را بگیر
+                if not items:
                     items = next((v for v in raw_data.values() if isinstance(v, list)), [])
             else:
                 items = []
@@ -274,40 +274,42 @@ class MainWindow(QMainWindow):
                 # نرمال‌سازی کلیدهای دیتابیس (تبدیل همه به حروف کوچک و حذف فضا)
                 norm_item = {str(k).strip().lower(): v for k, v in item.items()}
                 
-                # خواندن مقادیر d, D, B با تلورانس برای Floating Point
-                try:
-                    d_db = self.safe_float(norm_item.get('d'))
-                    
-                    if self.search_type == "bearing":
-                        # پیدا کردن D و B (ممکن است با حروف بزرگ یا کوچک باشند)
-                        D_db = self.safe_float(norm_item.get('d_outer', norm_item.get('d')))
-                        # چک کردن دستی برای کلید D بزرگ اگر d کوچک تکراری بود
-                        for k, v in item.items():
-                            if k.strip() == 'D': D_db = self.safe_float(v)
-                            if k.strip() == 'B': B_db = self.safe_float(v)
-                        
-                        B_db = self.safe_float(norm_item.get('b'))
+                # کمکی: تلاش برای گرفتن مقدار از میان چند نام ممکن (synonyms)
+                def get_any(possible_keys):
+                    # possible_keys باید لیستی از اسامی به صورت lowercase باشد
+                    for k in possible_keys:
+                        if k in norm_item and norm_item[k] is not None:
+                            return norm_item[k]
+                    # fallback: چک کردن کلیدهای اوریجینال (در صورت وجود اختلاف فرمت)
+                    for k0, v0 in item.items():
+                        if str(k0).strip().lower() in possible_keys:
+                            return v0
+                    return None
 
-                        if (abs(d_db - user_vals[0]) < 0.1 and 
-                            abs(D_db - user_vals[1]) < 0.1 and 
-                            abs(B_db - user_vals[2]) < 0.1):
-                            model = item.get("model") or item.get("Model") or "N/A"
-                            found_models.append(str(model))
+                # مجموعه کلیدهای محتمل برای هر فیلد
+                d_val = self.safe_float(get_any(['d','inner_diameter','inner','di','id','innerdiameter']))
+                if self.search_type == "bearing":
+                    D_val = self.safe_float(get_any(['d_outer','outer_diameter','outer','od','douter','outerdiameter']))
+                    B_val = self.safe_float(get_any(['b','width','w']))
+                    if (abs(d_val - user_vals[0]) < 0.1 and 
+                        abs(D_val - user_vals[1]) < 0.1 and 
+                        abs(B_val - user_vals[2]) < 0.1):
+                        model = get_any(['model']) or item.get("Model") or "N/A"
+                        found_models.append(str(model))
 
-                    elif self.search_type == "housing":
-                        if abs(d_db - user_vals[0]) < 0.1:
-                            model = item.get("model") or item.get("Model") or "N/A"
-                            found_models.append(str(model))
-                except: continue
+                elif self.search_type == "housing":
+                    if abs(d_val - user_vals[0]) < 0.1:
+                        model = get_any(['model']) or item.get("Model") or "N/A"
+                        found_models.append(str(model))
 
             if found_models:
-                res = "✅ Results Found:\n" + "\n".join([f"• {m}" for m in sorted(set(found_models))])
+                res = "✅ Results Found:\n" + "\n".join([f"• {{m}}" for m in sorted(set(found_models))])
                 self.output.setText(res)
             else:
                 self.output.setText(self.t("not_found"))
 
         except Exception as e:
-            self.output.setText(f"Critical Error: {str(e)}")
+            self.output.setText(f"Critical Error: {{str(e)}}")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
