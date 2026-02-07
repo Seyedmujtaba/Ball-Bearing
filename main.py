@@ -335,7 +335,8 @@ class MainWindow(QMainWindow):
 
         self.output = QListWidget()
         self.output.setMinimumHeight(250)
-        self.output.setFont(QFont("Consolas", 12))
+        output_font = QFont("B Nazanin", 12) if self.lang == "fa" else QFont("Consolas", 12)
+        self.output.setFont(output_font)
         self.output.setSelectionMode(QAbstractItemView.ExtendedSelection)
         self.output.setAlternatingRowColors(False)
         self.output.setStyleSheet(
@@ -462,43 +463,32 @@ class MainWindow(QMainWindow):
 
     def _get_localized_desc(self, item):
         if self.lang == "en":
-            primary = self._get_by_keys(
-                item,
-                ["purpose_en", "description_en", "special_features_en"],
-                ["purposeen", "descriptionen", "specialfeaturesen"],
+            return (
+                self._get_by_keys(
+                    item,
+                    ["purpose_en", "description_en", "special_features_en"],
+                    ["purposeen", "descriptionen", "specialfeaturesen"],
+                )
+                or ""
             )
-            if primary:
-                return primary
 
         if self.lang == "fa":
-            primary = self._get_by_keys(
-                item,
-                ["purpose", "description", "special_features"],
-                ["purpose", "description", "specialfeatures"],
+            return (
+                self._get_by_keys(
+                    item,
+                    ["purpose", "description", "special_features"],
+                    ["purpose", "description", "specialfeatures"],
+                )
+                or ""
             )
-            if primary:
-                return primary
 
-        fallback = self._get_by_keys(
-            item,
-            [
-                "purpose",
-                "purpose_en",
-                "description",
-                "description_en",
-                "special_features",
-                "special_features_en",
-            ],
-            [
-                "purpose",
-                "purposeen",
-                "description",
-                "descriptionen",
-                "specialfeatures",
-                "specialfeaturesen",
-            ],
-        )
-        return fallback or ""
+        return ""
+
+    def _localize_output_text(self, text):
+        if self.lang != "fa":
+            return str(text)
+
+        return str(text).translate(str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹"))
 
     def check_result(self):
         db_path = "DataBase/DataBase.json"
@@ -579,7 +569,9 @@ class MainWindow(QMainWindow):
                     ):
                         model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
                         desc = self._get_localized_desc(item)
-                        found_models.append((str(model), str(desc)))
+                        found_models.append(
+                            (self._localize_output_text(model), self._localize_output_text(desc))
+                        )
 
                 elif self.search_type == "housing":
                     if d_val is None:
@@ -588,7 +580,9 @@ class MainWindow(QMainWindow):
                     if abs(d_val - user_d) < 0.1:
                         model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
                         desc = self._get_localized_desc(item)
-                        found_models.append((str(model), str(desc)))
+                        found_models.append(
+                            (self._localize_output_text(model), self._localize_output_text(desc))
+                        )
 
             self.output.clear()
             if found_models:
