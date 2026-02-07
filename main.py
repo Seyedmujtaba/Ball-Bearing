@@ -403,22 +403,16 @@ class MainWindow(QMainWindow):
                 return True
             is_rtl = self.layoutDirection() == Qt.RightToLeft
             if key == Qt.Key_Space:
-                if is_rtl:
-                    self.move_focus_prev(obj)
-                else:
-                    self.move_focus_next(obj)
+                delta = -1 if is_rtl else 1
+                self.move_focus_delta(obj, delta)
                 return True
             if key == Qt.Key_Right:
-                if is_rtl:
-                    self.move_focus_prev(obj)
-                else:
-                    self.move_focus_next(obj)
+                delta = -1 if is_rtl else 1
+                self.move_focus_delta(obj, delta)
                 return True
             if key == Qt.Key_Left:
-                if is_rtl:
-                    self.move_focus_next(obj)
-                else:
-                    self.move_focus_prev(obj)
+                delta = 1 if is_rtl else -1
+                self.move_focus_delta(obj, delta)
                 return True
         return super().eventFilter(obj, event)
 
@@ -432,19 +426,18 @@ class MainWindow(QMainWindow):
         else:
             self.check_result()
 
-    def move_focus_next(self, current):
+    def move_focus_delta(self, current, delta):
         if current not in self.inputs or len(self.inputs) < 2:
             return
         index = self.inputs.index(current)
-        next_index = (index + 1) % len(self.inputs)
-        self.inputs[next_index].setFocus()
+        target_index = (index + delta) % len(self.inputs)
+        self.inputs[target_index].setFocus()
+
+    def move_focus_next(self, current):
+        self.move_focus_delta(current, 1)
 
     def move_focus_prev(self, current):
-        if current not in self.inputs or len(self.inputs) < 2:
-            return
-        index = self.inputs.index(current)
-        prev_index = (index - 1) % len(self.inputs)
-        self.inputs[prev_index].setFocus()
+        self.move_focus_delta(current, -1)
 
     def clear_inputs(self):
         for field in self.inputs:
