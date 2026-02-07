@@ -104,6 +104,11 @@ TEXTS = {
 }
 
 
+def resource_path(relative_path):
+    base_path = getattr(sys, "_MEIPASS", os.path.abspath("."))
+    return os.path.join(base_path, relative_path)
+
+
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -121,8 +126,9 @@ class MainWindow(QMainWindow):
         self.main_layout = QVBoxLayout(self.central)
 
         self.bg_label = QLabel(self.central)
-        if os.path.exists("assets/background.jpg"):
-            self.bg_pixmap = QPixmap("assets/background.jpg")
+        bg_path = resource_path("assets/background.jpg")
+        if os.path.exists(bg_path):
+            self.bg_pixmap = QPixmap(bg_path)
             self.bg_label.setPixmap(self.bg_pixmap)
             self.bg_label.setScaledContents(True)
         self.bg_label.lower()
@@ -536,7 +542,7 @@ class MainWindow(QMainWindow):
         return str(text).translate(str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹"))
 
     def check_result(self):
-        db_path = "DataBase/DataBase.json"
+        db_path = resource_path("DataBase/DataBase.json")
         self.check_btn.setEnabled(False)
         self.check_btn.setText(self.t("searching"))
         QApplication.processEvents()
