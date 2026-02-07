@@ -4,7 +4,7 @@ import re
 import sys
 import unicodedata
 
-from PyQt5.QtCore import QEasingCurve, QPropertyAnimation, QSequentialAnimationGroup, Qt
+from PyQt5.QtCore import QEasingCurve, QEvent, QPropertyAnimation, QSequentialAnimationGroup, Qt
 from PyQt5.QtGui import QColor, QFont, QKeySequence, QPixmap
 from PyQt5.QtWidgets import (
     QAbstractItemView,
@@ -319,6 +319,7 @@ class MainWindow(QMainWindow):
             edit.setStyleSheet("border-radius:10px; background:white;")
             edit.setMinimumWidth(220)
             edit.setPlaceholderText("مثال: 25.0 mm" if self.lang == "fa" else "e.g. 25.0 mm")
+            edit.installEventFilter(self)
 
             box.addWidget(lbl)
             box.addWidget(edit)
@@ -330,8 +331,8 @@ class MainWindow(QMainWindow):
 
         if self.inputs:
             self.inputs[0].setFocus()
-            for i, inp in enumerate(self.inputs):
-                inp.returnPressed.connect(lambda i=i: self.on_return_pressed(i))
+            for inp in self.inputs:
+                inp.returnPressed.connect(lambda inp=inp: self.handle_enter_key(inp))
 
         self.output = QListWidget()
         self.output.setMinimumHeight(250)
@@ -393,6 +394,57 @@ class MainWindow(QMainWindow):
             self.inputs[index + 1].setFocus()
         else:
             self.check_result()
+
+    def eventFilter(self, obj, event):
+        if obj in self.inputs and event.type() == QEvent.KeyPress:
+            key = event.key()
+            if key in (Qt.Key_Return, Qt.Key_Enter):
+                self.handle_enter_key(obj)
+                return True
+            is_rtl = self.layoutDirection() == Qt.RightToLeft
+            if key == Qt.Key_Space:
+                if is_rtl:
+                    self.move_focus_prev(obj)
+                else:
+                    self.move_focus_next(obj)
+                return True
+            if key == Qt.Key_Right:
+                if is_rtl:
+                    self.move_focus_prev(obj)
+                else:
+                    self.move_focus_next(obj)
+                return True
+            if key == Qt.Key_Left:
+                if is_rtl:
+                    self.move_focus_next(obj)
+                else:
+                    self.move_focus_prev(obj)
+                return True
+        return super().eventFilter(obj, event)
+
+    def handle_enter_key(self, current):
+        if current not in self.inputs:
+            self.check_result()
+            return
+        index = self.inputs.index(current)
+        if index < len(self.inputs) - 1:
+            self.inputs[index + 1].setFocus()
+        else:
+            self.check_result()
+
+    def move_focus_next(self, current):
+        if current not in self.inputs or len(self.inputs) < 2:
+            return
+        index = self.inputs.index(current)
+        next_index = (index + 1) % len(self.inputs)
+        self.inputs[next_index].setFocus()
+
+    def move_focus_prev(self, current):
+        if current not in self.inputs or len(self.inputs) < 2:
+            return
+        index = self.inputs.index(current)
+        prev_index = (index - 1) % len(self.inputs)
+        self.inputs[prev_index].setFocus()
 
     def clear_inputs(self):
         for field in self.inputs:
