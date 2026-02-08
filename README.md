@@ -156,6 +156,6 @@ For more projects, updates, or collaboration, you can reach out via the followin
 
 - 🌐 [GitHub](https://github.com/Seyedmujtaba)  
 - 📸 [Instagram](https://instagram.com/seyedmuji)
-- ✈️ [Telegram](https://t.me/Seyedmujataba)
+- ✈️ [Telegram](https://t.me/Seyedmujtaba)
 
 ---
