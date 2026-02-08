@@ -1,6 +1,7 @@
 # 🧩 Ball Bearing
 
 ![Icon](assets/Icon/BallBearing--Icon.png)
+
 ## 📌 Project Overview
 This project is an **industrial application** designed to identify and describe **ball bearings and bearing housings** based on their dimensions.
 
@@ -25,30 +26,40 @@ The application is intended for engineers, mechanical engineering students, and 
 The application supports the following languages:
 - English  
 - Persian (Farsi)
-  
-- ### Language Menu
+
+### Language Menu
 ![Language Select](Screenshots/Language.png)
-***
 
-- ## Menu
-- #### English
-- ![English menu](Screenshots/En-Screenshots/En-menu.png) 
-- #### Perian
-- ![Persian menu](Screenshots/Persian-screenshots/P-menu.png)
-***
+---
 
-- ## Ball Bearing
-- #### English
-- ![English BallBearing](Screenshots/En-Screenshots/En-Ball.png)
-- #### Persian
-- ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
-***
+## 📸 Menu
 
-- ## Housing
-- #### English
-![English Housing](Screenshots/En-Screenshots/En-Huos.png)
-- #### Persian
-- ![Persian Housing](Screenshots/Persian-screenshots/P-Huos.png)
+### English | Persian
+<p align="center">
+  <img src="Screenshots/En-Screenshots/En-menu.png" width="45%">
+  <img src="Screenshots/Persian-screenshots/P-menu.png" width="45%">
+</p>
+
+---
+
+## 🔩 Ball Bearing
+
+### English | Persian
+<p align="center">
+  <img src="Screenshots/En-Screenshots/En-Ball.png" width="45%">
+  <img src="Screenshots/Persian-screenshots/P-Ball.png" width="45%">
+</p>
+
+---
+
+## 🏠 Housing
+
+### English | Persian
+<p align="center">
+  <img src="Screenshots/En-Screenshots/En-Hous.png" width="45%">
+  <img src="Screenshots/Persian-screenshots/P-Hous.png" width="45%">
+</p>
+
 ---
 
 ## 📚 Data Source
@@ -66,7 +77,7 @@ All technical information used in this project is based on the following reliabl
 
 ---
 
-## 🚀 Future Improvements (Optional)
+## 🚀 Future Improvements
 - Expand bearing types and standards  
 - Add detailed load and speed calculations  
 - Improve user interface and visualization  
