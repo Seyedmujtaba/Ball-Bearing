@@ -146,3 +146,16 @@ This project is provided for **educational and industrial reference purposes**.
 Please review the license file for usage and distribution terms.
 
 ---
+---
+
+## 👤 Author & Contact
+
+This project was designed and developed by **Seyedmujtaba Tabatabaee**.
+
+For more projects, updates, or collaboration, you can reach out via the following platforms:
+
+- 🌐 [GitHub](https://github.com/Seyedmujtaba)  
+- 📸 [Instagram](https://instagram.com/seyedmuji)
+- ✈️ [Telegram](https://t.me/@Seyedmujatabaa)
+
+---
