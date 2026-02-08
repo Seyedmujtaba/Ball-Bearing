@@ -109,8 +109,8 @@ Python or any external libraries are **not required**.
 
 ### Housing (English | Persian)
 <p align="center">
-  <img src="Screenshots/En-Screenshots/En-Hous.png" width="45%">
-  <img src="Screenshots/Persian-screenshots/P-Hous.png" width="45%">
+  <img src="Screenshots/En-Screenshots/En-Huos.png" width="45%">
+  <img src="Screenshots/Persian-screenshots/P-Huos.png" width="45%">
 </p>
 
 ---
