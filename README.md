@@ -1,7 +1,7 @@
 # 🧩 Ball Bearing
 
 ![Icon](assets/Icon/BallBearing--Icon.png)
-[⬇ Releases](https://github.com/Seyedmujtaba/Ball-Bearing/releases)
+- [Releases](https://github.com/Seyedmujtaba/Ball-Bearing/releases)
 ## 📌 Project Overview
 **Ball Bearing** is an **industrial desktop application** designed to identify and describe **ball bearings and bearing housings** based on their physical dimensions.
 
