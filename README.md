@@ -146,7 +146,6 @@ This project is provided for **educational and industrial reference purposes**.
 Please review the license file for usage and distribution terms.
 
 ---
----
 
 ## 👤 Author & Contact
 
