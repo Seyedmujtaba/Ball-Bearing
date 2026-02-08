@@ -25,7 +25,7 @@ The application is intended for engineers, mechanical engineering students, and 
 The application supports the following languages:
 - English  
 - Persian (Farsi)
-- 
+  
 - ### Language Menu
 ![Language Select](Screenshots/Language.png)
 ***
