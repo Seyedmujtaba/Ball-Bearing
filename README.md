@@ -26,9 +26,9 @@ The application supports the following languages:
 - English  
 - Persian (Farsi)
 ![Language Select](Screenshots/Language.png)
-[English menu](Screenshots/En-Screenshots/En-menu.png) [Persian menu](Screenshots/Persian-screenshots/P-menu.png)
-[English BallBearing](Screenshots/En-Screenshots/En-Ball.png) [Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
-[English Housing](Screenshots/En-Screenshots/En-Huos.png) [Persian Housing](Screenshots/Persian-screenshots/P-Huos.png)
+![English menu](Screenshots/En-Screenshots/En-menu.png) ![Persian menu](Screenshots/Persian-screenshots/P-menu.png)
+![English BallBearing](Screenshots/En-Screenshots/En-Ball.png) ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
+![English Housing](Screenshots/En-Screenshots/En-Huos.png) ![Persian Housing](Screenshots/Persian-screenshots/P-Huos.png)
 ---
 
 ## 📚 Data Source
