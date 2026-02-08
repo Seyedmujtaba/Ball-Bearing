@@ -1,5 +1,6 @@
-# 🧩 Ball Bearing & Bearing Selector
+# 🧩 Ball Bearing
 
+![Icon](assets/Icon/BallBearing--Icon.png)
 ## 📌 Project Overview
 This project is an **industrial application** designed to identify and describe **ball bearings and bearing housings** based on their dimensions.
 
@@ -25,12 +26,15 @@ The application supports the following languages:
 - English  
 - Persian (Farsi)
 ![Language Select](Screenshots/Language.png)
+[English menu](Screenshots/En-Screenshots/En-menu.png) [Persian menu](Screenshots/Persian-screenshots/P-menu.png)
+[English BallBearing](Screenshots/En-Screenshots/En-Ball.png) [Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
+[English Housing](Screenshots/En-Screenshots/En-Huos.png) [Persian Housing](Screenshots/Persian-screenshots/P-Huos.png)
 ---
 
 ## 📚 Data Source
 All technical information used in this project is based on the following reliable reference:
 
-- **SKF Global Catalog**
+- [SKF Global Catalog](sources/full-source.pdf)
 
 ---
 
