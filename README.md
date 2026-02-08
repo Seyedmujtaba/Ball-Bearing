@@ -32,7 +32,7 @@ The application supports the following languages:
 
 - ### Menu
 - #### English
-![English menu](Screenshots/En-Screenshots/En-menu.png) 
+- ![English menu](Screenshots/En-Screenshots/En-menu.png) 
 - #### Perian
 - ![Persian menu](Screenshots/Persian-screenshots/P-menu.png)
 ***
