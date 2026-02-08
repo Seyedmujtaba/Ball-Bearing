@@ -28,18 +28,21 @@ The application supports the following languages:
 - 
 - ### Language Menu
 ![Language Select](Screenshots/Language.png)
+***
 
 - ### Menu
 - #### English
 ![English menu](Screenshots/En-Screenshots/En-menu.png) 
 - #### Perian
 - ![Persian menu](Screenshots/Persian-screenshots/P-menu.png)
+***
 
 - ### Ball Bearing
 - #### English
-- ![English BallBearing](Screenshots/En-Screenshots/En-Ball.png) ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
+- ![English BallBearing](Screenshots/En-Screenshots/En-Ball.png)
 - #### Persian
 - ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
+***
 
 - ### Housing
 - #### English
