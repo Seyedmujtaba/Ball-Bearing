@@ -25,10 +25,27 @@ The application is intended for engineers, mechanical engineering students, and 
 The application supports the following languages:
 - English  
 - Persian (Farsi)
+- 
+- ### Language Menu
 ![Language Select](Screenshots/Language.png)
-![English menu](Screenshots/En-Screenshots/En-menu.png) ![Persian menu](Screenshots/Persian-screenshots/P-menu.png)
-![English BallBearing](Screenshots/En-Screenshots/En-Ball.png) ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
-![English Housing](Screenshots/En-Screenshots/En-Huos.png) ![Persian Housing](Screenshots/Persian-screenshots/P-Huos.png)
+
+- ### Menu
+- #### English
+![English menu](Screenshots/En-Screenshots/En-menu.png) 
+- #### Perian
+- ![Persian menu](Screenshots/Persian-screenshots/P-menu.png)
+
+- ### Ball Bearing
+- #### English
+- ![English BallBearing](Screenshots/En-Screenshots/En-Ball.png) ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
+- #### Persian
+- ![Persian Ballbearing](Screenshots/Persian-screenshots/P-Ball.png)
+
+- ### Housing
+- #### English
+![English Housing](Screenshots/En-Screenshots/En-Huos.png)
+- #### Persian
+- ![Persian Housing](Screenshots/Persian-screenshots/P-Huos.png)
 ---
 
 ## 📚 Data Source
