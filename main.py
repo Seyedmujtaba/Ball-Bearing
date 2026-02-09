@@ -103,7 +103,6 @@ TEXTS = {
     },
 }
 
-
 def resource_path(relative_path):
     base_path = getattr(sys, "_MEIPASS", os.path.abspath("."))
     return os.path.join(base_path, relative_path)
@@ -175,7 +174,6 @@ class MainWindow(QMainWindow):
         self.output.addItem(item)
 
     def animate_widgets(self, widgets, duration=180):
-        # نگهداری رفرنس انیمیشن‌ها برای جلوگیری از garbage collection
         self._active_anim_group = QSequentialAnimationGroup(self)
         for w in widgets:
             effect = QGraphicsOpacityEffect(w)
@@ -463,18 +461,15 @@ class MainWindow(QMainWindow):
         if not txt:
             return None
 
-        # نرمال‌سازی برای حذف علائم کنترلی RTL/LTR و اختلاف‌های یونیکدی
         txt = unicodedata.normalize("NFKC", txt)
         txt = re.sub(r"[\u200e\u200f\u202a-\u202e\u2066-\u2069]", "", txt)
 
-        # ارقام فارسی/عربی + جداکننده‌های اعشاری رایج
         trans = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩٫٬،", "01234567890123456789.,,")
         txt = txt.translate(trans)
         txt = txt.replace(",", ".").replace("/", ".").replace("\\", ".")
         txt = re.sub(r"\s+", "", txt)
         txt = re.sub(r"[^0-9.+-]", "", txt)
 
-        # اگر چند نقطه وجود داشت، فقط اولین نقطه نگه داشته شود
         if txt.count(".") > 1:
             first = txt.find(".")
             txt = txt[: first + 1] + txt[first + 1 :].replace(".", "")
@@ -492,7 +487,6 @@ class MainWindow(QMainWindow):
         return re.sub(r"[^a-z0-9]", "", str(key).strip().lower())
 
     def _get_by_keys(self, item, exact_keys, normalized_keys):
-        # exact case-sensitive match اولویت دارد تا d و D قاطی نشوند
         for key in exact_keys:
             if key in item and item[key] is not None:
                 return item[key]
@@ -614,9 +608,9 @@ class MainWindow(QMainWindow):
                         continue
 
                     if (
-                        abs(d_val - user_d) < 0.1
-                        and abs(D_val - user_D) < 0.1
-                        and abs(B_val - user_B) < 0.1
+                        abs(d_val - user_d) < 0.2
+                        and abs(D_val - user_D) < 0.2
+                        and abs(B_val - user_B) < 1.0
                     ):
                         model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
                         desc = self._get_localized_desc(item)
@@ -628,7 +622,7 @@ class MainWindow(QMainWindow):
                     if d_val is None:
                         continue
 
-                    if abs(d_val - user_d) < 0.1:
+                    if abs(d_val - user_d) < 0.2:
                         model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
                         desc = self._get_localized_desc(item)
                         found_models.append(
