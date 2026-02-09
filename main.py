@@ -671,7 +671,7 @@ class MainWindow(QMainWindow):
                 return
 
             cpp_results, cpp_error = self._query_cpp_calculator(db_path, user_d, user_D, user_B)
-            if cpp_results is not None:
+            if cpp_results:
                 found_models = [
                     (self._localize_output_text(item.get("model", "N/A")),
                      self._localize_output_text(item.get("description", "")))
