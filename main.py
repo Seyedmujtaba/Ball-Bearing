@@ -575,59 +575,49 @@ class MainWindow(QMainWindow):
                 self.set_output_message(msg, "#ffd180")
                 return
 
+            def read_dimension(item, exact_keys, normalized_keys):
+                return self.safe_float(self._get_by_keys(item, exact_keys, normalized_keys))
+
+            bearing_dimensions = {
+                "d": (["d"], ["inner_diameter", "innerdiameter", "inner", "id", "di"]),
+                "D": (["D"], ["outer_diameter", "outerdiameter", "outer", "od"]),
+                "B": (["B", "b"], ["width", "w"]),
+            }
+            housing_dimensions = (
+                ["d", "shaft_diameter", "bearing_bore"],
+                ["inner_diameter", "innerdiameter", "shaft_diameter", "shaftdiameter", "bearing_bore", "bearingbore"],
+            )
+
             found_models = []
             for item in items:
                 if not isinstance(item, dict):
                     continue
 
-                d_val = self.safe_float(
-                    self._get_by_keys(
-                        item,
-                        exact_keys=["d"],
-                        normalized_keys=["inner_diameter", "inner", "di", "id", "innerdiameter"],
-                    )
-                )
-
                 if self.search_type == "bearing":
-                    D_val = self.safe_float(
-                        self._get_by_keys(
-                            item,
-                            exact_keys=["D"],
-                            normalized_keys=["outer_diameter", "outer", "od", "douter", "outerdiameter", "de"],
-                        )
-                    )
-                    B_val = self.safe_float(
-                        self._get_by_keys(
-                            item,
-                            exact_keys=["B", "b"],
-                            normalized_keys=["width", "w"],
-                        )
-                    )
+                    d_val = read_dimension(item, *bearing_dimensions["d"])
+                    D_val = read_dimension(item, *bearing_dimensions["D"])
+                    B_val = read_dimension(item, *bearing_dimensions["B"])
 
                     if d_val is None or D_val is None or B_val is None:
                         continue
 
-                    if (
+                    is_match = (
                         abs(d_val - user_d) < 0.2
                         and abs(D_val - user_D) < 0.2
                         and abs(B_val - user_B) < 1.0
-                    ):
-                        model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
-                        desc = self._get_localized_desc(item)
-                        found_models.append(
-                            (self._localize_output_text(model), self._localize_output_text(desc))
-                        )
-
-                elif self.search_type == "housing":
+                    )
+                else:
+                    d_val = read_dimension(item, *housing_dimensions)
                     if d_val is None:
                         continue
+                    is_match = abs(d_val - user_d) < 0.2
 
-                    if abs(d_val - user_d) < 0.2:
-                        model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
-                        desc = self._get_localized_desc(item)
-                        found_models.append(
-                            (self._localize_output_text(model), self._localize_output_text(desc))
-                        )
+                if is_match:
+                    model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
+                    desc = self._get_localized_desc(item)
+                    found_models.append(
+                        (self._localize_output_text(model), self._localize_output_text(desc))
+                    )
 
             self.output.clear()
             if found_models:
