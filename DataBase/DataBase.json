@@ -3258,7 +3258,7 @@
     "special_features_en": "The widest and heaviest model in this range"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 202 ECP",
     "inner_diameter": 15,
     "outer_diameter": 35,
@@ -3267,7 +3267,7 @@
     "special_features_en": "NU design (double edge on outer rim), polyamide shelf"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 202 ECP",
     "inner_diameter": 15,
     "outer_diameter": 35,
@@ -3276,7 +3276,7 @@
     "special_features_en": "NJ design (one lip on inner rim) for axial restraint on one side"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NUP 203 ECP",
     "inner_diameter": 17,
     "outer_diameter": 40,
@@ -3285,7 +3285,7 @@
     "special_features_en": "NUP design (full axial suspension from both sides)"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 304 ECP",
     "inner_diameter": 20,
     "outer_diameter": 52,
@@ -3294,7 +3294,7 @@
     "special_features_en": "300 series for heavier loads"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 305 ECP",
     "inner_diameter": 25,
     "outer_diameter": 62,
@@ -3303,7 +3303,7 @@
     "special_features_en": "Very popular model in electric motors"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 2205 ECP",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -3312,7 +3312,7 @@
     "special_features_en": "Wide 2200 series with higher load capacity"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 1006",
     "inner_diameter": 30,
     "outer_diameter": 55,
@@ -3321,7 +3321,7 @@
     "special_features_en": "1000 series with thin section"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 206 ECP",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -3330,7 +3330,7 @@
     "special_features_en": "Explorer design with optimized edges"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 2306 ECP",
     "inner_diameter": 30,
     "outer_diameter": 72,
@@ -3339,7 +3339,7 @@
     "special_features_en": "The 2300 series is wide and very powerful"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 307 ECM",
     "inner_diameter": 35,
     "outer_diameter": 80,
@@ -3348,7 +3348,7 @@
     "special_features_en": "Machined brass shelf (M)"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "N 307 ECP",
     "inner_diameter": 35,
     "outer_diameter": 80,
@@ -3357,7 +3357,7 @@
     "special_features_en": "N design (edges on inner rim)"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 208 ECP",
     "inner_diameter": 40,
     "outer_diameter": 80,
@@ -3366,7 +3366,7 @@
     "special_features_en": "Industry standard for 40mm shafts"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 408",
     "inner_diameter": 40,
     "outer_diameter": 110,
@@ -3375,7 +3375,7 @@
     "special_features_en": "400 series for heavy working conditions"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 2209 ECP",
     "inner_diameter": 45,
     "outer_diameter": 85,
@@ -3384,7 +3384,7 @@
     "special_features_en": "Wide 2200 series"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NUP 309 ECP",
     "inner_diameter": 45,
     "outer_diameter": 100,
@@ -3393,7 +3393,7 @@
     "special_features_en": "Ability to withstand huge radial load and axial restraint"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 210 ECP",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -3402,7 +3402,7 @@
     "special_features_en": "Classic model for pumps and compressors"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 210 ECP/C3",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -3411,7 +3411,7 @@
     "special_features_en": "With C3 slack for high revs"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 311 ECM",
     "inner_diameter": 55,
     "outer_diameter": 120,
@@ -3420,7 +3420,7 @@
     "special_features_en": "Brass rack, suitable for high vibrations"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 1012",
     "inner_diameter": 60,
     "outer_diameter": 95,
@@ -3429,7 +3429,7 @@
     "special_features_en": "Edged 10 series"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 2212 ECP",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -3438,7 +3438,7 @@
     "special_features_en": "Wide 2200 series"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 313 ECP",
     "inner_diameter": 65,
     "outer_diameter": 140,
@@ -3447,7 +3447,7 @@
     "special_features_en": "Excellent shock load tolerance"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NUP 214 ECP",
     "inner_diameter": 70,
     "outer_diameter": 125,
@@ -3456,7 +3456,7 @@
     "special_features_en": "Shaft stabilizer in the axial direction"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 215 ECM",
     "inner_diameter": 75,
     "outer_diameter": 130,
@@ -3465,7 +3465,7 @@
     "special_features_en": "Integrated brass shelf"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 2315 ECP",
     "inner_diameter": 75,
     "outer_diameter": 160,
@@ -3474,7 +3474,7 @@
     "special_features_en": "Super heavy with a width of 55 mm"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 216 ECP",
     "inner_diameter": 80,
     "outer_diameter": 140,
@@ -3483,7 +3483,7 @@
     "special_features_en": "200 standard series"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 316 ECM/C3",
     "inner_diameter": 80,
     "outer_diameter": 170,
@@ -3492,7 +3492,7 @@
     "special_features_en": "Very powerful, especially for stone crushers"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 217 ECP",
     "inner_diameter": 85,
     "outer_diameter": 150,
@@ -3501,7 +3501,7 @@
     "special_features_en": "NJ design with axial restraint"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 218 ECP",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -3510,7 +3510,7 @@
     "special_features_en": "Large industrial size"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 2318 ECM",
     "inner_diameter": 90,
     "outer_diameter": 190,
@@ -3519,7 +3519,7 @@
     "special_features_en": "High weight, solid brass rack"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 1020",
     "inner_diameter": 100,
     "outer_diameter": 150,
@@ -3528,7 +3528,7 @@
     "special_features_en": "Series 10 for limited space"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 220 ECM",
     "inner_diameter": 100,
     "outer_diameter": 180,
@@ -3537,7 +3537,7 @@
     "special_features_en": "Series 220 wide, machined brass rack"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 320 ECM/C3",
     "inner_diameter": 100,
     "outer_diameter": 215,
@@ -3546,7 +3546,7 @@
     "special_features_en": "Very high radial load bearing with C3 slack"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NUP 320 ECM",
     "inner_diameter": 100,
     "outer_diameter": 215,
@@ -3555,7 +3555,7 @@
     "special_features_en": "Full axial stabilization of the 100 mm shaft"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 1022 ML",
     "inner_diameter": 110,
     "outer_diameter": 170,
@@ -3564,7 +3564,7 @@
     "special_features_en": "ML Suffix: Machined integral brass rack, guided on outer ring"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 222 ECM",
     "inner_diameter": 110,
     "outer_diameter": 200,
@@ -3573,7 +3573,7 @@
     "special_features_en": "222 series with optimal load capacity"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 2322 ECM",
     "inner_diameter": 110,
     "outer_diameter": 240,
@@ -3582,7 +3582,7 @@
     "special_features_en": "Huge dimensions, weight approximately 18 kg"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 224 ECM",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -3591,7 +3591,7 @@
     "special_features_en": "Explorer designed to last"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJ 324 ECM",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -3600,7 +3600,7 @@
     "special_features_en": "Suitable for heavy mineral gearboxes"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NU 1026 M",
     "inner_diameter": 130,
     "outer_diameter": 200,
@@ -3609,7 +3609,7 @@
     "special_features_en": "Series 10 with a thin section compared to the diameter"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NCF 2918 CV",
     "inner_diameter": 90,
     "outer_diameter": 125,
@@ -3618,7 +3618,7 @@
     "special_features_en": "Full Complement (no shelf), very high load capacity, lower speed"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NCF 3020 CV",
     "inner_diameter": 100,
     "outer_diameter": 150,
@@ -3627,7 +3627,7 @@
     "special_features_en": "NCF series with an external rim retaining edge"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NJG 2324 VH",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -3636,7 +3636,7 @@
     "special_features_en": "NJG heavy series, full of rollers (Full Complement)"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NN 3020 K/P5W33",
     "inner_diameter": 100,
     "outer_diameter": 150,
@@ -3645,7 +3645,7 @@
     "special_features_en": "Double Row, conical hole (K), precision P5"
   },
   {
-    "type": "roller_bearing",
+    "type": "bearing",
     "model": "NNU 4924 BK/SPW33",
     "inner_diameter": 120,
     "outer_diameter": 165,
@@ -3654,7 +3654,7 @@
     "special_features_en": "NNU series, two rows of super precision (Super Precision) for lathe spindle"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "HK 0810",
     "inner_diameter": 8,
     "outer_diameter": 12,
@@ -3663,7 +3663,7 @@
     "special_features_en": "Drawn cup with open end"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "BK 1012",
     "inner_diameter": 10,
     "outer_diameter": 14,
@@ -3672,7 +3672,7 @@
     "special_features_en": "Drawn cup with closed end"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NK 15/16",
     "inner_diameter": 15,
     "outer_diameter": 23,
@@ -3681,7 +3681,7 @@
     "special_features_en": "Without internal ring (direct installation on hardened shaft)"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NKI 20/20",
     "inner_diameter": 20,
     "outer_diameter": 32,
@@ -3690,7 +3690,7 @@
     "special_features_en": "with internal rim (for shafts without hard work)"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NA 4905",
     "inner_diameter": 25,
     "outer_diameter": 42,
@@ -3699,7 +3699,7 @@
     "special_features_en": "Series 49 with machined rims and rims"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "RNA 4907",
     "inner_diameter": 42,
     "outer_diameter": 55,
@@ -3708,7 +3708,7 @@
     "special_features_en": "Without the inner ring, the machining diameter of the shaft should be 35mm"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NA 6908",
     "inner_diameter": 40,
     "outer_diameter": 62,
@@ -3717,7 +3717,7 @@
     "special_features_en": "69 series, two rows, very wide"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NA 4822",
     "inner_diameter": 110,
     "outer_diameter": 140,
@@ -3726,7 +3726,7 @@
     "special_features_en": "Large size needle for industrial machinery"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "AXK 1528",
     "inner_diameter": 15,
     "outer_diameter": 28,
@@ -3735,7 +3735,7 @@
     "special_features_en": "Thrust needle roller bearing, only 2 mm thick"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "AS 1528",
     "inner_diameter": 15,
     "outer_diameter": 28,
@@ -3744,7 +3744,7 @@
     "special_features_en": "Thin washer for combination with AXK series"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NAX 2030",
     "inner_diameter": 20,
     "outer_diameter": 30,
@@ -3753,7 +3753,7 @@
     "special_features_en": "Combined: radial needle + round needle"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NKIA 5906",
     "inner_diameter": 30,
     "outer_diameter": 47,
@@ -3762,7 +3762,7 @@
     "special_features_en": "Combined: needle + angular contact (unidirectional axial load bearing)"
   },
   {
-    "type": "needle_roller",
+    "type": "bearing",
     "model": "NKIB 5907",
     "inner_diameter": 35,
     "outer_diameter": 55,
@@ -3771,7 +3771,7 @@
     "special_features_en": "Combined: bear the axial load from both sides"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30202",
     "inner_diameter": 15,
     "outer_diameter": 35,
@@ -3780,7 +3780,7 @@
     "special_features_en": "302 series, the smallest standard size"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32004 X",
     "inner_diameter": 20,
     "outer_diameter": 42,
@@ -3789,7 +3789,7 @@
     "special_features_en": "Suffix X: Original dimensions modified according to ISO standards"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30305",
     "inner_diameter": 25,
     "outer_diameter": 62,
@@ -3798,7 +3798,7 @@
     "special_features_en": "303 series for heavier loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32206 B",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -3807,7 +3807,7 @@
     "special_features_en": "Steep angle for more axial load"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "33108",
     "inner_diameter": 40,
     "outer_diameter": 75,
@@ -3816,7 +3816,7 @@
     "special_features_en": "331 series with a very high load capacity in a small space"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32009 X/Q",
     "inner_diameter": 45,
     "outer_diameter": 75,
@@ -3825,7 +3825,7 @@
     "special_features_en": "Q Extension: Optimized geometry to reduce friction and noise"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30210 J2/Q",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -3834,7 +3834,7 @@
     "special_features_en": "Pressed steel rack, optimized design"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32310 B",
     "inner_diameter": 50,
     "outer_diameter": 110,
@@ -3843,7 +3843,7 @@
     "special_features_en": "Giant 323 series with a sharp angle"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32012 X",
     "inner_diameter": 60,
     "outer_diameter": 95,
@@ -3852,7 +3852,7 @@
     "special_features_en": "320 series with medium width"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "33213",
     "inner_diameter": 65,
     "outer_diameter": 120,
@@ -3861,7 +3861,7 @@
     "special_features_en": "Impact load tolerance in road construction machinery"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30315",
     "inner_diameter": 75,
     "outer_diameter": 160,
@@ -3870,7 +3870,7 @@
     "special_features_en": "Heavy industrial 303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32218",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -3879,7 +3879,7 @@
     "special_features_en": "A very widely used model in truck axles"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32920",
     "inner_diameter": 100,
     "outer_diameter": 140,
@@ -3888,7 +3888,7 @@
     "special_features_en": "329 series with very thin section for 100mm diameter"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30222",
     "inner_diameter": 110,
     "outer_diameter": 200,
@@ -3897,7 +3897,7 @@
     "special_features_en": "Large size 302 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32024 X",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -3906,7 +3906,7 @@
     "special_features_en": "320 series, Explorer design with very high dynamic load capacity"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30224",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -3915,7 +3915,7 @@
     "special_features_en": "Steel rims with special heat treatment for dimensional stability"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32224",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -3924,7 +3924,7 @@
     "special_features_en": "Wide series with huge radial load bearing"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30324",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -3933,7 +3933,7 @@
     "special_features_en": "Super heavy 303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32028 X",
     "inner_diameter": 140,
     "outer_diameter": 210,
@@ -3942,7 +3942,7 @@
     "special_features_en": "Suitable for thick shafts with limited chamber space"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32228",
     "inner_diameter": 140,
     "outer_diameter": 250,
@@ -3951,7 +3951,7 @@
     "special_features_en": "Approximate weight of 13.5 kg, for stone crushers"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30230",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -3960,7 +3960,7 @@
     "special_features_en": "Heavy industrial model"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "LM 11749/710",
     "inner_diameter": 17.46,
     "outer_diameter": 39.87,
@@ -3969,7 +3969,7 @@
     "special_features_en": "Inch series, very widely used in old cars"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "JL 69349/310",
     "inner_diameter": 38,
     "outer_diameter": 63,
@@ -3978,7 +3978,7 @@
     "special_features_en": "J-line inch series (metric dimensions, inch tolerance)"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "LM 67048/010",
     "inner_diameter": 31.75,
     "outer_diameter": 59.13,
@@ -3987,7 +3987,7 @@
     "special_features_en": "The most famous front wheel bearing of many cars"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "HM 803146/110",
     "inner_diameter": 41.27,
     "outer_diameter": 88.9,
@@ -3996,7 +3996,7 @@
     "special_features_en": "Heavy-Medium series for extreme shock loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32028 X/DF",
     "inner_diameter": 140,
     "outer_diameter": 210,
@@ -4005,7 +4005,7 @@
     "special_features_en": "Face-to-Face (DF) arrangement, including two rolling bearings and an intermediate"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32230 J2/DB",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -4014,7 +4014,7 @@
     "special_features_en": "Back-to-Back (DB) arrangement, very high rigidity against overturning anchor"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "TDO 452047",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -4023,7 +4023,7 @@
     "special_features_en": "TDO series (one integrated two-row external rim and two internal rims)"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "TDI 405062",
     "inner_diameter": 100,
     "outer_diameter": 160,
@@ -4032,7 +4032,7 @@
     "special_features_en": "TDI series (one integrated two-row internal rim and two external rims)"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "33110/Q",
     "inner_diameter": 50,
     "outer_diameter": 85,
@@ -4041,7 +4041,7 @@
     "special_features_en": "331 series with optimized geometry for low noise"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "33215/Q",
     "inner_diameter": 75,
     "outer_diameter": 130,
@@ -4050,7 +4050,7 @@
     "special_features_en": "Very high shock load tolerance, especially for mining equipment"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "BT1B 329013",
     "inner_diameter": 200,
     "outer_diameter": 280,
@@ -4059,7 +4059,7 @@
     "special_features_en": "Special series for heavy industry, large metric dimensions"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "HH 221449/410",
     "inner_diameter": 101.6,
     "outer_diameter": 190.5,
@@ -4068,7 +4068,7 @@
     "special_features_en": "Inch heavy series (Heavy-Heavy)"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "EE 127095/165",
     "inner_diameter": 241.3,
     "outer_diameter": 355.6,
@@ -4077,7 +4077,7 @@
     "special_features_en": "Extra-Extra Heavy inch series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "21308 E",
     "inner_diameter": 40,
     "outer_diameter": 90,
@@ -4086,7 +4086,7 @@
     "special_features_en": "213 series, E (Explorer) design for maximum cargo capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22210 EK",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -4095,7 +4095,7 @@
     "special_features_en": "222 series, taper hole (K), adapter bushing required"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22212 E/C3",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -4104,7 +4104,7 @@
     "special_features_en": "C3 slack to compensate for thermal expansion at high temperatures"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23022 CC/W33",
     "inner_diameter": 110,
     "outer_diameter": 170,
@@ -4113,7 +4113,7 @@
     "special_features_en": "230 series, CC design (roller guide without lip on inner rim)"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24024 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -4122,7 +4122,7 @@
     "special_features_en": "Wide 240 series with very high roller density"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22314 E",
     "inner_diameter": 70,
     "outer_diameter": 150,
@@ -4131,7 +4131,7 @@
     "special_features_en": "Heavy 223 series, for vibration and shock loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23120 CCK/W33",
     "inner_diameter": 100,
     "outer_diameter": 165,
@@ -4140,7 +4140,7 @@
     "special_features_en": "Combination of tapered hole and lubrication duct W33"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23218 CC/W33",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -4149,7 +4149,7 @@
     "special_features_en": "232 series, excellent balance between width and load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23924 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 165,
@@ -4158,7 +4158,7 @@
     "special_features_en": "Series 239 with thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23024 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -4167,7 +4167,7 @@
     "special_features_en": "CC design without inner edge"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24024 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -4176,7 +4176,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23124 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 200,
@@ -4185,7 +4185,7 @@
     "special_features_en": "High load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24124 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 200,
@@ -4194,7 +4194,7 @@
     "special_features_en": "Super wide 241 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22224 E",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -4203,7 +4203,7 @@
     "special_features_en": "Explorer series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23224 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -4212,7 +4212,7 @@
     "special_features_en": "Heavy design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "21324 CC/W33",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -4221,7 +4221,7 @@
     "special_features_en": "The 213 series is very heavy"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22324 E",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -4230,7 +4230,7 @@
     "special_features_en": "E design for maximum load"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23926 CC/W33",
     "inner_diameter": 130,
     "outer_diameter": 180,
@@ -4239,7 +4239,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23026 CC/W33",
     "inner_diameter": 130,
     "outer_diameter": 200,
@@ -4248,7 +4248,7 @@
     "special_features_en": "CC standard design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24026 CC/W33",
     "inner_diameter": 130,
     "outer_diameter": 200,
@@ -4257,7 +4257,7 @@
     "special_features_en": "wide series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23126 CC/W33",
     "inner_diameter": 130,
     "outer_diameter": 210,
@@ -4266,7 +4266,7 @@
     "special_features_en": "Series 231"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24126 CC/W33",
     "inner_diameter": 130,
     "outer_diameter": 210,
@@ -4275,7 +4275,7 @@
     "special_features_en": "Series 241"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22226 E",
     "inner_diameter": 130,
     "outer_diameter": 230,
@@ -4284,7 +4284,7 @@
     "special_features_en": "130 mm widely used model"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23226 CC/W33",
     "inner_diameter": 130,
     "outer_diameter": 230,
@@ -4293,7 +4293,7 @@
     "special_features_en": "Shock load bearing"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22326 E",
     "inner_diameter": 130,
     "outer_diameter": 280,
@@ -4302,7 +4302,7 @@
     "special_features_en": "Super heavy 223 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23928 CC/W33",
     "inner_diameter": 140,
     "outer_diameter": 190,
@@ -4311,7 +4311,7 @@
     "special_features_en": "thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23028 CC/W33",
     "inner_diameter": 140,
     "outer_diameter": 210,
@@ -4320,7 +4320,7 @@
     "special_features_en": "Standard series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24028 CC/W33",
     "inner_diameter": 140,
     "outer_diameter": 210,
@@ -4329,7 +4329,7 @@
     "special_features_en": "240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23128 CC/W33",
     "inner_diameter": 140,
     "outer_diameter": 225,
@@ -4338,7 +4338,7 @@
     "special_features_en": "Series 231"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24128 CC/W33",
     "inner_diameter": 140,
     "outer_diameter": 225,
@@ -4347,7 +4347,7 @@
     "special_features_en": "Wide 241 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22228 E",
     "inner_diameter": 140,
     "outer_diameter": 250,
@@ -4356,7 +4356,7 @@
     "special_features_en": "Explorer design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23228 CC/W33",
     "inner_diameter": 140,
     "outer_diameter": 250,
@@ -4365,7 +4365,7 @@
     "special_features_en": "Heavy design, weight approximately 20 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22328 E",
     "inner_diameter": 140,
     "outer_diameter": 300,
@@ -4374,7 +4374,7 @@
     "special_features_en": "223 series, extra heavy for shock loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23930 CC/W33",
     "inner_diameter": 150,
     "outer_diameter": 210,
@@ -4383,7 +4383,7 @@
     "special_features_en": "Series 239 with thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23030 CC/W33",
     "inner_diameter": 150,
     "outer_diameter": 225,
@@ -4392,7 +4392,7 @@
     "special_features_en": "CC standard design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24030 CC/W33",
     "inner_diameter": 150,
     "outer_diameter": 225,
@@ -4401,7 +4401,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23130 CC/W33",
     "inner_diameter": 150,
     "outer_diameter": 250,
@@ -4410,7 +4410,7 @@
     "special_features_en": "231 series with high load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24130 CC/W33",
     "inner_diameter": 150,
     "outer_diameter": 250,
@@ -4419,7 +4419,7 @@
     "special_features_en": "Super wide 241 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22230 E",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -4428,7 +4428,7 @@
     "special_features_en": "Optimized Explorer design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23230 CC/W33",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -4437,7 +4437,7 @@
     "special_features_en": "232 series for tough working conditions"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22330 E",
     "inner_diameter": 150,
     "outer_diameter": 320,
@@ -4446,7 +4446,7 @@
     "special_features_en": "The most powerful series in 150mm diameter"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23932 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 220,
@@ -4455,7 +4455,7 @@
     "special_features_en": "Thin section of series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23032 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 240,
@@ -4464,7 +4464,7 @@
     "special_features_en": "Classic CC design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24032 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 240,
@@ -4473,7 +4473,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23132 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 270,
@@ -4482,7 +4482,7 @@
     "special_features_en": "231 industrial series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24132 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 270,
@@ -4491,7 +4491,7 @@
     "special_features_en": "241 series with 1Hold mm width"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22232 E",
     "inner_diameter": 160,
     "outer_diameter": 290,
@@ -4500,7 +4500,7 @@
     "special_features_en": "Standard 222 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23232 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 290,
@@ -4509,7 +4509,7 @@
     "special_features_en": "Simultaneous axial and radial load bearing"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22332 CC/W33",
     "inner_diameter": 160,
     "outer_diameter": 340,
@@ -4518,7 +4518,7 @@
     "special_features_en": "Approximate weight of 50 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23934 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 230,
@@ -4527,7 +4527,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23034 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 260,
@@ -4536,7 +4536,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24034 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 260,
@@ -4545,7 +4545,7 @@
     "special_features_en": "Wide 240 series, excellent balance between diameter and width"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23134 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 280,
@@ -4554,7 +4554,7 @@
     "special_features_en": "CC design with central guide ring"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24134 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 280,
@@ -4563,7 +4563,7 @@
     "special_features_en": "Super wide 241 series for heavy radial loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22234 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 310,
@@ -4572,7 +4572,7 @@
     "special_features_en": "Classic 222 series model with high thermal stability"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23234 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 310,
@@ -4581,7 +4581,7 @@
     "special_features_en": "232 series with the ability to withstand fluctuating loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22334 CC/W33",
     "inner_diameter": 170,
     "outer_diameter": 360,
@@ -4590,7 +4590,7 @@
     "special_features_en": "Approximate weight 61 kg, super heavy 223 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23936 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 250,
@@ -4599,7 +4599,7 @@
     "special_features_en": "239 series with thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23036 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 280,
@@ -4608,7 +4608,7 @@
     "special_features_en": "Standard design for 180 mm shafts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24036 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 280,
@@ -4617,7 +4617,7 @@
     "special_features_en": "240 series with optimal load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23136 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 300,
@@ -4626,7 +4626,7 @@
     "special_features_en": "231 series, widely used in cement and steel industries"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24136 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 300,
@@ -4635,7 +4635,7 @@
     "special_features_en": "241 series, the maximum number of rollers in the diameter range of 300"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22236 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 320,
@@ -4644,7 +4644,7 @@
     "special_features_en": "222 series, higher speed limit than wider models"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23236 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 320,
@@ -4653,7 +4653,7 @@
     "special_features_en": "Special for applications with high axial pressure"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22336 CC/W33",
     "inner_diameter": 180,
     "outer_diameter": 380,
@@ -4662,7 +4662,7 @@
     "special_features_en": "223 series, one of the strongest barrel roller bearings in this category"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23938 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 260,
@@ -4671,7 +4671,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23038 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 290,
@@ -4680,7 +4680,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24038 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 290,
@@ -4689,7 +4689,7 @@
     "special_features_en": "240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23138 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 320,
@@ -4698,7 +4698,7 @@
     "special_features_en": "Series 231"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24138 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 320,
@@ -4707,7 +4707,7 @@
     "special_features_en": "super wide"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22238 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 340,
@@ -4716,7 +4716,7 @@
     "special_features_en": "Series 222"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23238 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 340,
@@ -4725,7 +4725,7 @@
     "special_features_en": "Heavy design, weight approximately 45 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22338 CC/W33",
     "inner_diameter": 190,
     "outer_diameter": 400,
@@ -4734,7 +4734,7 @@
     "special_features_en": "223 series, maximum load capacity for 190 shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23940 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 280,
@@ -4743,7 +4743,7 @@
     "special_features_en": "Series 239 with thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23040 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 310,
@@ -4752,7 +4752,7 @@
     "special_features_en": "Classic CC design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24040 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 310,
@@ -4761,7 +4761,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23140 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 340,
@@ -4770,7 +4770,7 @@
     "special_features_en": "231 series, widely used in large industrial gearboxes"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24140 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 340,
@@ -4779,7 +4779,7 @@
     "special_features_en": "Super wide 241 series (high width to diameter ratio)"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22240 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 360,
@@ -4788,7 +4788,7 @@
     "special_features_en": "222 series, higher speed tolerance than wide series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23240 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 360,
@@ -4797,7 +4797,7 @@
     "special_features_en": "232 series for heavy axial pressures"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22340 CC/W33",
     "inner_diameter": 200,
     "outer_diameter": 420,
@@ -4806,7 +4806,7 @@
     "special_features_en": "Approximate weight of 90 kg, industrial giant"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23944 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 300,
@@ -4815,7 +4815,7 @@
     "special_features_en": "Series 239 thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23044 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 340,
@@ -4824,7 +4824,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24044 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 340,
@@ -4833,7 +4833,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23144 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 370,
@@ -4842,7 +4842,7 @@
     "special_features_en": "231 series with high rigidity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24144 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 370,
@@ -4851,7 +4851,7 @@
     "special_features_en": "Series 241, width 15 cm"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22244 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 400,
@@ -4860,7 +4860,7 @@
     "special_features_en": "Series 222"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23244 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 400,
@@ -4869,7 +4869,7 @@
     "special_features_en": "232 series, heavy duty design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22344 CC/W33",
     "inner_diameter": 220,
     "outer_diameter": 460,
@@ -4878,7 +4878,7 @@
     "special_features_en": "Super heavy 223 series, weight more than 100 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23948 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 320,
@@ -4887,7 +4887,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23048 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 360,
@@ -4896,7 +4896,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24048 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 360,
@@ -4905,7 +4905,7 @@
     "special_features_en": "Wide 240 series for 240 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23148 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 400,
@@ -4914,7 +4914,7 @@
     "special_features_en": "231 series, optimized design for heavy radial loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24148 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 400,
@@ -4923,7 +4923,7 @@
     "special_features_en": "241 series, extra wide with very high static load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23248 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 440,
@@ -4932,7 +4932,7 @@
     "special_features_en": "232 series, robust design for stone crushers"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "22348 CC/W33",
     "inner_diameter": 240,
     "outer_diameter": 500,
@@ -4941,7 +4941,7 @@
     "special_features_en": "Series 223, a giant with an approximate weight of 160 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23952 CC/W33",
     "inner_diameter": 260,
     "outer_diameter": 360,
@@ -4950,7 +4950,7 @@
     "special_features_en": "Series 239 with thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23052 CC/W33",
     "inner_diameter": 260,
     "outer_diameter": 400,
@@ -4959,7 +4959,7 @@
     "special_features_en": "230 series, CC standard design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24052 CC/W33",
     "inner_diameter": 260,
     "outer_diameter": 400,
@@ -4968,7 +4968,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23152 CC/W33",
     "inner_diameter": 260,
     "outer_diameter": 440,
@@ -4977,7 +4977,7 @@
     "special_features_en": "231 series for wind turbines and heavy industries"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24152 CC/W33",
     "inner_diameter": 260,
     "outer_diameter": 440,
@@ -4986,7 +4986,7 @@
     "special_features_en": "241 series, maximum width for diameter 260"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23252 CC/W33",
     "inner_diameter": 260,
     "outer_diameter": 480,
@@ -4995,7 +4995,7 @@
     "special_features_en": "232 series, bearing huge torques"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23956 CC/W33",
     "inner_diameter": 280,
     "outer_diameter": 380,
@@ -5004,7 +5004,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23056 CC/W33",
     "inner_diameter": 280,
     "outer_diameter": 420,
@@ -5013,7 +5013,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24056 CC/W33",
     "inner_diameter": 280,
     "outer_diameter": 420,
@@ -5022,7 +5022,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23156 CC/W33",
     "inner_diameter": 280,
     "outer_diameter": 460,
@@ -5031,7 +5031,7 @@
     "special_features_en": "Heavy industrial series 231"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24156 CC/W33",
     "inner_diameter": 280,
     "outer_diameter": 460,
@@ -5040,7 +5040,7 @@
     "special_features_en": "Series 241"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23256 CC/W33",
     "inner_diameter": 280,
     "outer_diameter": 500,
@@ -5049,7 +5049,7 @@
     "special_features_en": "Giant 232 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23960 CC/W33",
     "inner_diameter": 300,
     "outer_diameter": 420,
@@ -5058,7 +5058,7 @@
     "special_features_en": "239 series for 300 mm shafts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23060 CC/W33",
     "inner_diameter": 300,
     "outer_diameter": 460,
@@ -5067,7 +5067,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24060 CC/W33",
     "inner_diameter": 300,
     "outer_diameter": 460,
@@ -5076,7 +5076,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23160 CC/W33",
     "inner_diameter": 300,
     "outer_diameter": 500,
@@ -5085,7 +5085,7 @@
     "special_features_en": "Series 231, weight approximately 125 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24160 CC/W33",
     "inner_diameter": 300,
     "outer_diameter": 500,
@@ -5094,7 +5094,7 @@
     "special_features_en": "241 series, extra wide design for maximum stability"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23260 CC/W33",
     "inner_diameter": 300,
     "outer_diameter": 540,
@@ -5103,7 +5103,7 @@
     "special_features_en": "232 series, bearing huge shock loads in industrial mills"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23964 CC/W33",
     "inner_diameter": 320,
     "outer_diameter": 440,
@@ -5112,7 +5112,7 @@
     "special_features_en": "Series 239 thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23064 CC/W33",
     "inner_diameter": 320,
     "outer_diameter": 480,
@@ -5121,7 +5121,7 @@
     "special_features_en": "Standard 230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24064 CC/W33",
     "inner_diameter": 320,
     "outer_diameter": 480,
@@ -5130,7 +5130,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23164 CC/W33",
     "inner_diameter": 320,
     "outer_diameter": 540,
@@ -5139,7 +5139,7 @@
     "special_features_en": "231 series with excellent static load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24164 CC/W33",
     "inner_diameter": 320,
     "outer_diameter": 540,
@@ -5148,7 +5148,7 @@
     "special_features_en": "241 series, more than 21 cm wide"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23264 CC/W33",
     "inner_diameter": 320,
     "outer_diameter": 580,
@@ -5157,7 +5157,7 @@
     "special_features_en": "Approximate weight 240 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23968 CC/W33",
     "inner_diameter": 340,
     "outer_diameter": 460,
@@ -5166,7 +5166,7 @@
     "special_features_en": "239 series for 340 mm shafts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23068 CC/W33",
     "inner_diameter": 340,
     "outer_diameter": 520,
@@ -5175,7 +5175,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24068 CC/W33",
     "inner_diameter": 340,
     "outer_diameter": 520,
@@ -5184,7 +5184,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23168 CC/W33",
     "inner_diameter": 340,
     "outer_diameter": 580,
@@ -5193,7 +5193,7 @@
     "special_features_en": "231 series for steel industry"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24168 CC/W33",
     "inner_diameter": 340,
     "outer_diameter": 580,
@@ -5202,7 +5202,7 @@
     "special_features_en": "241 series with very high roller density"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23268 CC/W33",
     "inner_diameter": 340,
     "outer_diameter": 620,
@@ -5211,7 +5211,7 @@
     "special_features_en": "232 series, giant and strong"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23972 CC/W33",
     "inner_diameter": 360,
     "outer_diameter": 480,
@@ -5220,7 +5220,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23072 CC/W33",
     "inner_diameter": 360,
     "outer_diameter": 540,
@@ -5229,7 +5229,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24072 CC/W33",
     "inner_diameter": 360,
     "outer_diameter": 540,
@@ -5238,7 +5238,7 @@
     "special_features_en": "240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23172 CC/W33",
     "inner_diameter": 360,
     "outer_diameter": 600,
@@ -5247,7 +5247,7 @@
     "special_features_en": "Series 231"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24172 CC/W33",
     "inner_diameter": 360,
     "outer_diameter": 600,
@@ -5256,7 +5256,7 @@
     "special_features_en": "The largest series of 241 in this page range"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23272 CC/W33",
     "inner_diameter": 360,
     "outer_diameter": 650,
@@ -5265,7 +5265,7 @@
     "special_features_en": "Giant 232 series, weight approx. 320 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23976 CC/W33",
     "inner_diameter": 380,
     "outer_diameter": 520,
@@ -5274,7 +5274,7 @@
     "special_features_en": "239 series with thin section for limited radial space"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23076 CC/W33",
     "inner_diameter": 380,
     "outer_diameter": 560,
@@ -5283,7 +5283,7 @@
     "special_features_en": "CC standard design with central roller guide"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24076 CC/W33",
     "inner_diameter": 380,
     "outer_diameter": 560,
@@ -5292,7 +5292,7 @@
     "special_features_en": "Wide 240 series for better load distribution"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23176 CC/W33",
     "inner_diameter": 380,
     "outer_diameter": 620,
@@ -5301,7 +5301,7 @@
     "special_features_en": "231 series, suitable for heavy vertical applications"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24176 CC/W33",
     "inner_diameter": 380,
     "outer_diameter": 620,
@@ -5310,7 +5310,7 @@
     "special_features_en": "241 series, maximum load capacity for 620 mm diameter"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23276 CC/W33",
     "inner_diameter": 380,
     "outer_diameter": 680,
@@ -5319,7 +5319,7 @@
     "special_features_en": "232 series with an approximate weight of 370 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23980 CC/W33",
     "inner_diameter": 400,
     "outer_diameter": 540,
@@ -5328,7 +5328,7 @@
     "special_features_en": "239 series for 400 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23080 CC/W33",
     "inner_diameter": 400,
     "outer_diameter": 600,
@@ -5337,7 +5337,7 @@
     "special_features_en": "230 series, rigid and stable design"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24080 CC/W33",
     "inner_diameter": 400,
     "outer_diameter": 600,
@@ -5346,7 +5346,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23180 CC/W33",
     "inner_diameter": 400,
     "outer_diameter": 650,
@@ -5355,7 +5355,7 @@
     "special_features_en": "231 series for radial crushing loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24180 CC/W33",
     "inner_diameter": 400,
     "outer_diameter": 650,
@@ -5364,7 +5364,7 @@
     "special_features_en": "241 series with a width of 25 cm"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23280 CC/W33",
     "inner_diameter": 400,
     "outer_diameter": 720,
@@ -5373,7 +5373,7 @@
     "special_features_en": "Approximate weight 440 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23984 CC/W33",
     "inner_diameter": 420,
     "outer_diameter": 560,
@@ -5382,7 +5382,7 @@
     "special_features_en": "Series 239 thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23084 CC/W33",
     "inner_diameter": 420,
     "outer_diameter": 620,
@@ -5391,7 +5391,7 @@
     "special_features_en": "Standard 230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24084 CC/W33",
     "inner_diameter": 420,
     "outer_diameter": 620,
@@ -5400,7 +5400,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23184 CC/W33",
     "inner_diameter": 420,
     "outer_diameter": 700,
@@ -5409,7 +5409,7 @@
     "special_features_en": "Giant 231 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24184 CC/W33",
     "inner_diameter": 420,
     "outer_diameter": 700,
@@ -5418,7 +5418,7 @@
     "special_features_en": "241 series, maximum number of barrel rollers"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23284 CC/W33",
     "inner_diameter": 420,
     "outer_diameter": 760,
@@ -5427,7 +5427,7 @@
     "special_features_en": "Approximate weight 530 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23988 CC/W33",
     "inner_diameter": 440,
     "outer_diameter": 600,
@@ -5436,7 +5436,7 @@
     "special_features_en": "239 series for 440 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23088 CC/W33",
     "inner_diameter": 440,
     "outer_diameter": 650,
@@ -5445,7 +5445,7 @@
     "special_features_en": "CC design, high rigidity against radial loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24088 CC/W33",
     "inner_diameter": 440,
     "outer_diameter": 650,
@@ -5454,7 +5454,7 @@
     "special_features_en": "Wide 240 series for more load distribution"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23188 CC/W33",
     "inner_diameter": 440,
     "outer_diameter": 720,
@@ -5463,7 +5463,7 @@
     "special_features_en": "231 series, bearing impact loads in heavy crushers"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24188 CC/W33",
     "inner_diameter": 440,
     "outer_diameter": 720,
@@ -5472,7 +5472,7 @@
     "special_features_en": "Series 241, weight approximately 480 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23288 CC/W33",
     "inner_diameter": 440,
     "outer_diameter": 790,
@@ -5481,7 +5481,7 @@
     "special_features_en": "Giant 232 series for massive axial thrusts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23992 CC/W33",
     "inner_diameter": 460,
     "outer_diameter": 620,
@@ -5490,7 +5490,7 @@
     "special_features_en": "239 series with a thin section to reduce the overall weight of the structure"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23092 CC/W33",
     "inner_diameter": 460,
     "outer_diameter": 680,
@@ -5499,7 +5499,7 @@
     "special_features_en": "Industrial standard 230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24092 CC/W33",
     "inner_diameter": 460,
     "outer_diameter": 680,
@@ -5508,7 +5508,7 @@
     "special_features_en": "Wide 240 series for 460 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23192 CC/W33",
     "inner_diameter": 460,
     "outer_diameter": 760,
@@ -5517,7 +5517,7 @@
     "special_features_en": "231 series with a static load capacity of tens of thousands of kilonewtons"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24192 CC/W33",
     "inner_diameter": 460,
     "outer_diameter": 760,
@@ -5526,7 +5526,7 @@
     "special_features_en": "Series 241, exact width 30 cm"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23292 CC/W33",
     "inner_diameter": 460,
     "outer_diameter": 830,
@@ -5535,7 +5535,7 @@
     "special_features_en": "Approximate weight is 660 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23996 CC/W33",
     "inner_diameter": 480,
     "outer_diameter": 650,
@@ -5544,7 +5544,7 @@
     "special_features_en": "239 series for 480 mm shafts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23096 CC/W33",
     "inner_diameter": 480,
     "outer_diameter": 700,
@@ -5553,7 +5553,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24096 CC/W33",
     "inner_diameter": 480,
     "outer_diameter": 700,
@@ -5562,7 +5562,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23196 CC/W33",
     "inner_diameter": 480,
     "outer_diameter": 790,
@@ -5571,7 +5571,7 @@
     "special_features_en": "231 series for heavy vibration loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "24196 CC/W33",
     "inner_diameter": 480,
     "outer_diameter": 790,
@@ -5580,7 +5580,7 @@
     "special_features_en": "Super wide 241 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "23296 CC/W33",
     "inner_diameter": 480,
     "outer_diameter": 870,
@@ -5589,7 +5589,7 @@
     "special_features_en": "Approximate weight of 780 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "238/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 620,
@@ -5598,7 +5598,7 @@
     "special_features_en": "238 series, the beginning of rolling bearings with an inner diameter of 500mm"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 670,
@@ -5607,7 +5607,7 @@
     "special_features_en": "CA design with retaining edges on inner rim"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 720,
@@ -5616,7 +5616,7 @@
     "special_features_en": "230 series with cylindrical bore"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 720,
@@ -5625,7 +5625,7 @@
     "special_features_en": "Wide 240 series for 500mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "231/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 830,
@@ -5634,7 +5634,7 @@
     "special_features_en": "Series 231, weight approximately 530 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "241/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 830,
@@ -5643,7 +5643,7 @@
     "special_features_en": "241 series, extremely high static load capacity"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "232/500 CA/W33",
     "inner_diameter": 500,
     "outer_diameter": 920,
@@ -5652,7 +5652,7 @@
     "special_features_en": "Approximate weight of 980 kg, nearly one ton"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "238/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 650,
@@ -5661,7 +5661,7 @@
     "special_features_en": "238 series with very thin section"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 710,
@@ -5670,7 +5670,7 @@
     "special_features_en": "239 series for 530 mm shafts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 780,
@@ -5679,7 +5679,7 @@
     "special_features_en": "Standard 230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 780,
@@ -5688,7 +5688,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "231/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 870,
@@ -5697,7 +5697,7 @@
     "special_features_en": "Giant 231 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "241/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 870,
@@ -5706,7 +5706,7 @@
     "special_features_en": "Series 241, width 33.5 cm"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "232/530 CA/W33",
     "inner_diameter": 530,
     "outer_diameter": 980,
@@ -5715,7 +5715,7 @@
     "special_features_en": "Approximate weight 1200 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "238/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 680,
@@ -5724,7 +5724,7 @@
     "special_features_en": "Series 238"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 750,
@@ -5733,7 +5733,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 820,
@@ -5742,7 +5742,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 820,
@@ -5751,7 +5751,7 @@
     "special_features_en": "240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "231/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 920,
@@ -5760,7 +5760,7 @@
     "special_features_en": "231 series for power plant turbines"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "241/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 920,
@@ -5769,7 +5769,7 @@
     "special_features_en": "Super wide 241 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "232/560 CA/W33",
     "inner_diameter": 560,
     "outer_diameter": 1030,
@@ -5778,7 +5778,7 @@
     "special_features_en": "The first model with an external diameter of more than one meter in this category"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/600 CA/W33",
     "inner_diameter": 600,
     "outer_diameter": 800,
@@ -5787,7 +5787,7 @@
     "special_features_en": "239 series for 600 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/600 CA/W33",
     "inner_diameter": 600,
     "outer_diameter": 870,
@@ -5796,7 +5796,7 @@
     "special_features_en": "Standard 230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/600 CA/W33",
     "inner_diameter": 600,
     "outer_diameter": 870,
@@ -5805,7 +5805,7 @@
     "special_features_en": "Wide 240 series, excellent balance between load capacity and stability"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "231/600 CA/W33",
     "inner_diameter": 600,
     "outer_diameter": 980,
@@ -5814,7 +5814,7 @@
     "special_features_en": "Series 231, weight approximately 850 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "241/600 CA/W33",
     "inner_diameter": 600,
     "outer_diameter": 980,
@@ -5823,7 +5823,7 @@
     "special_features_en": "241 series, static load capacity over 50,000 kilonewtons"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "232/600 CA/W33",
     "inner_diameter": 600,
     "outer_diameter": 1090,
@@ -5832,7 +5832,7 @@
     "special_features_en": "Approximate weight 1,500 kg (1.5 tons)"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "238/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 780,
@@ -5841,7 +5841,7 @@
     "special_features_en": "238 series, compact design for 630 mm shafts"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 850,
@@ -5850,7 +5850,7 @@
     "special_features_en": "239 series with integrated leading edges"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 920,
@@ -5859,7 +5859,7 @@
     "special_features_en": "Heavy standard 230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 920,
@@ -5868,7 +5868,7 @@
     "special_features_en": "Wide 240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "231/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 1030,
@@ -5877,7 +5877,7 @@
     "special_features_en": "231 series capable of working in high vibration environments"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "241/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 1030,
@@ -5886,7 +5886,7 @@
     "special_features_en": "241 series, exact width 40 cm"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "232/630 CA/W33",
     "inner_diameter": 630,
     "outer_diameter": 1150,
@@ -5895,7 +5895,7 @@
     "special_features_en": "Approximate weight of 1,800 kg"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "238/670 CA/W33",
     "inner_diameter": 670,
     "outer_diameter": 820,
@@ -5904,7 +5904,7 @@
     "special_features_en": "238 series for 670 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/670 CA/W33",
     "inner_diameter": 670,
     "outer_diameter": 900,
@@ -5913,7 +5913,7 @@
     "special_features_en": "Series 239"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/670 CA/W33",
     "inner_diameter": 670,
     "outer_diameter": 980,
@@ -5922,7 +5922,7 @@
     "special_features_en": "230 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/670 CA/W33",
     "inner_diameter": 670,
     "outer_diameter": 980,
@@ -5931,7 +5931,7 @@
     "special_features_en": "240 series"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "231/670 CA/W33",
     "inner_diameter": 670,
     "outer_diameter": 1090,
@@ -5940,7 +5940,7 @@
     "special_features_en": "231 series with machined brass rack"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "241/670 CA/W33",
     "inner_diameter": 670,
     "outer_diameter": 1090,
@@ -5949,7 +5949,7 @@
     "special_features_en": "Extra wide to withstand asymmetric radial loads"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "239/710 CA/W33",
     "inner_diameter": 710,
     "outer_diameter": 950,
@@ -5958,7 +5958,7 @@
     "special_features_en": "239 series for 710 mm shaft"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "230/710 CA/W33",
     "inner_diameter": 710,
     "outer_diameter": 1030,
@@ -5967,7 +5967,7 @@
     "special_features_en": "230 series, outer diameter more than one meter"
   },
   {
-    "type": "spherical_roller",
+    "type": "bearing",
     "model": "240/710 CA/W33",
     "inner_diameter": 710,
     "outer_diameter": 1030,
@@ -5976,7 +5976,7 @@
     "special_features_en": "Wide 240 series for huge bearings"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2205 TN9",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -5985,7 +5985,7 @@
     "special_features_en": "Polyamide shelf, small dimensions for 25mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2206 TN9",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -5994,7 +5994,7 @@
     "special_features_en": "Ability to move axially up to 5 mm"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2207 TN9",
     "inner_diameter": 35,
     "outer_diameter": 72,
@@ -6003,7 +6003,7 @@
     "special_features_en": "Compact design"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2208 TN9",
     "inner_diameter": 40,
     "outer_diameter": 80,
@@ -6012,7 +6012,7 @@
     "special_features_en": "Suitable for 40mm shafts"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2209 TN9",
     "inner_diameter": 45,
     "outer_diameter": 85,
@@ -6021,7 +6021,7 @@
     "special_features_en": "Excellent alternative to barrel roller bearings on the free side of the shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2210 TN9",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -6030,7 +6030,7 @@
     "special_features_en": "Misalignment tolerance up to 0.5 degrees"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2211 TN9",
     "inner_diameter": 55,
     "outer_diameter": 100,
@@ -6039,7 +6039,7 @@
     "special_features_en": "22 series for medium loads"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2212 TN9",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -6048,7 +6048,7 @@
     "special_features_en": "Explorer design for longer life"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2213 TN9",
     "inner_diameter": 65,
     "outer_diameter": 120,
@@ -6057,7 +6057,7 @@
     "special_features_en": "Reinforced polymer shelf"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2214",
     "inner_diameter": 70,
     "outer_diameter": 125,
@@ -6066,7 +6066,7 @@
     "special_features_en": "Steel shelf"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2215",
     "inner_diameter": 75,
     "outer_diameter": 130,
@@ -6075,7 +6075,7 @@
     "special_features_en": "Complete elimination of unwanted axial loads due to thermal expansion"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2216",
     "inner_diameter": 80,
     "outer_diameter": 140,
@@ -6084,7 +6084,7 @@
     "special_features_en": "22 industrial series"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2217",
     "inner_diameter": 85,
     "outer_diameter": 150,
@@ -6093,7 +6093,7 @@
     "special_features_en": "Suitable for industrial gearboxes"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2218",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -6102,7 +6102,7 @@
     "special_features_en": "Very high radial load capacity"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2219",
     "inner_diameter": 95,
     "outer_diameter": 170,
@@ -6111,7 +6111,7 @@
     "special_features_en": "Series 22"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2220",
     "inner_diameter": 100,
     "outer_diameter": 180,
@@ -6120,7 +6120,7 @@
     "special_features_en": "For 100 mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2314",
     "inner_diameter": 70,
     "outer_diameter": 150,
@@ -6129,7 +6129,7 @@
     "special_features_en": "23 series (wider and stronger than 22)"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2315",
     "inner_diameter": 75,
     "outer_diameter": 160,
@@ -6138,7 +6138,7 @@
     "special_features_en": "23 series with heavy load capacity"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2316",
     "inner_diameter": 80,
     "outer_diameter": 170,
@@ -6147,7 +6147,7 @@
     "special_features_en": "Ideal for paper machine rolls"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2317",
     "inner_diameter": 85,
     "outer_diameter": 180,
@@ -6156,7 +6156,7 @@
     "special_features_en": "Very high fatigue resistance"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2318",
     "inner_diameter": 90,
     "outer_diameter": 190,
@@ -6165,7 +6165,7 @@
     "special_features_en": "23 series with very high radial load capacity for 90mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2320",
     "inner_diameter": 100,
     "outer_diameter": 215,
@@ -6174,7 +6174,7 @@
     "special_features_en": "Suitable for heavy loads and medium speeds"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3022",
     "inner_diameter": 110,
     "outer_diameter": 170,
@@ -6183,7 +6183,7 @@
     "special_features_en": "30 series with a thinner section than 23 series"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3122",
     "inner_diameter": 110,
     "outer_diameter": 180,
@@ -6192,7 +6192,7 @@
     "special_features_en": "Series 31, optimized design for compact bearings"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2222",
     "inner_diameter": 110,
     "outer_diameter": 200,
@@ -6201,7 +6201,7 @@
     "special_features_en": "Explorer design with enhanced longevity"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2322",
     "inner_diameter": 110,
     "outer_diameter": 240,
@@ -6210,7 +6210,7 @@
     "special_features_en": "Approximate weight of 17 kg, super heavy series"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3124",
     "inner_diameter": 120,
     "outer_diameter": 200,
@@ -6219,7 +6219,7 @@
     "special_features_en": "Suitable for 120mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2224",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -6228,7 +6228,7 @@
     "special_features_en": "22 standard series"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2324",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -6237,7 +6237,7 @@
     "special_features_en": "Bearing huge radial loads"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3126",
     "inner_diameter": 130,
     "outer_diameter": 210,
@@ -6246,7 +6246,7 @@
     "special_features_en": "Series 31 for limited spaces"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2226",
     "inner_diameter": 130,
     "outer_diameter": 230,
@@ -6255,7 +6255,7 @@
     "special_features_en": "Advanced design to reduce friction"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2326",
     "inner_diameter": 130,
     "outer_diameter": 280,
@@ -6264,7 +6264,7 @@
     "special_features_en": "Approximate weight of 28 kg"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3128",
     "inner_diameter": 140,
     "outer_diameter": 225,
@@ -6273,7 +6273,7 @@
     "special_features_en": "Series 31"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2228",
     "inner_diameter": 140,
     "outer_diameter": 250,
@@ -6282,7 +6282,7 @@
     "special_features_en": "Series 22"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2328",
     "inner_diameter": 140,
     "outer_diameter": 300,
@@ -6291,7 +6291,7 @@
     "special_features_en": "Giant 23 series"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3130",
     "inner_diameter": 150,
     "outer_diameter": 250,
@@ -6300,7 +6300,7 @@
     "special_features_en": "31 series for 150mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2230",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -6309,7 +6309,7 @@
     "special_features_en": "Series 22"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2330",
     "inner_diameter": 150,
     "outer_diameter": 320,
@@ -6318,7 +6318,7 @@
     "special_features_en": "Approximate weight is 42 kg"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3132",
     "inner_diameter": 160,
     "outer_diameter": 270,
@@ -6327,7 +6327,7 @@
     "special_features_en": "Series 31"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2232",
     "inner_diameter": 160,
     "outer_diameter": 290,
@@ -6336,7 +6336,7 @@
     "special_features_en": "Industrial standard series 22"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3134",
     "inner_diameter": 170,
     "outer_diameter": 280,
@@ -6345,7 +6345,7 @@
     "special_features_en": "31 series for 170 mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2234",
     "inner_diameter": 170,
     "outer_diameter": 310,
@@ -6354,7 +6354,7 @@
     "special_features_en": "Approximate weight is 26 kg"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2334",
     "inner_diameter": 170,
     "outer_diameter": 360,
@@ -6363,7 +6363,7 @@
     "special_features_en": "Super heavy 23 series"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 3136",
     "inner_diameter": 180,
     "outer_diameter": 300,
@@ -6372,7 +6372,7 @@
     "special_features_en": "Series 31"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2236",
     "inner_diameter": 180,
     "outer_diameter": 320,
@@ -6381,7 +6381,7 @@
     "special_features_en": "Suitable for 180 mm shaft"
   },
   {
-    "type": "CARB_toroidal",
+    "type": "bearing",
     "model": "C 2336",
     "inner_diameter": 180,
     "outer_diameter": 380,
@@ -6390,7 +6390,7 @@
     "special_features_en": "Approximate weight is 63 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30202",
     "inner_diameter": 15,
     "outer_diameter": 35,
@@ -6399,7 +6399,7 @@
     "special_features_en": "Small series 302, single row"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30302",
     "inner_diameter": 15,
     "outer_diameter": 42,
@@ -6408,7 +6408,7 @@
     "special_features_en": "303 series with more load capacity"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32004 X",
     "inner_diameter": 20,
     "outer_diameter": 42,
@@ -6417,7 +6417,7 @@
     "special_features_en": "320 series, compact design"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30204",
     "inner_diameter": 20,
     "outer_diameter": 47,
@@ -6426,7 +6426,7 @@
     "special_features_en": "Widely used in light car wheels"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30304",
     "inner_diameter": 20,
     "outer_diameter": 52,
@@ -6435,7 +6435,7 @@
     "special_features_en": "303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32005 X",
     "inner_diameter": 25,
     "outer_diameter": 47,
@@ -6444,7 +6444,7 @@
     "special_features_en": "Suitable for small gearboxes"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30205",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -6453,7 +6453,7 @@
     "special_features_en": "Standard single row design"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32205",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -6462,7 +6462,7 @@
     "special_features_en": "322 series with more width than 302"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30305",
     "inner_diameter": 25,
     "outer_diameter": 62,
@@ -6471,7 +6471,7 @@
     "special_features_en": "Tolerating extreme axial loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32006 X",
     "inner_diameter": 30,
     "outer_diameter": 55,
@@ -6480,7 +6480,7 @@
     "special_features_en": "320 series for 30 mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30206",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -6489,7 +6489,7 @@
     "special_features_en": "One of the most used codes in the market"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32206",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -6498,7 +6498,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30306",
     "inner_diameter": 30,
     "outer_diameter": 72,
@@ -6507,7 +6507,7 @@
     "special_features_en": "High resistance to deformation"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32306",
     "inner_diameter": 30,
     "outer_diameter": 72,
@@ -6516,7 +6516,7 @@
     "special_features_en": "Super wide 323 series for very heavy loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32007 X",
     "inner_diameter": 35,
     "outer_diameter": 62,
@@ -6525,7 +6525,7 @@
     "special_features_en": "Compact design of the 320 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30207",
     "inner_diameter": 35,
     "outer_diameter": 72,
@@ -6534,7 +6534,7 @@
     "special_features_en": "ISO standard, suitable for mixed loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32207",
     "inner_diameter": 35,
     "outer_diameter": 72,
@@ -6543,7 +6543,7 @@
     "special_features_en": "322 series with more width to bear more axial load"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30307",
     "inner_diameter": 35,
     "outer_diameter": 80,
@@ -6552,7 +6552,7 @@
     "special_features_en": "303 series for high speeds and heavy loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32307",
     "inner_diameter": 35,
     "outer_diameter": 80,
@@ -6561,7 +6561,7 @@
     "special_features_en": "The highest thickness in the shaft category is 35mm"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32008 X",
     "inner_diameter": 40,
     "outer_diameter": 68,
@@ -6570,7 +6570,7 @@
     "special_features_en": "320 series for 40mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30208",
     "inner_diameter": 40,
     "outer_diameter": 80,
@@ -6579,7 +6579,7 @@
     "special_features_en": "Widely used in hydraulic pumps"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32208",
     "inner_diameter": 40,
     "outer_diameter": 80,
@@ -6588,7 +6588,7 @@
     "special_features_en": "Excellent resistance to instantaneous loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30308",
     "inner_diameter": 40,
     "outer_diameter": 90,
@@ -6597,7 +6597,7 @@
     "special_features_en": "Rigid and resistant design"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32308",
     "inner_diameter": 40,
     "outer_diameter": 90,
@@ -6606,7 +6606,7 @@
     "special_features_en": "Small giant 323 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32009 X",
     "inner_diameter": 45,
     "outer_diameter": 75,
@@ -6615,7 +6615,7 @@
     "special_features_en": "320 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30209",
     "inner_diameter": 45,
     "outer_diameter": 85,
@@ -6624,7 +6624,7 @@
     "special_features_en": "Suitable for 45mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32209",
     "inner_diameter": 45,
     "outer_diameter": 85,
@@ -6633,7 +6633,7 @@
     "special_features_en": "Balance between dimensions and power"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30309",
     "inner_diameter": 45,
     "outer_diameter": 100,
@@ -6642,7 +6642,7 @@
     "special_features_en": "Very high axial load tolerance"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32309",
     "inner_diameter": 45,
     "outer_diameter": 100,
@@ -6651,7 +6651,7 @@
     "special_features_en": "Approximate weight 1.3 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32010 X",
     "inner_diameter": 50,
     "outer_diameter": 80,
@@ -6660,7 +6660,7 @@
     "special_features_en": "320 series for 50mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30210",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -6669,7 +6669,7 @@
     "special_features_en": "Very common code in industries"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32210",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -6678,7 +6678,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30310",
     "inner_diameter": 50,
     "outer_diameter": 110,
@@ -6687,7 +6687,7 @@
     "special_features_en": "Heavy series 303"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32310",
     "inner_diameter": 50,
     "outer_diameter": 110,
@@ -6696,7 +6696,7 @@
     "special_features_en": "Super wide and very rigid"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32011 X",
     "inner_diameter": 55,
     "outer_diameter": 90,
@@ -6705,7 +6705,7 @@
     "special_features_en": "320 series for 55mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30211",
     "inner_diameter": 55,
     "outer_diameter": 100,
@@ -6714,7 +6714,7 @@
     "special_features_en": "ISO standard design"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32211",
     "inner_diameter": 55,
     "outer_diameter": 100,
@@ -6723,7 +6723,7 @@
     "special_features_en": "322 series with improved width"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30311",
     "inner_diameter": 55,
     "outer_diameter": 120,
@@ -6732,7 +6732,7 @@
     "special_features_en": "High static load tolerance"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32311",
     "inner_diameter": 55,
     "outer_diameter": 120,
@@ -6741,7 +6741,7 @@
     "special_features_en": "Giant 323 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32012 X",
     "inner_diameter": 60,
     "outer_diameter": 95,
@@ -6750,7 +6750,7 @@
     "special_features_en": "320 series for 60mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30212",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -6759,7 +6759,7 @@
     "special_features_en": "Widely used in agricultural machinery"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32212",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -6768,7 +6768,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30312",
     "inner_diameter": 60,
     "outer_diameter": 130,
@@ -6777,7 +6777,7 @@
     "special_features_en": "The solid design of the 303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32312",
     "inner_diameter": 60,
     "outer_diameter": 130,
@@ -6786,7 +6786,7 @@
     "special_features_en": "Approximate weight 2.8 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32013 X",
     "inner_diameter": 65,
     "outer_diameter": 100,
@@ -6795,7 +6795,7 @@
     "special_features_en": "320 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30213",
     "inner_diameter": 65,
     "outer_diameter": 120,
@@ -6804,7 +6804,7 @@
     "special_features_en": "For 65mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32213",
     "inner_diameter": 65,
     "outer_diameter": 120,
@@ -6813,7 +6813,7 @@
     "special_features_en": "Wide 322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30313",
     "inner_diameter": 65,
     "outer_diameter": 140,
@@ -6822,7 +6822,7 @@
     "special_features_en": "303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32313",
     "inner_diameter": 65,
     "outer_diameter": 140,
@@ -6831,7 +6831,7 @@
     "special_features_en": "super heavy"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32014 X",
     "inner_diameter": 70,
     "outer_diameter": 110,
@@ -6840,7 +6840,7 @@
     "special_features_en": "320 series for 70mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30214",
     "inner_diameter": 70,
     "outer_diameter": 125,
@@ -6849,7 +6849,7 @@
     "special_features_en": "Suitable for the rear wheel of light trucks"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32214",
     "inner_diameter": 70,
     "outer_diameter": 125,
@@ -6858,7 +6858,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30314",
     "inner_diameter": 70,
     "outer_diameter": 150,
@@ -6867,7 +6867,7 @@
     "special_features_en": "Very high resistance to deformation"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32314",
     "inner_diameter": 70,
     "outer_diameter": 150,
@@ -6876,7 +6876,7 @@
     "special_features_en": "Approximate weight 4.3 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32015 X",
     "inner_diameter": 75,
     "outer_diameter": 115,
@@ -6885,7 +6885,7 @@
     "special_features_en": "320 series for 75mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30215",
     "inner_diameter": 75,
     "outer_diameter": 130,
@@ -6894,7 +6894,7 @@
     "special_features_en": "Industry standard, suitable for solar gearboxes"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32215",
     "inner_diameter": 75,
     "outer_diameter": 130,
@@ -6903,7 +6903,7 @@
     "special_features_en": "322 series with more width"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30315",
     "inner_diameter": 75,
     "outer_diameter": 160,
@@ -6912,7 +6912,7 @@
     "special_features_en": "withstand extreme shock loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32315",
     "inner_diameter": 75,
     "outer_diameter": 160,
@@ -6921,7 +6921,7 @@
     "special_features_en": "Approximate weight 5.2 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32016 X",
     "inner_diameter": 80,
     "outer_diameter": 125,
@@ -6930,7 +6930,7 @@
     "special_features_en": "320 series for 80mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30216",
     "inner_diameter": 80,
     "outer_diameter": 140,
@@ -6939,7 +6939,7 @@
     "special_features_en": "Rigid design for power transmission shafts"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32216",
     "inner_diameter": 80,
     "outer_diameter": 140,
@@ -6948,7 +6948,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30316",
     "inner_diameter": 80,
     "outer_diameter": 170,
@@ -6957,7 +6957,7 @@
     "special_features_en": "Super strong 303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32316",
     "inner_diameter": 80,
     "outer_diameter": 170,
@@ -6966,7 +6966,7 @@
     "special_features_en": "Approximate weight is 6.4 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32017 X",
     "inner_diameter": 85,
     "outer_diameter": 130,
@@ -6975,7 +6975,7 @@
     "special_features_en": "320 series for 85mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30217",
     "inner_diameter": 85,
     "outer_diameter": 150,
@@ -6984,7 +6984,7 @@
     "special_features_en": "Suitable for the front wheels of mining machinery"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32217",
     "inner_diameter": 85,
     "outer_diameter": 150,
@@ -6993,7 +6993,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30317",
     "inner_diameter": 85,
     "outer_diameter": 180,
@@ -7002,7 +7002,7 @@
     "special_features_en": "303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32317",
     "inner_diameter": 85,
     "outer_diameter": 180,
@@ -7011,7 +7011,7 @@
     "special_features_en": "Approximate weight 7.8 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32018 X",
     "inner_diameter": 90,
     "outer_diameter": 140,
@@ -7020,7 +7020,7 @@
     "special_features_en": "320 series for 90mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30218",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -7029,7 +7029,7 @@
     "special_features_en": "Excellent tolerance of combined radial-axial loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32218",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -7038,7 +7038,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30318",
     "inner_diameter": 90,
     "outer_diameter": 190,
@@ -7047,7 +7047,7 @@
     "special_features_en": "303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32318",
     "inner_diameter": 90,
     "outer_diameter": 190,
@@ -7056,7 +7056,7 @@
     "special_features_en": "Approximate weight is 9.5 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32020 X",
     "inner_diameter": 100,
     "outer_diameter": 150,
@@ -7065,7 +7065,7 @@
     "special_features_en": "320 series for 100mm shaft, compact design"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30220",
     "inner_diameter": 100,
     "outer_diameter": 180,
@@ -7074,7 +7074,7 @@
     "special_features_en": "ISO standard with high radial load capacity"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32220",
     "inner_diameter": 100,
     "outer_diameter": 180,
@@ -7083,7 +7083,7 @@
     "special_features_en": "Wide 322 series, suitable for heavy axial loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30320",
     "inner_diameter": 100,
     "outer_diameter": 215,
@@ -7092,7 +7092,7 @@
     "special_features_en": "303 series, excellent rigidity against shaft bending"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32320",
     "inner_diameter": 100,
     "outer_diameter": 215,
@@ -7101,7 +7101,7 @@
     "special_features_en": "Approximate weight of 13 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32021 X",
     "inner_diameter": 105,
     "outer_diameter": 160,
@@ -7110,7 +7110,7 @@
     "special_features_en": "320 series for 105mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30221",
     "inner_diameter": 105,
     "outer_diameter": 190,
@@ -7119,7 +7119,7 @@
     "special_features_en": "Explorer design to reduce friction"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32221",
     "inner_diameter": 105,
     "outer_diameter": 190,
@@ -7128,7 +7128,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30321",
     "inner_diameter": 105,
     "outer_diameter": 225,
@@ -7137,7 +7137,7 @@
     "special_features_en": "High resistance to material fatigue"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32321",
     "inner_diameter": 105,
     "outer_diameter": 225,
@@ -7146,7 +7146,7 @@
     "special_features_en": "Endurance of impact loads in stone crushers"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32022 X",
     "inner_diameter": 110,
     "outer_diameter": 170,
@@ -7155,7 +7155,7 @@
     "special_features_en": "320 series for 110mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30222",
     "inner_diameter": 110,
     "outer_diameter": 200,
@@ -7164,7 +7164,7 @@
     "special_features_en": "Suitable for main power transmission shafts"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32222",
     "inner_diameter": 110,
     "outer_diameter": 200,
@@ -7173,7 +7173,7 @@
     "special_features_en": "322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30322",
     "inner_diameter": 110,
     "outer_diameter": 240,
@@ -7182,7 +7182,7 @@
     "special_features_en": "303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32322",
     "inner_diameter": 110,
     "outer_diameter": 240,
@@ -7191,7 +7191,7 @@
     "special_features_en": "Approximate weight of 18 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32024 X",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -7200,7 +7200,7 @@
     "special_features_en": "320 series for 120mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30224",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -7209,7 +7209,7 @@
     "special_features_en": "Standard 302 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32224",
     "inner_diameter": 120,
     "outer_diameter": 215,
@@ -7218,7 +7218,7 @@
     "special_features_en": "Wide 322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30324",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -7227,7 +7227,7 @@
     "special_features_en": "303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32324",
     "inner_diameter": 120,
     "outer_diameter": 260,
@@ -7236,7 +7236,7 @@
     "special_features_en": "Approximate weight 23 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32026 X",
     "inner_diameter": 130,
     "outer_diameter": 200,
@@ -7245,7 +7245,7 @@
     "special_features_en": "320 series for 130mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30226",
     "inner_diameter": 130,
     "outer_diameter": 230,
@@ -7254,7 +7254,7 @@
     "special_features_en": "Optimal design for heavy radial loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32226",
     "inner_diameter": 130,
     "outer_diameter": 230,
@@ -7263,7 +7263,7 @@
     "special_features_en": "322 series with enhanced axial load capacity"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30326",
     "inner_diameter": 130,
     "outer_diameter": 280,
@@ -7272,7 +7272,7 @@
     "special_features_en": "Super heavy 303 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32028 X",
     "inner_diameter": 140,
     "outer_diameter": 210,
@@ -7281,7 +7281,7 @@
     "special_features_en": "320 series for 140mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30228",
     "inner_diameter": 140,
     "outer_diameter": 250,
@@ -7290,7 +7290,7 @@
     "special_features_en": "Suitable for the main power transmission shafts of power plants"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32228",
     "inner_diameter": 140,
     "outer_diameter": 250,
@@ -7299,7 +7299,7 @@
     "special_features_en": "Approximate weight 13.5 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30328",
     "inner_diameter": 140,
     "outer_diameter": 300,
@@ -7308,7 +7308,7 @@
     "special_features_en": "303 series with very high resistance to deformation"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32030 X",
     "inner_diameter": 150,
     "outer_diameter": 225,
@@ -7317,7 +7317,7 @@
     "special_features_en": "320 series for 150mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30230",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -7326,7 +7326,7 @@
     "special_features_en": "Bearing combined loads in hydraulic presses"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32230",
     "inner_diameter": 150,
     "outer_diameter": 270,
@@ -7335,7 +7335,7 @@
     "special_features_en": "Wide 322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30330",
     "inner_diameter": 150,
     "outer_diameter": 320,
@@ -7344,7 +7344,7 @@
     "special_features_en": "Approximate weight of 30 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32032 X",
     "inner_diameter": 160,
     "outer_diameter": 240,
@@ -7353,7 +7353,7 @@
     "special_features_en": "320 series for 160mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30232",
     "inner_diameter": 160,
     "outer_diameter": 290,
@@ -7362,7 +7362,7 @@
     "special_features_en": "Standard 302 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32232",
     "inner_diameter": 160,
     "outer_diameter": 290,
@@ -7371,7 +7371,7 @@
     "special_features_en": "322 series with a width of 84 mm"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32034 X",
     "inner_diameter": 170,
     "outer_diameter": 260,
@@ -7380,7 +7380,7 @@
     "special_features_en": "320 series for 170mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30234",
     "inner_diameter": 170,
     "outer_diameter": 310,
@@ -7389,7 +7389,7 @@
     "special_features_en": "Explorer design for maximum efficiency"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32234",
     "inner_diameter": 170,
     "outer_diameter": 310,
@@ -7398,7 +7398,7 @@
     "special_features_en": "Super wide 322 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32036 X",
     "inner_diameter": 180,
     "outer_diameter": 280,
@@ -7407,7 +7407,7 @@
     "special_features_en": "320 series for 180mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30236",
     "inner_diameter": 180,
     "outer_diameter": 320,
@@ -7416,7 +7416,7 @@
     "special_features_en": "Suitable for large bearings"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32038 X",
     "inner_diameter": 190,
     "outer_diameter": 290,
@@ -7425,7 +7425,7 @@
     "special_features_en": "320 series for 190mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30238",
     "inner_diameter": 190,
     "outer_diameter": 340,
@@ -7434,7 +7434,7 @@
     "special_features_en": "Approximate weight 24 kg"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32040 X",
     "inner_diameter": 200,
     "outer_diameter": 310,
@@ -7443,7 +7443,7 @@
     "special_features_en": "320 series for 200mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "30240",
     "inner_diameter": 200,
     "outer_diameter": 360,
@@ -7452,7 +7452,7 @@
     "special_features_en": "Design for super heavy radial loads"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32044 X",
     "inner_diameter": 220,
     "outer_diameter": 340,
@@ -7461,7 +7461,7 @@
     "special_features_en": "320 series for 220mm shaft"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32948",
     "inner_diameter": 240,
     "outer_diameter": 320,
@@ -7470,7 +7470,7 @@
     "special_features_en": "329 series with very thin wall"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32048 X",
     "inner_diameter": 240,
     "outer_diameter": 360,
@@ -7479,7 +7479,7 @@
     "special_features_en": "320 series"
   },
   {
-    "type": "tapered_roller",
+    "type": "bearing",
     "model": "32052 X",
     "inner_diameter": 260,
     "outer_diameter": 400,
@@ -7488,7 +7488,7 @@
     "special_features_en": "For thick industrial shafts"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "LM 11749/710",
     "inner_diameter": 17.462,
     "outer_diameter": 39.878,
@@ -7497,7 +7497,7 @@
     "special_features_en": "Light medium inch series, very widely used"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "LM 11949/910",
     "inner_diameter": 19.05,
     "outer_diameter": 45.237,
@@ -7506,7 +7506,7 @@
     "special_features_en": "The famous code in the wheels of old cars"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "M 12649/610",
     "inner_diameter": 21.43,
     "outer_diameter": 50.005,
@@ -7515,7 +7515,7 @@
     "special_features_en": "Medium inch series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "LM 12749/710",
     "inner_diameter": 22,
     "outer_diameter": 45.237,
@@ -7524,7 +7524,7 @@
     "special_features_en": "Inch compact design"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "L 44649/610",
     "inner_diameter": 26.988,
     "outer_diameter": 50.292,
@@ -7533,7 +7533,7 @@
     "special_features_en": "Light inch series, very common"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "M 86649/610",
     "inner_diameter": 30.162,
     "outer_diameter": 64.292,
@@ -7542,7 +7542,7 @@
     "special_features_en": "High resistance to combined loads"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "LM 67048/010",
     "inner_diameter": 31.75,
     "outer_diameter": 59.131,
@@ -7551,7 +7551,7 @@
     "special_features_en": "One of the most used inch codes in the world"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "L 45449/410",
     "inner_diameter": 29,
     "outer_diameter": 50.292,
@@ -7560,7 +7560,7 @@
     "special_features_en": "light series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "HM 88542/510",
     "inner_diameter": 31.75,
     "outer_diameter": 73.025,
@@ -7569,7 +7569,7 @@
     "special_features_en": "Heavy Medium series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "LM 48548/510",
     "inner_diameter": 34.925,
     "outer_diameter": 65.088,
@@ -7578,7 +7578,7 @@
     "special_features_en": "Suitable for car differential"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "25580/520",
     "inner_diameter": 44.45,
     "outer_diameter": 82.931,
@@ -7587,7 +7587,7 @@
     "special_features_en": "Inch standard series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "15123/15245",
     "inner_diameter": 31.75,
     "outer_diameter": 62,
@@ -7596,7 +7596,7 @@
     "special_features_en": "Classic series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "3780/3720",
     "inner_diameter": 50.8,
     "outer_diameter": 93.264,
@@ -7605,7 +7605,7 @@
     "special_features_en": "3700\" series for high radial loads"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "HM 803146/110",
     "inner_diameter": 41.275,
     "outer_diameter": 88.9,
@@ -7614,7 +7614,7 @@
     "special_features_en": "Heavy Medium series with thick wall"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "495/493",
     "inner_diameter": 76.2,
     "outer_diameter": 136.525,
@@ -7623,7 +7623,7 @@
     "special_features_en": "Suitable for 3 inch shafts"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "JM 716649/610",
     "inner_diameter": 82.55,
     "outer_diameter": 130,
@@ -7632,7 +7632,7 @@
     "special_features_en": "J series (Metric design inch series)"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "594/592 A",
     "inner_diameter": 95.25,
     "outer_diameter": 152.4,
@@ -7641,7 +7641,7 @@
     "special_features_en": "590 series for heavy loads"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "33275/33462",
     "inner_diameter": 69.85,
     "outer_diameter": 117.475,
@@ -7650,7 +7650,7 @@
     "special_features_en": "Precision series for lathes"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "HM 212049/011",
     "inner_diameter": 63.5,
     "outer_diameter": 122.238,
@@ -7659,7 +7659,7 @@
     "special_features_en": "Tolerating very high torques"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "47487/47420",
     "inner_diameter": 69.85,
     "outer_diameter": 120,
@@ -7668,7 +7668,7 @@
     "special_features_en": "47000 series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "580/572",
     "inner_diameter": 82.55,
     "outer_diameter": 139.7,
@@ -7677,7 +7677,7 @@
     "special_features_en": "Suitable for the rear wheel of the truck"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "HM 218248/210",
     "inner_diameter": 89.974,
     "outer_diameter": 146.975,
@@ -7686,7 +7686,7 @@
     "special_features_en": "HM series for 3.5 inch shaft"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "683/672",
     "inner_diameter": 95.25,
     "outer_diameter": 168.275,
@@ -7695,7 +7695,7 @@
     "special_features_en": "inch super heavy"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "749/742",
     "inner_diameter": 85,
     "outer_diameter": 150,
@@ -7704,7 +7704,7 @@
     "special_features_en": "Excellent resistance to mechanical shocks"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "48290/48220",
     "inner_diameter": 127,
     "outer_diameter": 182.562,
@@ -7713,7 +7713,7 @@
     "special_features_en": "48000 series for 5 inch shaft"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "L 623149/110",
     "inner_diameter": 101.6,
     "outer_diameter": 146.05,
@@ -7722,7 +7722,7 @@
     "special_features_en": "Light series with narrow section"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "HM 926747/710",
     "inner_diameter": 114.3,
     "outer_diameter": 228.6,
@@ -7731,7 +7731,7 @@
     "special_features_en": "Approximate weight of 11 kg"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "EE 127095/127135",
     "inner_diameter": 241.3,
     "outer_diameter": 342.9,
@@ -7740,7 +7740,7 @@
     "special_features_en": "EE (Extra Heavy) series for heavy industries"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "HH 221449/410",
     "inner_diameter": 101.6,
     "outer_diameter": 190.5,
@@ -7749,7 +7749,7 @@
     "special_features_en": "Heavy Heavy series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "938/932",
     "inner_diameter": 114.3,
     "outer_diameter": 212.725,
@@ -7758,7 +7758,7 @@
     "special_features_en": "Withstand huge combined loads"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "M 241547/510",
     "inner_diameter": 209.55,
     "outer_diameter": 317.5,
@@ -7767,7 +7767,7 @@
     "special_features_en": "Large Medium series"
   },
   {
-    "type": "tapered_roller_inch",
+    "type": "bearing",
     "model": "LM 739749/710",
     "inner_diameter": 196.85,
     "outer_diameter": 282.575,
@@ -7776,7 +7776,7 @@
     "special_features_en": "Inch Explorer design"
   },
   {
-    "type": "double_row_tapered",
+    "type": "bearing",
     "model": "33108",
     "inner_diameter": 40,
     "outer_diameter": 75,
@@ -7785,7 +7785,7 @@
     "special_features_en": "Compact two-row design"
   },
   {
-    "type": "double_row_tapered",
+    "type": "bearing",
     "model": "33110",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -7794,7 +7794,7 @@
     "special_features_en": "High rigidity for short shafts"
   },
   {
-    "type": "double_row_tapered",
+    "type": "bearing",
     "model": "33112",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -7803,7 +7803,7 @@
     "special_features_en": "Suitable for shock loads"
   },
   {
-    "type": "double_row_tapered",
+    "type": "bearing",
     "model": "33114",
     "inner_diameter": 70,
     "outer_diameter": 125,
@@ -7812,7 +7812,7 @@
     "special_features_en": "Approximate weight 4.8 kg"
   },
   {
-    "type": "double_row_tapered",
+    "type": "bearing",
     "model": "33116",
     "inner_diameter": 80,
     "outer_diameter": 140,
@@ -7821,7 +7821,7 @@
     "special_features_en": "Two-way axial load bearing"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "BT1B 329013",
     "inner_diameter": 45.9,
     "outer_diameter": 74.9,
@@ -7830,7 +7830,7 @@
     "special_features_en": "Exclusive code for the automotive industry"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "BT1B 328688",
     "inner_diameter": 45,
     "outer_diameter": 80,
@@ -7839,7 +7839,7 @@
     "special_features_en": "SKF custom design"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "BT1B 328612",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -7848,7 +7848,7 @@
     "special_features_en": "Improved dimensional accuracy"
   },
   {
-    "type": "tapered_roller_inch_heavy",
+    "type": "bearing",
     "model": "EE 275105/275155",
     "inner_diameter": 266.7,
     "outer_diameter": 393.7,
@@ -7857,7 +7857,7 @@
     "special_features_en": "EE super heavy series"
   },
   {
-    "type": "tapered_roller_inch_heavy",
+    "type": "bearing",
     "model": "EE 724121/724195",
     "inner_diameter": 304.8,
     "outer_diameter": 495.3,
@@ -7866,7 +7866,7 @@
     "special_features_en": "Approximate weight 85 kg"
   },
   {
-    "type": "tapered_roller_inch_heavy",
+    "type": "bearing",
     "model": "EE 430350/430500",
     "inner_diameter": 88.9,
     "outer_diameter": 127,
@@ -7875,7 +7875,7 @@
     "special_features_en": "Precision series for rolling rollers"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "THD series",
     "inner_diameter": "متغیر",
     "outer_diameter": "متغیر",
@@ -7887,7 +7887,7 @@
     "special_features_en": "Design with long inner edge to withstand overturning loads"
   },
   {
-    "type": "tapered_roller_unit",
+    "type": "bearing",
     "model": "TBU 130x230",
     "inner_diameter": 130,
     "outer_diameter": 230,
@@ -7896,7 +7896,7 @@
     "special_features_en": "Ready-to-install unit for train wagons (Sealed Unit)"
   },
   {
-    "type": "tapered_roller_unit",
+    "type": "bearing",
     "model": "TBU 150x250",
     "inner_diameter": 150,
     "outer_diameter": 250,
@@ -7905,7 +7905,7 @@
     "special_features_en": "It has an internal seal and special grease"
   },
   {
-    "type": "tapered_roller_matched",
+    "type": "bearing",
     "model": "32024 X/DF",
     "inner_diameter": 120,
     "outer_diameter": 180,
@@ -7914,7 +7914,7 @@
     "special_features_en": "Paired face-to-face"
   },
   {
-    "type": "tapered_roller_matched",
+    "type": "bearing",
     "model": "32218/DB",
     "inner_diameter": 90,
     "outer_diameter": 160,
@@ -7923,7 +7923,7 @@
     "special_features_en": "Paired back-to-back"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "30309 J2/Q",
     "inner_diameter": 45,
     "outer_diameter": 100,
@@ -7932,7 +7932,7 @@
     "special_features_en": "The suffix Q indicates the optimal geometry for noise reduction"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "32210 B",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -7941,7 +7941,7 @@
     "special_features_en": "Steep angle for more axial load"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "32314 B",
     "inner_diameter": 70,
     "outer_diameter": 150,
@@ -7950,7 +7950,7 @@
     "special_features_en": "Suitable for hypoid gears"
   },
   {
-    "type": "tapered_roller_special",
+    "type": "bearing",
     "model": "30222 J2",
     "inner_diameter": 110,
     "outer_diameter": 200,
@@ -7959,7 +7959,7 @@
     "special_features_en": "Reinforced steel shelf"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81102",
     "inner_diameter": 15,
     "outer_diameter": 28,
@@ -7968,7 +7968,7 @@
     "special_features_en": "811 light series for 15mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81103",
     "inner_diameter": 17,
     "outer_diameter": 30,
@@ -7977,7 +7977,7 @@
     "special_features_en": "Compact design"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81104",
     "inner_diameter": 20,
     "outer_diameter": 35,
@@ -7986,7 +7986,7 @@
     "special_features_en": "Suitable for small hydraulic jacks"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81105",
     "inner_diameter": 25,
     "outer_diameter": 42,
@@ -7995,7 +7995,7 @@
     "special_features_en": "Widely used in packaging machinery"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81205",
     "inner_diameter": 25,
     "outer_diameter": 47,
@@ -8004,7 +8004,7 @@
     "special_features_en": "812 series with more load bearing"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81106",
     "inner_diameter": 30,
     "outer_diameter": 47,
@@ -8013,7 +8013,7 @@
     "special_features_en": "811 series for 30mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81206",
     "inner_diameter": 30,
     "outer_diameter": 52,
@@ -8022,7 +8022,7 @@
     "special_features_en": "Very high rigidity"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81107",
     "inner_diameter": 35,
     "outer_diameter": 52,
@@ -8031,7 +8031,7 @@
     "special_features_en": "ISO standard design"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81207",
     "inner_diameter": 35,
     "outer_diameter": 62,
@@ -8040,7 +8040,7 @@
     "special_features_en": "Suitable for heavy vertical loads"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81108",
     "inner_diameter": 40,
     "outer_diameter": 60,
@@ -8049,7 +8049,7 @@
     "special_features_en": "811 series for 40mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81208",
     "inner_diameter": 40,
     "outer_diameter": 68,
@@ -8058,7 +8058,7 @@
     "special_features_en": "812 series"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81109",
     "inner_diameter": 45,
     "outer_diameter": 65,
@@ -8067,7 +8067,7 @@
     "special_features_en": "Excellent tolerance of static axial loads"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81209",
     "inner_diameter": 45,
     "outer_diameter": 73,
@@ -8076,7 +8076,7 @@
     "special_features_en": "Approximate weight 0.4 kg"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81110",
     "inner_diameter": 50,
     "outer_diameter": 70,
@@ -8085,7 +8085,7 @@
     "special_features_en": "Very common code in lathes"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81210",
     "inner_diameter": 50,
     "outer_diameter": 78,
@@ -8094,7 +8094,7 @@
     "special_features_en": "Super rigid 812 series"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81111",
     "inner_diameter": 55,
     "outer_diameter": 78,
@@ -8103,7 +8103,7 @@
     "special_features_en": "811 series for 55mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81211",
     "inner_diameter": 55,
     "outer_diameter": 90,
@@ -8112,7 +8112,7 @@
     "special_features_en": "Bearing axial loads in heavy industries"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81112",
     "inner_diameter": 60,
     "outer_diameter": 85,
@@ -8121,7 +8121,7 @@
     "special_features_en": "Explorer design to reduce friction"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81212",
     "inner_diameter": 60,
     "outer_diameter": 95,
@@ -8130,7 +8130,7 @@
     "special_features_en": "812 series"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81113",
     "inner_diameter": 65,
     "outer_diameter": 90,
@@ -8139,7 +8139,7 @@
     "special_features_en": "Suitable for turntables"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81114",
     "inner_diameter": 70,
     "outer_diameter": 95,
@@ -8148,7 +8148,7 @@
     "special_features_en": "811 series for 70mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81214",
     "inner_diameter": 70,
     "outer_diameter": 105,
@@ -8157,7 +8157,7 @@
     "special_features_en": "812 series with more thickness"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81115",
     "inner_diameter": 75,
     "outer_diameter": 100,
@@ -8166,7 +8166,7 @@
     "special_features_en": "Optimal design for vertical loads"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81215",
     "inner_diameter": 75,
     "outer_diameter": 110,
@@ -8175,7 +8175,7 @@
     "special_features_en": "Excellent static load tolerance"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81116",
     "inner_diameter": 80,
     "outer_diameter": 105,
@@ -8184,7 +8184,7 @@
     "special_features_en": "811 series for 80mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81216",
     "inner_diameter": 80,
     "outer_diameter": 115,
@@ -8193,7 +8193,7 @@
     "special_features_en": "Approximate weight 0.9 kg"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81117",
     "inner_diameter": 85,
     "outer_diameter": 110,
@@ -8202,7 +8202,7 @@
     "special_features_en": "Suitable for small water turbines"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81217",
     "inner_diameter": 85,
     "outer_diameter": 125,
@@ -8211,7 +8211,7 @@
     "special_features_en": "Solid 812 series"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81118",
     "inner_diameter": 90,
     "outer_diameter": 120,
@@ -8220,7 +8220,7 @@
     "special_features_en": "811 series for 90mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81218",
     "inner_diameter": 90,
     "outer_diameter": 135,
@@ -8229,7 +8229,7 @@
     "special_features_en": "Tolerating heavy axial loads in presses"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81120",
     "inner_diameter": 100,
     "outer_diameter": 135,
@@ -8238,7 +8238,7 @@
     "special_features_en": "811 series for 100mm shaft"
   },
   {
-    "type": "cylindrical_thrust",
+    "type": "bearing",
     "model": "81220",
     "inner_diameter": 100,
     "outer_diameter": 150,
@@ -8247,7 +8247,7 @@
     "special_features_en": "Approximate weight 2.5 kg"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXK 1024",
     "inner_diameter": 10,
     "outer_diameter": 24,
@@ -8256,7 +8256,7 @@
     "special_features_en": "Very thin round needle roller bearing"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXK 1528",
     "inner_diameter": 15,
     "outer_diameter": 28,
@@ -8265,7 +8265,7 @@
     "special_features_en": "The total thickness is only 2 mm!"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXK 2035",
     "inner_diameter": 20,
     "outer_diameter": 35,
@@ -8274,7 +8274,7 @@
     "special_features_en": "AXK series for 20mm shaft"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXK 2542",
     "inner_diameter": 25,
     "outer_diameter": 42,
@@ -8283,7 +8283,7 @@
     "special_features_en": "Suitable for car clutch"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXK 3047",
     "inner_diameter": 30,
     "outer_diameter": 47,
@@ -8292,7 +8292,7 @@
     "special_features_en": "Maximum savings in axial space"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXK 4060",
     "inner_diameter": 40,
     "outer_diameter": 60,
@@ -8301,7 +8301,7 @@
     "special_features_en": "Heavier AXK series"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXW 15",
     "inner_diameter": 15,
     "outer_diameter": 28,
@@ -8310,7 +8310,7 @@
     "special_features_en": "AXW series with guide edge"
   },
   {
-    "type": "needle_thrust",
+    "type": "bearing",
     "model": "AXW 25",
     "inner_diameter": 25,
     "outer_diameter": 42,
@@ -8319,7 +8319,7 @@
     "special_features_en": "Combination of needle rack with thicker washer"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29240",
     "inner_diameter": 200,
     "outer_diameter": 280,
@@ -8328,7 +8328,7 @@
     "special_features_en": "292 series for 200mm shaft, slim design"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29340",
     "inner_diameter": 200,
     "outer_diameter": 340,
@@ -8337,7 +8337,7 @@
     "special_features_en": "293 series with very high load capacity"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29440",
     "inner_diameter": 200,
     "outer_diameter": 400,
@@ -8346,7 +8346,7 @@
     "special_features_en": "Super heavy 294 series, weight approximately 75 kg"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29244",
     "inner_diameter": 220,
     "outer_diameter": 300,
@@ -8355,7 +8355,7 @@
     "special_features_en": "Self-adjustment capability in asymmetric loads"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29344",
     "inner_diameter": 220,
     "outer_diameter": 370,
@@ -8364,7 +8364,7 @@
     "special_features_en": "Explorer design to reduce friction at high revs"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29444",
     "inner_diameter": 220,
     "outer_diameter": 440,
@@ -8373,7 +8373,7 @@
     "special_features_en": "Used in the main shaft of large wind turbines"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29248",
     "inner_diameter": 240,
     "outer_diameter": 340,
@@ -8382,7 +8382,7 @@
     "special_features_en": "292 series for 240mm shaft"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29348",
     "inner_diameter": 240,
     "outer_diameter": 400,
@@ -8391,7 +8391,7 @@
     "special_features_en": "Suitable for cement industry gearboxes"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29448",
     "inner_diameter": 240,
     "outer_diameter": 480,
@@ -8400,7 +8400,7 @@
     "special_features_en": "Endurance of axial loads in huge hydraulic presses"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29252",
     "inner_diameter": 260,
     "outer_diameter": 360,
@@ -8409,7 +8409,7 @@
     "special_features_en": "292 series for 260mm shaft"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29352",
     "inner_diameter": 260,
     "outer_diameter": 440,
@@ -8418,7 +8418,7 @@
     "special_features_en": "Design with machined brass shelf"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29452",
     "inner_diameter": 260,
     "outer_diameter": 520,
@@ -8427,7 +8427,7 @@
     "special_features_en": "Approximate weight of 160 kg"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29256",
     "inner_diameter": 280,
     "outer_diameter": 380,
@@ -8436,7 +8436,7 @@
     "special_features_en": "292 series for 280mm shaft"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29356",
     "inner_diameter": 280,
     "outer_diameter": 460,
@@ -8445,7 +8445,7 @@
     "special_features_en": "Suitable for ship propulsion shaft bearings"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29456",
     "inner_diameter": 280,
     "outer_diameter": 540,
@@ -8454,7 +8454,7 @@
     "special_features_en": "Tolerating heavy vertical loads"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29260",
     "inner_diameter": 300,
     "outer_diameter": 420,
@@ -8463,7 +8463,7 @@
     "special_features_en": "292 series for 300mm shaft"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29360",
     "inner_diameter": 300,
     "outer_diameter": 480,
@@ -8472,7 +8472,7 @@
     "special_features_en": "High resistance to mechanical shocks"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29460",
     "inner_diameter": 300,
     "outer_diameter": 600,
@@ -8481,7 +8481,7 @@
     "special_features_en": "Approximate weight of 250 kg"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29364",
     "inner_diameter": 320,
     "outer_diameter": 540,
@@ -8490,7 +8490,7 @@
     "special_features_en": "Design for massive shafts"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "29464",
     "inner_diameter": 320,
     "outer_diameter": 640,
@@ -8499,7 +8499,7 @@
     "special_features_en": "Super heavy 294 series"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 126 W",
     "inner_diameter": 31.75,
     "outer_diameter": 82.55,
@@ -8508,7 +8508,7 @@
     "special_features_en": "Inch series for very high axial loads"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 151",
     "inner_diameter": 38.1,
     "outer_diameter": 87.31,
@@ -8517,7 +8517,7 @@
     "special_features_en": "Compact design with excellent load capacity"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 177",
     "inner_diameter": 44.45,
     "outer_diameter": 101.6,
@@ -8526,7 +8526,7 @@
     "special_features_en": "Suitable for heavy power transmission gears"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 201",
     "inner_diameter": 50.8,
     "outer_diameter": 114.3,
@@ -8535,7 +8535,7 @@
     "special_features_en": "Standard T series"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "353035",
     "inner_diameter": 100,
     "outer_diameter": 170,
@@ -8544,7 +8544,7 @@
     "special_features_en": "Metric design for 100mm shaft"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "353066",
     "inner_diameter": 110,
     "outer_diameter": 190,
@@ -8553,7 +8553,7 @@
     "special_features_en": "High resistance to sudden blows"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "294/500 EF",
     "inner_diameter": 500,
     "outer_diameter": 870,
@@ -8562,7 +8562,7 @@
     "special_features_en": "Approximate weight is 630 kg! (industrial giants)"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "294/530 EF",
     "inner_diameter": 530,
     "outer_diameter": 920,
@@ -8571,7 +8571,7 @@
     "special_features_en": "Suitable for main shafts in hydropower plants"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "293/600 EF",
     "inner_diameter": 600,
     "outer_diameter": 950,
@@ -8580,7 +8580,7 @@
     "special_features_en": "293 series with a diameter of 600 mm"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "294/630 EF",
     "inner_diameter": 630,
     "outer_diameter": 1090,
@@ -8589,7 +8589,7 @@
     "special_features_en": "Axial load bearing on mega-newton scale"
   },
   {
-    "type": "tapered_thrust_special",
+    "type": "bearing",
     "model": "V-flat series",
     "inner_diameter": "متغیر",
     "outer_diameter": "متغیر",
@@ -8601,7 +8601,7 @@
     "special_features_en": "A combination of a flat washer and a conical washer to withstand vibration"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 611",
     "inner_diameter": 155.57,
     "outer_diameter": 285.75,
@@ -8610,7 +8610,7 @@
     "special_features_en": "inch heavy series"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 711",
     "inner_diameter": 180.97,
     "outer_diameter": 323.85,
@@ -8619,7 +8619,7 @@
     "special_features_en": "For massive mining machinery"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 911",
     "inner_diameter": 231.77,
     "outer_diameter": 406.4,
@@ -8628,7 +8628,7 @@
     "special_features_en": "Approximate weight of 50 kg"
   },
   {
-    "type": "tapered_thrust",
+    "type": "bearing",
     "model": "T 1120",
     "inner_diameter": 282.57,
     "outer_diameter": 508,
@@ -8637,7 +8637,7 @@
     "special_features_en": "Carrying extra heavy loads in the steel industry"
   },
   {
-    "type": "cylindrical_thrust_heavy",
+    "type": "bearing",
     "model": "811/500 M",
     "inner_diameter": 500,
     "outer_diameter": 600,
@@ -8646,7 +8646,7 @@
     "special_features_en": "Machined brass shelf (M)"
   },
   {
-    "type": "cylindrical_thrust_heavy",
+    "type": "bearing",
     "model": "812/500 M",
     "inner_diameter": 500,
     "outer_diameter": 670,
@@ -8655,7 +8655,7 @@
     "special_features_en": "812 series in gigantic dimensions"
   },
   {
-    "type": "cylindrical_thrust_heavy",
+    "type": "bearing",
     "model": "811/630 M",
     "inner_diameter": 630,
     "outer_diameter": 750,
@@ -8664,7 +8664,7 @@
     "special_features_en": "High dimensional accuracy in large size"
   },
   {
-    "type": "cylindrical_thrust_heavy",
+    "type": "bearing",
     "model": "812/630 M",
     "inner_diameter": 630,
     "outer_diameter": 850,
@@ -8673,7 +8673,7 @@
     "special_features_en": "Approximate weight is 320 kg"
   },
   {
-    "type": "spherical_thrust",
+    "type": "bearing",
     "model": "294/1000 EF",
     "inner_diameter": 1000,
     "outer_diameter": 1670,
@@ -8682,7 +8682,7 @@
     "special_features_en": "The largest standard catalog sizes"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 203/12",
     "inner_diameter": 12,
     "outer_diameter": 40,
@@ -8693,7 +8693,7 @@
     "special_features_en": "YAR 2 series with wide inner rim"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 204",
     "inner_diameter": 20,
     "outer_diameter": 47,
@@ -8704,7 +8704,7 @@
     "special_features_en": "It has a standard seal and a dust ejector ring"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YET 204",
     "inner_diameter": 20,
     "outer_diameter": 47,
@@ -8715,7 +8715,7 @@
     "special_features_en": "YET series with narrower inner rim"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YEL 204-012",
     "inner_diameter": 19.05,
     "outer_diameter": 47,
@@ -8726,7 +8726,7 @@
     "special_features_en": "inch size (3/4 inch)"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YSA 204",
     "inner_diameter": 20,
     "outer_diameter": 47,
@@ -8737,7 +8737,7 @@
     "special_features_en": "Taper hole for use with interface bushing"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 205",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -8748,7 +8748,7 @@
     "special_features_en": "Very widely used in industrial conveyors"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YET 205",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -8759,7 +8759,7 @@
     "special_features_en": "Easy and fast installation"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YEL 205",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -8770,7 +8770,7 @@
     "special_features_en": "Wide inner rim on both sides"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 205-100",
     "inner_diameter": 25.4,
     "outer_diameter": 52,
@@ -8781,7 +8781,7 @@
     "special_features_en": "1 inch shaft"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 206",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -8792,7 +8792,7 @@
     "special_features_en": "Heavier series for medium loads"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YET 206",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -8803,7 +8803,7 @@
     "special_features_en": "Suitable for fixed rotation direction"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YEL 206-104",
     "inner_diameter": 31.75,
     "outer_diameter": 62,
@@ -8814,7 +8814,7 @@
     "special_features_en": "1.1/4 inch shaft"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 207",
     "inner_diameter": 35,
     "outer_diameter": 72,
@@ -8825,7 +8825,7 @@
     "special_features_en": "Suitable radial load bearing"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YET 207",
     "inner_diameter": 35,
     "outer_diameter": 72,
@@ -8836,7 +8836,7 @@
     "special_features_en": "Economic series"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 208",
     "inner_diameter": 40,
     "outer_diameter": 80,
@@ -8847,7 +8847,7 @@
     "special_features_en": "Widely used in agricultural machinery"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 209",
     "inner_diameter": 45,
     "outer_diameter": 85,
@@ -8856,7 +8856,7 @@
     "special_features_en": "Heavy series 2"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 210",
     "inner_diameter": 50,
     "outer_diameter": 90,
@@ -8865,7 +8865,7 @@
     "special_features_en": "For 50 mm shafts"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAT 205",
     "inner_diameter": 25,
     "outer_diameter": 52,
@@ -8876,7 +8876,7 @@
     "special_features_en": "YAT series with single-sided inner ring"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 211",
     "inner_diameter": 55,
     "outer_diameter": 100,
@@ -8885,7 +8885,7 @@
     "special_features_en": "Bearing heavy loads in ventilation systems"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 212",
     "inner_diameter": 60,
     "outer_diameter": 110,
@@ -8894,7 +8894,7 @@
     "special_features_en": "The largest common sizes of the Y series"
   },
   {
-    "type": "pillow_block",
+    "type": "housing",
     "model": "SY 20 TF",
     "shaft_diameter": 20,
     "material": "چدن خاکستری",
@@ -8903,7 +8903,7 @@
     "special_features_en": "Pillow block with two screw holes"
   },
   {
-    "type": "pillow_block",
+    "type": "housing",
     "model": "SY 25 TF",
     "shaft_diameter": 25,
     "material": "چدن خاکستری",
@@ -8912,7 +8912,7 @@
     "special_features_en": "With grease eater for relubrication"
   },
   {
-    "type": "pillow_block",
+    "type": "housing",
     "model": "SY 30 TF",
     "shaft_diameter": 30,
     "material": "چدن خاکستری",
@@ -8921,7 +8921,7 @@
     "special_features_en": "SKF standard SY series"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FY 20 TF",
     "shaft_diameter": 20,
     "shape": "مربعی (Square)",
@@ -8930,7 +8930,7 @@
     "special_features_en": "Flanged unit with 4 screw holes"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FY 25 TF",
     "shaft_diameter": 25,
     "shape": "مربعی",
@@ -8939,7 +8939,7 @@
     "special_features_en": "Vertical installation on the wall of the device"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FYJ 30 TF",
     "shaft_diameter": 30,
     "shape": "مربعی",
@@ -8948,7 +8948,7 @@
     "special_features_en": "J series standard"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FYT 20 TF",
     "shaft_diameter": 20,
     "shape": "بیضی (Oval)",
@@ -8957,7 +8957,7 @@
     "special_features_en": "Flanged unit with 2 screw holes (small space)"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FYT 25 TF",
     "shaft_diameter": 25,
     "shape": "بیضی",
@@ -8966,7 +8966,7 @@
     "special_features_en": "2 screw series for limited spaces"
   },
   {
-    "type": "کشویی",
+    "type": "housing",
     "model": "TU 20 TF",
     "shaft_diameter": 20,
     "special_features": "مخصوص سفت کردن تسمه کانوایر (Take-up)",
@@ -8974,7 +8974,7 @@
     "special_features_en": "for tightening the conveyor belt (Take-up)"
   },
   {
-    "type": "کشویی",
+    "type": "housing",
     "model": "TU 30 TF",
     "shaft_diameter": 30,
     "special_features": "قابلیت تنظیم موقعیت شفت در ریل",
@@ -8982,7 +8982,7 @@
     "special_features_en": "The ability to adjust the position of the shaft in the rail"
   },
   {
-    "type": "pillow_block_composite",
+    "type": "housing",
     "model": "SYK 20 TR",
     "shaft_diameter": 20,
     "material": "کامپوزیت",
@@ -8991,7 +8991,7 @@
     "special_features_en": "Very light weight and resistant to washing"
   },
   {
-    "type": "flanged_unit_composite",
+    "type": "housing",
     "model": "FYK 25 TR",
     "shaft_diameter": 25,
     "material": "کامپوزیت",
@@ -9000,7 +9000,7 @@
     "special_features_en": "Ideal for food industry (Food Grade)"
   },
   {
-    "type": "pillow_block_steel",
+    "type": "housing",
     "model": "P 20 TR",
     "shaft_diameter": 20,
     "material": "فولاد پرس شده",
@@ -9009,7 +9009,7 @@
     "special_features_en": "Economical and light series for small loads"
   },
   {
-    "type": "flanged_unit_steel",
+    "type": "housing",
     "model": "PF 25 TR",
     "shaft_diameter": 25,
     "material": "فولاد پرس شده",
@@ -9018,7 +9018,7 @@
     "special_features_en": "Super slim"
   },
   {
-    "type": "pillow_block",
+    "type": "housing",
     "model": "SY 510 M",
     "shaft_diameter": 50,
     "material": "چدن",
@@ -9027,7 +9027,7 @@
     "special_features_en": "M series with enhanced design"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FY 50 TF",
     "shaft_diameter": 50,
     "shape": "مربعی",
@@ -9036,7 +9036,7 @@
     "special_features_en": "Bearing high radial loads"
   },
   {
-    "type": "pillow_block",
+    "type": "housing",
     "model": "SY 1.1/2 TF",
     "shaft_diameter": 38.1,
     "unit_system": "Inch",
@@ -9044,7 +9044,7 @@
     "special_features_en": "Inch size for the US market"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FY 1.1/4 TF",
     "shaft_diameter": 31.75,
     "unit_system": "Inch",
@@ -9052,7 +9052,7 @@
     "special_features_en": "1 1/4 inch shaft"
   },
   {
-    "type": "pillow_block",
+    "type": "housing",
     "model": "SY 60 TF",
     "shaft_diameter": 60,
     "material": "چدن",
@@ -9061,7 +9061,7 @@
     "special_features_en": "The largest common standing sizes 19"
   },
   {
-    "type": "flanged_unit",
+    "type": "housing",
     "model": "FY 60 TF",
     "shaft_diameter": 60,
     "shape": "مربعی",
@@ -9070,7 +9070,7 @@
     "special_features_en": "Approximate weight 5 kg"
   },
   {
-    "type": "food_line",
+    "type": "housing",
     "model": "SYK 20 PTH",
     "shaft_diameter": 20,
     "material": "Composite (Blue)",
@@ -9078,7 +9078,7 @@
     "special_features_en": "Antibacterial body, no need for relubrication"
   },
   {
-    "type": "food_line",
+    "type": "housing",
     "model": "FYK 25 PTH",
     "shaft_diameter": 25,
     "material": "Composite (Blue)",
@@ -9086,7 +9086,7 @@
     "special_features_en": "Resistant to strong chemical detergents"
   },
   {
-    "type": "stainless_steel_unit",
+    "type": "housing",
     "model": "SYW 20 TF",
     "shaft_diameter": 20,
     "material": "Stainless Steel",
@@ -9094,7 +9094,7 @@
     "special_features_en": "All steel shell and bearing for acidic environments"
   },
   {
-    "type": "stainless_steel_unit",
+    "type": "housing",
     "model": "FYW 25 TF",
     "shaft_diameter": 25,
     "material": "Stainless Steel",
@@ -9102,40 +9102,40 @@
     "special_features_en": "Stainless flanged design"
   },
   {
-    "type": "Y-bearing_seal",
+    "type": "bearing",
     "model": "Standard Seal",
     "suffix": "2F",
     "description": "آب‌بند تماسی استاندارد با رینگ پرتاب‌گر",
     "description_en": "Standard contact seal with ejector ring"
   },
   {
-    "type": "Y-bearing_seal",
+    "type": "bearing",
     "model": "Multiple Seal",
     "suffix": "2RF",
     "description": "آب‌بند چندگانه برای محیط‌های بسیار آلوده و گرد و غبار",
     "description_en": "Multiple seals for highly polluted and dusty environments"
   },
   {
-    "type": "Y-bearing_seal",
+    "type": "bearing",
     "model": "High Temp Seal",
     "suffix": "HV",
     "description": "آب‌بند با لبه فلوراید برای دمای بالای ۲۰۰ درجه",
     "description_en": "Fluoride edge seal for temperatures above 200 degrees"
   },
   {
-    "type": "End Cover",
+    "type": "bearing",
     "model": "ECY 205",
     "description": "درپوش پلاستیکی برای محافظت از انتهای شفت و ایمنی اپراتور",
     "description_en": "Plastic cap to protect shaft end and operator safety"
   },
   {
-    "type": "End Cover",
+    "type": "bearing",
     "model": "ECY 208",
     "description": "مناسب برای یاتاقان‌های سری ۲۰۸",
     "description_en": "Suitable for 208 series bearings"
   },
   {
-    "type": "Y-bearing_unit",
+    "type": "housing",
     "model": "SY 35 TR",
     "shaft_diameter": 35,
     "material": "Cast Iron",
@@ -9143,7 +9143,7 @@
     "special_features_en": "Upgraded series with the ability to withstand shock loads"
   },
   {
-    "type": "Y-bearing_unit",
+    "type": "housing",
     "model": "FY 35 TR",
     "shaft_diameter": 35,
     "material": "Cast Iron",
@@ -9151,7 +9151,7 @@
     "special_features_en": "Square flanged model"
   },
   {
-    "type": "narrow_inner_ring",
+    "type": "bearing",
     "model": "YAT 206",
     "inner_diameter": 30,
     "outer_diameter": 62,
@@ -9159,7 +9159,7 @@
     "special_features_en": "Narrow inner rim to save space"
   },
   {
-    "type": "eccentric_collar",
+    "type": "bearing",
     "model": "YET 208",
     "inner_diameter": 40,
     "outer_diameter": 80,
@@ -9167,7 +9167,7 @@
     "special_features_en": "Eccentric locking for low vibrations"
   },
   {
-    "type": "heavy_duty_unit",
+    "type": "housing",
     "model": "SY 50 TF",
     "shaft_diameter": 50,
     "material": "Ductile Iron",
@@ -9175,7 +9175,7 @@
     "special_features_en": "Use of ductile iron for heavy loads"
   },
   {
-    "type": "heavy_duty_unit",
+    "type": "housing",
     "model": "FY 50 TF",
     "shaft_diameter": 50,
     "material": "Ductile Iron",
@@ -9183,21 +9183,21 @@
     "special_features_en": "Very high resistance to failure"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 206-2LP005",
     "inner_diameter": 30,
     "special_features": "گریس اختصاصی برای دمای زیر صفر",
     "special_features_en": "Special grease for temperatures below zero"
   },
   {
-    "type": "Y-bearing",
+    "type": "bearing",
     "model": "YAR 207-2RF/HV",
     "inner_diameter": 35,
     "special_features": "ترکیب آب‌بند پیشرفته و مقاومت حرارتی",
     "special_features_en": "The combination of advanced sealing and thermal resistance"
   },
   {
-    "type": "flanged_unit",
+    "type": "bearing",
     "model": "FYTB 20 TF",
     "inner_diameter": 20,
     "shape": "Oval",
@@ -9205,7 +9205,7 @@
     "special_features_en": "Oval design with two screws"
   },
   {
-    "type": "flanged_unit",
+    "type": "bearing",
     "model": "FYTB 25 TF",
     "inner_diameter": 25,
     "shape": "Oval",
@@ -9213,7 +9213,7 @@
     "special_features_en": "Fast installation in narrow spaces"
   },
   {
-    "type": "Y-bearing_unit",
+    "type": "bearing",
     "model": "SYJ 40 TF",
     "inner_diameter": 40,
     "standard": "JIS",
@@ -9221,7 +9221,7 @@
     "special_features_en": "In accordance with Japanese industrial standards"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 205",
     "shaft_diameter": 20,
     "bearing_compatibility": "1205K, 2205K, 22205K",
@@ -9229,7 +9229,7 @@
     "special_features_en": "Two-piece shell for small shafts"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 206-305",
     "shaft_diameter": 25,
     "bearing_compatibility": "1206K, 22206K",
@@ -9237,7 +9237,7 @@
     "special_features_en": "Modular design for multiple bearing sizes"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 507-606",
     "shaft_diameter": 30,
     "sealing_options": "TSN 507 G (Labyrinth), TSN 507 S (Felt)",
@@ -9245,7 +9245,7 @@
     "special_features_en": "The most widely used shell in industrial conveyors"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 508-607",
     "shaft_diameter": 35,
     "material": "Cast iron (Grade 200)",
@@ -9253,7 +9253,7 @@
     "special_features_en": "Has center indicator lines for accurate alignment"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 510-608",
     "shaft_diameter": 40,
     "lubrication": "گریس‌خور از بالا یا پهلو",
@@ -9262,7 +9262,7 @@
     "special_features_en": "Optimal heat transfer from the bearing to the body"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 511-609",
     "shaft_diameter": 45,
     "weight": 4.4,
@@ -9270,7 +9270,7 @@
     "special_features_en": "Reinforced base to withstand vertical loads"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 512-610",
     "shaft_diameter": 50,
     "bearing_compatibility": "22212K",
@@ -9278,7 +9278,7 @@
     "special_features_en": "Very rigid against vibration"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 513-611",
     "shaft_diameter": 55,
     "sealing_options": "Taconite (Heavy Duty)",
@@ -9286,7 +9286,7 @@
     "special_features_en": "Suitable for environments full of mineral dust"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 515-612",
     "shaft_diameter": 60,
     "material": "Spheroidal graphite cast iron (Optional)",
@@ -9294,14 +9294,14 @@
     "special_features_en": "Can be ordered with unbreakable cast iron"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 516-613",
     "shaft_diameter": 65,
     "special_features": "دارای سوراخ‌های رزوه شده برای سنسور پایش وضعیت",
     "special_features_en": "Has threaded holes for position monitoring sensor"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 517",
     "shaft_diameter": 75,
     "bearing_compatibility": "22217K",
@@ -9309,7 +9309,7 @@
     "special_features_en": "Series 5 for medium loads"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 518-615",
     "shaft_diameter": 80,
     "weight": 12.5,
@@ -9317,40 +9317,40 @@
     "special_features_en": "Large shell for heavy industry"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 520-617",
     "shaft_diameter": 90,
     "special_features": "پایه با ۴ سوراخ پیچ (در سایزهای بزرگ)",
     "special_features_en": "Base with 4 screw holes (in large sizes)"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 522-619",
     "shaft_diameter": 100,
     "special_features": "تحمل گشتاورهای بسیار بالا",
     "special_features_en": "Tolerating very high torques"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 524-620",
     "shaft_diameter": 110,
     "special_features": "وزن تقریبی ۲۶ کیلوگرم",
     "special_features_en": "Approximate weight is 26 kg"
   },
   {
-    "type": "Labyrinth",
+    "type": "bearing",
     "model": "TSN 511 G",
     "special_features": "آب‌بند لابرینت برای سرعت‌های بالا",
     "special_features_en": "Labyrinth seal for high speeds"
   },
   {
-    "type": "V-ring",
+    "type": "bearing",
     "model": "TSN 511 A",
     "special_features": "آب‌بند لاستیکی برای جلوگیری از ورود آب",
     "special_features_en": "Rubber seal to prevent water from entering"
   },
   {
-    "type": "locating_ring",
+    "type": "bearing",
     "model": "FRB 10/120",
     "function": "تثبیت موقعیت محوری",
     "special_features": "برای تبدیل یاتاقان شناور به ثابت",
@@ -9358,21 +9358,21 @@
     "special_features_en": "To convert a floating bearing to a fixed one"
   },
   {
-    "type": "end_cover",
+    "type": "bearing",
     "model": "ASNH 511",
     "material": "Plastic/Steel",
     "special_features": "مسدود کردن انتهای پوسته",
     "special_features_en": "Blocking the end of the shell"
   },
   {
-    "type": "housing_split",
+    "type": "housing",
     "model": "SNL 211",
     "shaft_diameter": 55,
     "special_features": "سری ۲ برای سوراخ‌های استوانه‌ای (بدون بوش)",
     "special_features_en": "Series 2 for cylindrical holes (without bushing)"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 217-517",
     "shaft_diameter": 75,
     "cooling": "Air-cooled fins",
@@ -9380,7 +9380,7 @@
     "special_features_en": "It has cooling fins on the body"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 220-520",
     "shaft_diameter": 90,
     "oil_level_gauge": "شیشه رویت روغن",
@@ -9389,7 +9389,7 @@
     "special_features_en": "Labyrinth sealing system to prevent oil leakage"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 222-522",
     "shaft_diameter": 100,
     "bearing_compatibility": "22222 EK",
@@ -9397,7 +9397,7 @@
     "special_features_en": "Exclusive design for large industrial fans"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 228-528",
     "shaft_diameter": 125,
     "weight": 45,
@@ -9405,20 +9405,20 @@
     "special_features_en": "Suitable for critical rotational speeds"
   },
   {
-    "type": "Labyrinth",
+    "type": "bearing",
     "model": "TSO 517",
     "special_features": "آب‌بند مخصوص برای نگهداری روغن در دور بالا",
     "special_features_en": "Special seal to keep the oil at the top"
   },
   {
-    "type": "housing_accessory",
+    "type": "housing",
     "model": "Cooling Coil",
     "function": "Water cooling",
     "special_features": "کویل مسی داخلی برای خنک‌کاری با آب در دماهای بسیار بالا",
     "special_features_en": "Internal copper coil for water cooling at very high temperatures"
   },
   {
-    "type": "housing_split_heavy",
+    "type": "housing",
     "model": "SDAF 22532",
     "shaft_diameter": 140,
     "material": "Ductile Iron",
@@ -9426,7 +9426,7 @@
     "special_features_en": "SDAF series for super heavy and impact loads"
   },
   {
-    "type": "housing_split_heavy",
+    "type": "housing",
     "model": "SDAF 22536",
     "shaft_diameter": 160,
     "standard": "ANSI/ABMA",
@@ -9434,7 +9434,7 @@
     "special_features_en": "Giant shell with 8 screw holes in the base"
   },
   {
-    "type": "housing_split_heavy",
+    "type": "housing",
     "model": "SDAF 22544",
     "shaft_diameter": 200,
     "weight": 180,
@@ -9442,55 +9442,55 @@
     "special_features_en": "Use in mining crushers"
   },
   {
-    "type": "Labyrinth",
+    "type": "bearing",
     "model": "LER 110",
     "special_features": "رینگ لابرینت فولادی برای سری SAF",
     "special_features_en": "Steel labyrinth ring for SAF series"
   },
   {
-    "type": "oil_pick_up_ring",
+    "type": "bearing",
     "model": "Oil Ring",
     "function": "Oil distribution",
     "special_features": "حلقه فلزی برای پاشش روغن به یاتاقان",
     "special_features_en": "Metal ring for spraying oil to the bearing"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 230-530",
     "shaft_diameter": 135,
     "special_features": "حجم مخزن روغن بهینه شده",
     "special_features_en": "Optimized oil tank volume"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 234-534",
     "shaft_diameter": 150,
     "special_features": "صلبیت فوق‌العاده پوسته",
     "special_features_en": "The extreme rigidity of the shell"
   },
   {
-    "type": "Flanged split",
+    "type": "housing",
     "model": "FNL 512 B",
     "shaft_diameter": 50,
     "special_features": "پوسته دو تکه فلانژدار (ترکیب نایاب)",
     "special_features_en": "Two-piece flanged shell (rare combination)"
   },
   {
-    "type": "flanged_housing",
+    "type": "housing",
     "model": "FNL 516 B",
     "shaft_diameter": 70,
     "special_features": "نصب عمودی با دسترسی آسان به یاتاقان",
     "special_features_en": "Vertical installation with easy access to bearings"
   },
   {
-    "type": "housing_part",
+    "type": "housing",
     "model": "End plug",
     "material": "Steel",
     "description": "درپوش انتهای شفت برای پوسته‌های SAF",
     "description_en": "Shaft end cap for SAF shells"
   },
   {
-    "type": "housing_oil",
+    "type": "housing",
     "model": "SONL 240-540",
     "shaft_diameter": 180,
     "weight": 115,
@@ -9498,28 +9498,28 @@
     "special_features_en": "The giant of the world of oil shells"
   },
   {
-    "type": "housing_heavy",
+    "type": "housing",
     "model": "SDAF 22644",
     "shaft_diameter": 200,
     "special_features": "سری ۲۲۶ با ظرفیت بار بیشتر",
     "special_features_en": "226 series with more load capacity"
   },
   {
-    "type": "housing_heavy",
+    "type": "housing",
     "model": "SDAF 22648",
     "shaft_diameter": 220,
     "special_features": "وزن تقریبی ۴۸۰ کیلوگرم",
     "special_features_en": "Approximate weight is 480 kg"
   },
   {
-    "type": "housing_accessory",
+    "type": "housing",
     "model": "Oil level monitor",
     "function": "Electronic sensing",
     "special_features": "امکان نصب سنسور سطح روغن",
     "special_features_en": "The possibility of installing an oil level sensor"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 204",
     "shaft_diameter": 17,
     "bearing_bore": 20,
@@ -9527,7 +9527,7 @@
     "special_features_en": "Small intermediate bush for 17mm shaft"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 205",
     "shaft_diameter": 20,
     "bearing_bore": 25,
@@ -9535,7 +9535,7 @@
     "special_features_en": "Suitable for series 12, 22 and 222 bearings"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 305",
     "shaft_diameter": 20,
     "bearing_bore": 25,
@@ -9543,7 +9543,7 @@
     "special_features_en": "The 300 series is longer than the 200 series"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 2305",
     "shaft_diameter": 20,
     "bearing_bore": 25,
@@ -9551,7 +9551,7 @@
     "special_features_en": "2300 series for wide bearings"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 306",
     "shaft_diameter": 25,
     "bearing_bore": 30,
@@ -9559,7 +9559,7 @@
     "special_features_en": "Very widely used in centrifugal pumps"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 308",
     "shaft_diameter": 35,
     "bearing_bore": 40,
@@ -9567,7 +9567,7 @@
     "special_features_en": "including locking nut (KM) and washer (MB)"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 310",
     "shaft_diameter": 45,
     "bearing_bore": 50,
@@ -9575,7 +9575,7 @@
     "special_features_en": "Suitable for 45 mm shaft"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 311",
     "shaft_diameter": 50,
     "bearing_bore": 55,
@@ -9583,7 +9583,7 @@
     "special_features_en": "Metric standard series"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "HE 311",
     "shaft_diameter": 50.8,
     "bearing_bore": 55,
@@ -9591,7 +9591,7 @@
     "special_features_en": "HE series (inch) for 2 inch shaft"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 312",
     "shaft_diameter": 55,
     "bearing_bore": 60,
@@ -9599,7 +9599,7 @@
     "special_features_en": "High torque tolerance in frictional installations"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 313",
     "shaft_diameter": 60,
     "bearing_bore": 65,
@@ -9607,7 +9607,7 @@
     "special_features_en": "H 3 series for medium loads"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 2313",
     "shaft_diameter": 60,
     "bearing_bore": 65,
@@ -9615,7 +9615,7 @@
     "special_features_en": "Long version for 223 series barrel roller bearings"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 315",
     "shaft_diameter": 65,
     "bearing_bore": 75,
@@ -9623,7 +9623,7 @@
     "special_features_en": "Widely used in industrial gearboxes"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 316",
     "shaft_diameter": 70,
     "bearing_bore": 80,
@@ -9631,7 +9631,7 @@
     "special_features_en": "Easy installation without the need for precise machining of the shaft"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 317",
     "shaft_diameter": 75,
     "bearing_bore": 85,
@@ -9639,7 +9639,7 @@
     "special_features_en": "Includes KM 17 nut and MB 17 washer"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 318",
     "shaft_diameter": 80,
     "bearing_bore": 90,
@@ -9647,7 +9647,7 @@
     "special_features_en": "Approximate weight 1.3 kg"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "OH 3120 H",
     "shaft_diameter": 90,
     "bearing_bore": 100,
@@ -9655,7 +9655,7 @@
     "special_features_en": "OH series with oil injection ducts (Hydraulic)"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "OH 3122 H",
     "shaft_diameter": 100,
     "bearing_bore": 110,
@@ -9663,7 +9663,7 @@
     "special_features_en": "Facilitating disassembly with hydraulic pressure"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 319",
     "shaft_diameter": 85,
     "bearing_bore": 95,
@@ -9671,7 +9671,7 @@
     "special_features_en": "H standard series"
   },
   {
-    "type": "adapter_sleeve",
+    "type": "housing",
     "model": "H 320",
     "shaft_diameter": 90,
     "bearing_bore": 100,
@@ -9679,7 +9679,7 @@
     "special_features_en": "The largest size in this 20-page range"
   },
   {
-    "type": "adapter_sleeve_hydraulic",
+    "type": "housing",
     "model": "OH 3144 H",
     "shaft_diameter": 200,
     "bearing_bore": 220,
@@ -9687,7 +9687,7 @@
     "special_features_en": "It has internal channels for oil injection and reducing friction during installation"
   },
   {
-    "type": "adapter_sleeve_hydraulic",
+    "type": "housing",
     "model": "OH 3148 H",
     "shaft_diameter": 220,
     "bearing_bore": 240,
@@ -9695,7 +9695,7 @@
     "special_features_en": "Designed for heavy barrel roller bearings"
   },
   {
-    "type": "adapter_sleeve_hydraulic",
+    "type": "housing",
     "model": "OH 3152 HT",
     "shaft_diameter": 240,
     "bearing_bore": 260,
@@ -9703,7 +9703,7 @@
     "special_features_en": "HT extension for shafts with wider tolerances"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 308",
     "shaft_diameter": 40,
     "bearing_bore": 40,
@@ -9711,7 +9711,7 @@
     "special_features_en": "Connection Bush (Withdrawal); It pushes the bearing towards the step of the shaft"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 2308",
     "shaft_diameter": 40,
     "bearing_bore": 40,
@@ -9719,7 +9719,7 @@
     "special_features_en": "23 series for wide bearings"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AHX 310",
     "shaft_diameter": 50,
     "bearing_bore": 50,
@@ -9727,7 +9727,7 @@
     "special_features_en": "The suffix X indicates the dimensions according to the new ISO standards"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 312",
     "shaft_diameter": 60,
     "bearing_bore": 60,
@@ -9735,7 +9735,7 @@
     "special_features_en": "Installation with locking nut on the shaft"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 315",
     "shaft_diameter": 75,
     "bearing_bore": 75,
@@ -9743,7 +9743,7 @@
     "special_features_en": "Suitable for 75 mm shafts"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 320",
     "shaft_diameter": 100,
     "bearing_bore": 100,
@@ -9751,7 +9751,7 @@
     "special_features_en": "Standard connecting bush"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 3124",
     "shaft_diameter": 120,
     "bearing_bore": 120,
@@ -9759,7 +9759,7 @@
     "special_features_en": "AOH series with hydraulic disassembly capability"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 2232",
     "shaft_diameter": 160,
     "bearing_bore": 160,
@@ -9767,7 +9767,7 @@
     "special_features_en": "Facilitating the removal of the bush from under the bearing with oil pressure"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 3140",
     "shaft_diameter": 200,
     "bearing_bore": 200,
@@ -9775,7 +9775,7 @@
     "special_features_en": "Used in giant steelmaking equipment"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 24044",
     "shaft_diameter": 220,
     "bearing_bore": 220,
@@ -9783,7 +9783,7 @@
     "special_features_en": "Design for extra wide 240 series"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 24152",
     "shaft_diameter": 260,
     "bearing_bore": 260,
@@ -9791,49 +9791,49 @@
     "special_features_en": "Approximate weight of 20 kg only for bush"
   },
   {
-    "type": "lock_nut",
+    "type": "bearing",
     "model": "KM 20",
     "thread": "M100x2",
     "special_features": "مهره قفل‌کن برای سفت کردن بوش",
     "special_features_en": "Locking nut to tighten the bushing"
   },
   {
-    "type": "lock_nut_hydraulic",
+    "type": "bearing",
     "model": "HMV 40 E",
     "thread": "M200x3",
     "special_features": "جک هیدرولیکی (مهره هیدرولیک) برای نصب یاتاقان",
     "special_features_en": "Hydraulic jack (hydraulic nut) for bearing installation"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 3122",
     "shaft_diameter": 110,
     "special_features": "سری AH ۳۱",
     "special_features_en": "AH 31 series"
   },
   {
-    "type": "withdrawal_sleeve",
+    "type": "housing",
     "model": "AH 3224",
     "shaft_diameter": 120,
     "special_features": "سری ۳۲ با طول بیشتر",
     "special_features_en": "32 series with longer length"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 3052",
     "shaft_diameter": 260,
     "special_features": "مناسب برای بارهای فوق سنگین",
     "special_features_en": "Suitable for super heavy loads"
   },
   {
-    "type": "withdrawal_sleeve_hydraulic",
+    "type": "housing",
     "model": "AOH 3160",
     "shaft_diameter": 300,
     "special_features": "بزرگترین سایزهای متداول در این بخش",
     "special_features_en": "The largest common sizes in this section"
   },
   {
-    "type": "lock_nut",
+    "type": "bearing",
     "model": "KM 0",
     "thread": "M10x0.75",
     "washer_needed": "MB 0",
@@ -9841,7 +9841,7 @@
     "features_en": "The smallest standard locking nut size"
   },
   {
-    "type": "lock_nut",
+    "type": "bearing",
     "model": "KM 5",
     "thread": "M25x1.5",
     "washer_needed": "MB 5",
@@ -9849,7 +9849,7 @@
     "features_en": "Very common in 25 mm shafts"
   },
   {
-    "type": "lock_nut",
+    "type": "bearing",
     "model": "KM 10",
     "thread": "M50x1.5",
     "washer_needed": "MB 10",
@@ -9857,14 +9857,14 @@
     "features_en": "Suitable for medium series bearings"
   },
   {
-    "type": "Light series",
+    "type": "bearing",
     "model": "KML 15",
     "thread": "M75x2",
     "features": "سری سبک با ضخامت کمتر",
     "features_en": "Light series with less thickness"
   },
   {
-    "type": "lock_nut",
+    "type": "bearing",
     "model": "KMFE 20",
     "thread": "M100x2",
     "locking_method": "Built-in screw",
@@ -9872,35 +9872,35 @@
     "features_en": "No need for solar washer (with internal locking screw)"
   },
   {
-    "type": "Trapezoidal thread",
+    "type": "bearing",
     "model": "HM 3064",
     "thread": "Tr 320x5",
     "features": "رزوه ذوزنقه‌ای برای تحمل نیروهای عظیم",
     "features_en": "Trapezoidal thread to withstand huge forces"
   },
   {
-    "type": "locking_washer",
+    "type": "bearing",
     "model": "MB 10",
     "inner_diameter": 50,
     "features": "واشر خورشیدی با زبانه‌های خم‌شونده",
     "features_en": "Solar washer with bendable tabs"
   },
   {
-    "type": "locking_clip",
+    "type": "bearing",
     "model": "MS 3088",
     "function": "Bolt-on locking",
     "features": "گیره قفل‌کن برای مهره‌های غول‌پیکر HM",
     "features_en": "Locking clamp for giant HM beads"
   },
   {
-    "type": "precision_nut",
+    "type": "bearing",
     "model": "KMT 5",
     "thread": "M25x1.5",
     "features": "مهره دقیق برای اسپیندل دستگاه CNC با دقت میکرونی",
     "features_en": "Precision nut for CNC machine spindle with micron accuracy"
   },
   {
-    "type": "precision_nut",
+    "type": "bearing",
     "model": "KMTA 10",
     "thread": "M50x1.5",
     "features": "بدنه استوانه‌ای صاف برای بالانس بهتر در دور بالا",
@@ -9911,66 +9911,76 @@
     "standard": "ISO 286-2",
     "types": "g6, h6, j6, k6, m6",
     "description": "تعیین دقیق میزان انحراف مجاز قطر شفت برای انطباق‌های مختلف",
-    "description_en": "Accurate determination of the permissible deviation of the shaft diameter for different adaptations"
+    "description_en": "Accurate determination of the permissible deviation of the shaft diameter for different adaptations",
+    "type": "bearing"
   },
   {
     "category": "Housing Tolerances",
     "standard": "ISO 286-2",
     "types": "H7, J7, K7, M7",
     "description": "استاندارد ماشین‌کاری سوراخِ پوسته برای قرارگیری یاتاقان",
-    "description_en": "Standard for machining shell holes for bearing placement"
+    "description_en": "Standard for machining shell holes for bearing placement",
+    "type": "bearing"
   },
   {
     "category": "Radial Internal Clearance",
     "bearing_type": "Deep Groove Ball",
     "groups": "C2, CN (Normal), C3, C4, C5",
     "description": "میزان لقی داخلی یاتاقان قبل از نصب",
-    "description_en": "The internal clearance of the bearing before installation"
+    "description_en": "The internal clearance of the bearing before installation",
+    "type": "bearing"
   },
   {
     "category": "Radial Internal Clearance",
     "bearing_type": "Cylindrical Roller",
     "groups": "C1, C2, CN, C3, C4, C5",
     "description": "لقی برای رولبرینگ‌های استوانه‌ای (بسیار حساس به دما)",
-    "description_en": "Slack for cylindrical roller bearings (very sensitive to temperature)"
+    "description_en": "Slack for cylindrical roller bearings (very sensitive to temperature)",
+    "type": "bearing"
   },
   {
     "category": "Spherical Clearance",
     "bearing_type": "Spherical Roller",
     "groups": "CN, C3, C4",
     "description": "لقی مورد نیاز برای جبران ناترازی‌های بزرگ",
-    "description_en": "The slack needed to compensate for large discrepancies"
+    "description_en": "The slack needed to compensate for large discrepancies",
+    "type": "bearing"
   },
   {
     "category": "Speed Adjustment",
     "factor": "fn",
     "description": "ضریب اصلاح سرعت در صورت تغییر شرایط روان‌کاری",
-    "description_en": "Speed ​​correction factor in case of changing lubrication conditions"
+    "description_en": "Speed ​​correction factor in case of changing lubrication conditions",
+    "type": "bearing"
   },
   {
     "category": "Temperature Limits",
     "material": "Steel / Brass / Polyamide",
     "limits": "120°C to 200°C",
     "description": "دمای کاری مجاز برای انواع مختلف قفسه‌ها",
-    "description_en": "Allowed working temperature for different types of racks"
+    "description_en": "Allowed working temperature for different types of racks",
+    "type": "bearing"
   },
   {
     "category": "Friction Models",
     "formula": "M = M_rr + M_sl + M_seal + M_drag",
     "description": "فرمول محاسبه گشتاور اصطکاکی کل یاتاقان",
-    "description_en": "The formula for calculating the total friction torque of the bearing"
+    "description_en": "The formula for calculating the total friction torque of the bearing",
+    "type": "bearing"
   },
   {
     "category": "Vibration Standards",
     "standard": "ISO 10816",
     "description": "حدود مجاز ارتعاشات برای کلاس‌های مختلف ماشین‌آلات",
-    "description_en": "Permissible limits of vibrations for different classes of machinery"
+    "description_en": "Permissible limits of vibrations for different classes of machinery",
+    "type": "bearing"
   },
   {
     "category": "Precision Standards",
     "standard": "ABEC 1 to ABEC 9",
     "description": "درجه‌بندی دقت ابعادی و چرخش یاتاقان",
-    "description_en": "Grading of dimensional accuracy and bearing rotation"
+    "description_en": "Grading of dimensional accuracy and bearing rotation",
+    "type": "bearing"
   },
   {
     "section": "Unit Conversions",
@@ -9978,7 +9988,8 @@
     "to": "Millimeter",
     "factor": "25.4",
     "context": "تبدیل ابعاد یاتاقان‌های سری اینچی (بیشتر در صنایع نفت)",
-    "context_en": "Converting the dimensions of inch series bearings (mostly in the oil industry)"
+    "context_en": "Converting the dimensions of inch series bearings (mostly in the oil industry)",
+    "type": "bearing"
   },
   {
     "section": "Unit Conversions",
@@ -9986,7 +9997,8 @@
     "to": "Pound-force (lbf)",
     "factor": "0.2248",
     "context": "محاسبه بار استاتیکی و دینامیکی",
-    "context_en": "Static and dynamic load calculation"
+    "context_en": "Static and dynamic load calculation",
+    "type": "bearing"
   },
   {
     "section": "Unit Conversions",
@@ -9994,7 +10006,8 @@
     "to": "Fahrenheit",
     "formula": "(C * 9/5) + 32",
     "context": "تنظیم آلارم‌های دمایی در سیستم‌های پایش",
-    "context_en": "Setting temperature alarms in monitoring systems"
+    "context_en": "Setting temperature alarms in monitoring systems",
+    "type": "bearing"
   },
   {
     "section": "Alphabetical Index",
@@ -10002,7 +10015,8 @@
     "content": "فهرست تمام پیشوندها (Prefixes) و پسوندها (Suffixes)",
     "purpose": "یافتن سریع معنی کدهایی مثل 2RS1 یا KTN9",
     "content_en": "List of all prefixes and suffixes",
-    "purpose_en": "Quickly find the meaning of codes like 2RS1 or KTN9"
+    "purpose_en": "Quickly find the meaning of codes like 2RS1 or KTN9",
+    "type": "bearing"
   },
   {
     "section": "Product Index",
@@ -10010,7 +10024,8 @@
     "content": "لیست شماره فنی‌ها از ۶۰۰ تا ۲۴۰۰۰",
     "purpose": "پیدا کردن شماره صفحه مشخصات برای هر مدل",
     "content_en": "List of technical numbers from 600 to 24000",
-    "purpose_en": "Find the specification page number for each model"
+    "purpose_en": "Find the specification page number for each model",
+    "type": "bearing"
   },
   {
     "section": "Service Info",
@@ -10018,19 +10033,22 @@
     "items": "گریس‌مپ‌، گرمکن القایی، تراز لایزری",
     "purpose": "معرفی ابزارهای لازم برای نصب صحیح",
     "items_en": "Greasemap, induction heater, laser leveler",
-    "purpose_en": "Introducing the necessary tools for correct installation"
+    "purpose_en": "Introducing the necessary tools for correct installation",
+    "type": "bearing"
   },
   {
     "section": "Online Tools",
     "content": "SKF Bearing Select / LubeSelect",
     "purpose": "معرفی نرم‌افزارهای کمکی برای انتخاب هوشمند یاتاقان",
-    "purpose_en": "Introducing auxiliary software for intelligent selection of bearings"
+    "purpose_en": "Introducing auxiliary software for intelligent selection of bearings",
+    "type": "bearing"
   },
   {
     "section": "Legal & Trademarks",
     "content": "حقوق معنوی برندها",
     "note": "حفاظت از تکنولوژی‌های انحصاری مثل CARB",
     "content_en": "Intellectual rights of brands",
-    "note_en": "Protecting exclusive technologies like CARB"
+    "note_en": "Protecting exclusive technologies like CARB",
+    "type": "bearing"
   }
 ]
