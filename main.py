@@ -307,6 +307,8 @@ class MainWindow(QMainWindow):
 
         if self.search_type == "bearing":
             configs = [("d", self.t("inner")), ("D", self.t("outer")), ("B", self.t("width"))]
+            if self.lang == "fa":
+                configs = list(reversed(configs))
         else:
             configs = [("d", self.t("inner"))]
 
