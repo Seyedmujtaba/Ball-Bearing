@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <cmath>
+#include <cctype>
 #include <fstream>
 #include <iostream>
 #include <optional>
@@ -10,6 +11,12 @@
 #include <vector>
 
 namespace {
+std::string to_lower(std::string input) {
+    std::transform(input.begin(), input.end(), input.begin(),
+                   [](unsigned char c) { return static_cast<char>(std::tolower(c)); });
+    return input;
+}
+
 std::string read_file(const std::string &path) {
     std::ifstream file(path);
     if (!file) {
@@ -130,6 +137,20 @@ std::optional<double> extract_number(const std::string &object,
 void print_error(const std::string &message) {
     std::cout << "{\"error\":\"" << json_escape(message) << "\"}";
 }
+
+bool type_matches(const std::optional<std::string> &type, const std::string &mode) {
+    if (!type) {
+        return true;
+    }
+    std::string normalized = to_lower(*type);
+    if (mode == "bearing") {
+        return normalized == "bearing";
+    }
+    if (mode == "housing") {
+        return normalized.rfind("housing", 0) == 0;
+    }
+    return false;
+}
 } // namespace
 
 int main(int argc, char *argv[]) {
@@ -183,7 +204,7 @@ int main(int argc, char *argv[]) {
 
     for (const auto &object : objects) {
         auto type = extract_string(object, type_keys);
-        if (!type || (mode == "bearing" && *type != "bearing") || (mode == "housing" && *type != "housing")) {
+        if (!type_matches(type, mode)) {
             continue;
         }
 
