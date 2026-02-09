@@ -3,6 +3,7 @@ import os
 import re
 import sys
 import unicodedata
+import subprocess
 
 from PyQt5.QtCore import QEasingCurve, QEvent, QPropertyAnimation, QSequentialAnimationGroup, Qt
 from PyQt5.QtGui import QColor, QFont, QKeySequence, QPixmap
@@ -535,6 +536,110 @@ class MainWindow(QMainWindow):
 
         return str(text).translate(str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹"))
 
+    def _get_calculator_paths(self):
+        cpp_dir = resource_path("Cpp")
+        source_path = os.path.join(cpp_dir, "calculator.cpp")
+        binary_name = "calculator.exe" if os.name == "nt" else "calculator"
+        binary_path = os.path.join(cpp_dir, binary_name)
+        return source_path, binary_path
+
+    def _ensure_calculator_binary(self):
+        source_path, binary_path = self._get_calculator_paths()
+        if os.path.exists(binary_path):
+            return binary_path
+        if not os.path.exists(source_path):
+            return None
+        try:
+            compile_cmd = ["g++", "-std=c++17", source_path, "-O2", "-o", binary_path]
+            subprocess.run(compile_cmd, check=True, capture_output=True, text=True)
+        except (OSError, subprocess.CalledProcessError):
+            return None
+        return binary_path if os.path.exists(binary_path) else None
+
+    def _query_cpp_calculator(self, db_path, user_d, user_D, user_B):
+        binary_path = self._ensure_calculator_binary()
+        if not binary_path:
+            return None, "Calculator binary not available"
+
+        args = [binary_path, db_path, self.search_type, str(user_d)]
+        if self.search_type == "bearing":
+            args.extend([str(user_D), str(user_B)])
+
+        try:
+            result = subprocess.run(args, check=False, capture_output=True, text=True)
+        except OSError as exc:
+            return None, str(exc)
+
+        if result.returncode != 0:
+            return None, result.stderr.strip() or result.stdout.strip() or "Calculator failed"
+
+        try:
+            payload = json.loads(result.stdout)
+        except json.JSONDecodeError:
+            return None, "Invalid calculator response"
+
+        if payload.get("error"):
+            return None, payload["error"]
+
+        return payload.get("results", []), None
+
+    def _search_in_python(self, raw_data, user_d, user_D, user_B):
+        if isinstance(raw_data, list):
+            items = raw_data
+        elif isinstance(raw_data, dict):
+            key = "bearings" if self.search_type == "bearing" else "housings"
+            items = raw_data.get(key, [])
+            if not items:
+                items = next((v for v in raw_data.values() if isinstance(v, list)), [])
+        else:
+            items = []
+
+        def read_dimension(item, exact_keys, normalized_keys):
+            return self.safe_float(self._get_by_keys(item, exact_keys, normalized_keys))
+
+        bearing_dimensions = {
+            "d": (["d"], ["inner_diameter", "innerdiameter", "inner", "id", "di"]),
+            "D": (["D"], ["outer_diameter", "outerdiameter", "outer", "od"]),
+            "B": (["B", "b"], ["width", "w"]),
+        }
+        housing_dimensions = (
+            ["d", "shaft_diameter", "bearing_bore"],
+            ["inner_diameter", "innerdiameter", "shaft_diameter", "shaftdiameter", "bearing_bore", "bearingbore"],
+        )
+
+        found_models = []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+
+            if self.search_type == "bearing":
+                d_val = read_dimension(item, *bearing_dimensions["d"])
+                D_val = read_dimension(item, *bearing_dimensions["D"])
+                B_val = read_dimension(item, *bearing_dimensions["B"])
+
+                if d_val is None or D_val is None or B_val is None:
+                    continue
+
+                is_match = (
+                    abs(d_val - user_d) < 0.2
+                    and abs(D_val - user_D) < 0.2
+                    and abs(B_val - user_B) < 1.0
+                )
+            else:
+                d_val = read_dimension(item, *housing_dimensions)
+                if d_val is None:
+                    continue
+                is_match = abs(d_val - user_d) < 0.2
+
+            if is_match:
+                model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
+                desc = self._get_localized_desc(item)
+                found_models.append(
+                    (self._localize_output_text(model), self._localize_output_text(desc))
+                )
+
+        return found_models
+
     def check_result(self):
         db_path = resource_path("DataBase/DataBase.json")
         self.check_btn.setEnabled(False)
@@ -548,16 +653,6 @@ class MainWindow(QMainWindow):
 
             with open(db_path, "r", encoding="utf-8") as f:
                 raw_data = json.load(f)
-
-            if isinstance(raw_data, list):
-                items = raw_data
-            elif isinstance(raw_data, dict):
-                key = "bearings" if self.search_type == "bearing" else "housings"
-                items = raw_data.get(key, [])
-                if not items:
-                    items = next((v for v in raw_data.values() if isinstance(v, list)), [])
-            else:
-                items = []
 
             if self.search_type == "bearing":
                 user_d = self.safe_float(self.input_map.get("d").text()) if self.input_map.get("d") else None
@@ -575,49 +670,15 @@ class MainWindow(QMainWindow):
                 self.set_output_message(msg, "#ffd180")
                 return
 
-            def read_dimension(item, exact_keys, normalized_keys):
-                return self.safe_float(self._get_by_keys(item, exact_keys, normalized_keys))
-
-            bearing_dimensions = {
-                "d": (["d"], ["inner_diameter", "innerdiameter", "inner", "id", "di"]),
-                "D": (["D"], ["outer_diameter", "outerdiameter", "outer", "od"]),
-                "B": (["B", "b"], ["width", "w"]),
-            }
-            housing_dimensions = (
-                ["d", "shaft_diameter", "bearing_bore"],
-                ["inner_diameter", "innerdiameter", "shaft_diameter", "shaftdiameter", "bearing_bore", "bearingbore"],
-            )
-
-            found_models = []
-            for item in items:
-                if not isinstance(item, dict):
-                    continue
-
-                if self.search_type == "bearing":
-                    d_val = read_dimension(item, *bearing_dimensions["d"])
-                    D_val = read_dimension(item, *bearing_dimensions["D"])
-                    B_val = read_dimension(item, *bearing_dimensions["B"])
-
-                    if d_val is None or D_val is None or B_val is None:
-                        continue
-
-                    is_match = (
-                        abs(d_val - user_d) < 0.2
-                        and abs(D_val - user_D) < 0.2
-                        and abs(B_val - user_B) < 1.0
-                    )
-                else:
-                    d_val = read_dimension(item, *housing_dimensions)
-                    if d_val is None:
-                        continue
-                    is_match = abs(d_val - user_d) < 0.2
-
-                if is_match:
-                    model = self._get_by_keys(item, ["model", "Model"], ["model"]) or "N/A"
-                    desc = self._get_localized_desc(item)
-                    found_models.append(
-                        (self._localize_output_text(model), self._localize_output_text(desc))
-                    )
+            cpp_results, cpp_error = self._query_cpp_calculator(db_path, user_d, user_D, user_B)
+            if cpp_results is not None:
+                found_models = [
+                    (self._localize_output_text(item.get("model", "N/A")),
+                     self._localize_output_text(item.get("description", "")))
+                    for item in cpp_results
+                ]
+            else:
+                found_models = self._search_in_python(raw_data, user_d, user_D, user_B)
 
             self.output.clear()
             if found_models:
