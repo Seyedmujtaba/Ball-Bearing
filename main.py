@@ -104,6 +104,12 @@ TEXTS = {
     },
 }
 
+PERSIAN_DIGITS = "".join(chr(code) for code in range(0x06F0, 0x06FA))
+ARABIC_INDIC_DIGITS = "".join(chr(code) for code in range(0x0660, 0x066A))
+ARABIC_DECIMAL_SEP = "\u066b"
+ARABIC_THOUSANDS_SEP = "\u066c"
+ARABIC_COMMA = "\u060c"
+
 def resource_path(relative_path):
     base_path = getattr(sys, "_MEIPASS", os.path.abspath("."))
     return os.path.join(base_path, relative_path)
@@ -467,7 +473,10 @@ class MainWindow(QMainWindow):
         txt = unicodedata.normalize("NFKC", txt)
         txt = re.sub(r"[\u200e\u200f\u202a-\u202e\u2066-\u2069]", "", txt)
 
-        trans = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩٫٬،", "01234567890123456789.,,")
+        trans = str.maketrans(
+            PERSIAN_DIGITS + ARABIC_INDIC_DIGITS + ARABIC_DECIMAL_SEP + ARABIC_THOUSANDS_SEP + ARABIC_COMMA,
+            "0123456789" * 2 + ".,,",
+        )
         txt = txt.translate(trans)
         txt = txt.replace(",", ".").replace("/", ".").replace("\\", ".")
         txt = re.sub(r"\s+", "", txt)
@@ -536,7 +545,7 @@ class MainWindow(QMainWindow):
         if self.lang != "fa":
             return str(text)
 
-        return str(text).translate(str.maketrans("0123456789", "۰۱۲۳۴۵۶۷۸۹"))
+        return str(text).translate(str.maketrans("0123456789", PERSIAN_DIGITS))
 
     def _get_calculator_paths(self):
         cpp_dir = resource_path("Cpp")
