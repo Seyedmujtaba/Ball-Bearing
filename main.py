@@ -8,6 +8,8 @@ import subprocess
 from PyQt5.QtCore import (
     QEasingCurve,
     QEvent,
+    QParallelAnimationGroup,
+    QPauseAnimation,
     QPropertyAnimation,
     QSequentialAnimationGroup,
     Qt,
@@ -223,7 +225,7 @@ class MainWindow(QMainWindow):
         return effect
 
     def animate_widgets(self, widgets, duration=180):
-        self._active_anim_group = QSequentialAnimationGroup(self)
+        group = QParallelAnimationGroup(self)
         for w in widgets:
             effect = self._ensure_opacity_effect(w, 0.0)
             anim = QPropertyAnimation(effect, b"opacity", self)
@@ -231,37 +233,58 @@ class MainWindow(QMainWindow):
             anim.setStartValue(0.0)
             anim.setEndValue(1.0)
             anim.setEasingCurve(QEasingCurve.OutCubic)
-            self._active_anim_group.addAnimation(anim)
-        self._active_anim_group.start()
+            group.addAnimation(anim)
+        self._active_anim_group = group
+        group.start()
 
     def animate_widgets_staggered(self, widgets, duration=280, stagger_ms=70):
         """انیمیشن ظاهر شدن پشت سر هم با تأخیر کوتاه بین هر ویجت."""
-        self.animate_widgets(widgets, duration=440)
+        group = QParallelAnimationGroup(self)
+        for i, w in enumerate(widgets):
+            effect = self._ensure_opacity_effect(w, 0.0)
+            fade = QPropertyAnimation(effect, b"opacity", self)
+            fade.setDuration(duration)
+            fade.setStartValue(0.0)
+            fade.setEndValue(1.0)
+            fade.setEasingCurve(QEasingCurve.OutCubic)
+            seq = QSequentialAnimationGroup(self)
+            seq.addAnimation(QPauseAnimation(i * stagger_ms))
+            seq.addAnimation(fade)
+            group.addAnimation(seq)
+        self._active_anim_group = group
+        group.start()
 
     def animate_card_entrance(self, card, inner_widgets=None, delay_before_inner=80):
         """ورود کارت با فید این و در صورت تمایل انیمیشن پلکانی المان‌های داخلی."""
+        self.main_layout.activate()
         effect = self._ensure_opacity_effect(card, 0.0)
+
         fade = QPropertyAnimation(effect, b"opacity", self)
-        fade.setDuration(520)
+        fade.setDuration(360)
         fade.setStartValue(0.0)
         fade.setEndValue(1.0)
         fade.setEasingCurve(QEasingCurve.OutCubic)
+
         if inner_widgets:
             for w in inner_widgets:
-                eff = w.graphicsEffect()
-                if isinstance(eff, QGraphicsOpacityEffect):
-                    eff.setOpacity(1.0)
+                inner_effect = w.graphicsEffect()
+                if isinstance(inner_effect, QGraphicsOpacityEffect):
+                    inner_effect.setOpacity(1.0)
+                w.show()
+                w.update()
+
         self._active_anim_group = fade
         fade.start()
 
     def _button_hover_anim(self, button, enter):
         """انیمیشن hover دکمه: کمی بزرگ‌تر شدن با ورود موس."""
+        is_hovered = getattr(button, "_bb_is_hovered", False)
+        if enter == is_hovered:
+            return
+        button._bb_is_hovered = enter
+
         base_h = getattr(button, "_bb_base_height", 70)
-        current_w = max(button.width(), button.minimumWidth(), button.sizeHint().width())
-        base_w = getattr(button, "_bb_base_width", current_w)
-        if enter:
-            base_w = max(base_w, current_w)
-            button._bb_base_width = base_w
+        base_w = getattr(button, "_bb_base_width", max(button.minimumWidth(), button.sizeHint().width()))
         target_h = base_h + 14 if enter else base_h
         target_w = base_w + 36 if enter else base_w
         anim_h = QPropertyAnimation(button, b"minimumHeight", self)
@@ -283,12 +306,57 @@ class MainWindow(QMainWindow):
         anim_h.start()
         anim_w.start()
 
+    def _button_press_anim(self, button, pressed):
+        base_h = getattr(button, "_bb_base_height", button.minimumHeight())
+        base_w = getattr(button, "_bb_base_width", max(button.width(), button.minimumWidth()))
+        hover_h = base_h + 14
+        hover_w = base_w + 36
+        pressed_h = max(base_h - 4, 48)
+        pressed_w = max(base_w - 10, 120)
+
+        if pressed:
+            target_h = pressed_h
+            target_w = pressed_w
+        else:
+            is_hovered = button.underMouse()
+            target_h = hover_h if is_hovered else base_h
+            target_w = hover_w if is_hovered else base_w
+
+        press_h = QPropertyAnimation(button, b"minimumHeight", self)
+        press_h.setDuration(120)
+        press_h.setStartValue(button.minimumHeight())
+        press_h.setEndValue(target_h)
+        press_h.setEasingCurve(QEasingCurve.OutCubic)
+
+        press_w = QPropertyAnimation(button, b"minimumWidth", self)
+        press_w.setDuration(120)
+        press_w.setStartValue(button.minimumWidth())
+        press_w.setEndValue(target_w)
+        press_w.setEasingCurve(QEasingCurve.OutCubic)
+
+        if getattr(button, "_bb_press_anim_h", None):
+            button._bb_press_anim_h.stop()
+        if getattr(button, "_bb_press_anim_w", None):
+            button._bb_press_anim_w.stop()
+        button._bb_press_anim_h = press_h
+        button._bb_press_anim_w = press_w
+        press_h.start()
+        press_w.start()
+
+    def _set_input_focus_style(self, edit, focused):
+        border = "2px solid rgba(52, 152, 219, 0.95)" if focused else "2px solid rgba(255,255,255,0.18)"
+        edit.setStyleSheet(f"border-radius:10px; background:white; border: {border};")
+
     def _install_button_hover(self, button, base_height=None):
         if base_height is None:
             base_height = button.minimumHeight()
         button._bb_base_height = base_height
-        button._bb_base_width = 0
+        button._bb_base_width = max(button.minimumWidth(), button.sizeHint().width())
+        button._bb_is_hovered = False
+        self._ensure_opacity_effect(button, 1.0)
         button.installEventFilter(self)
+        button.pressed.connect(lambda b=button: self._button_press_anim(b, True))
+        button.released.connect(lambda b=button: self._button_press_anim(b, False))
         self._hover_buttons = getattr(self, "_hover_buttons", set())
         self._hover_buttons.add(button)
 
@@ -300,24 +368,31 @@ class MainWindow(QMainWindow):
             if event.type() == QEvent.Leave:
                 self._button_hover_anim(obj, False)
                 return False
-        if obj in self.inputs and event.type() == QEvent.KeyPress:
-            key = event.key()
-            if key in (Qt.Key_Return, Qt.Key_Enter):
-                self.handle_enter_key(obj)
-                return True
-            is_rtl = self.layoutDirection() == Qt.RightToLeft
-            if key == Qt.Key_Space:
-                delta = -1 if is_rtl else 1
-                self.move_focus_delta(obj, delta)
-                return True
-            if key == Qt.Key_Right:
-                delta = -1 if is_rtl else 1
-                self.move_focus_delta(obj, delta)
-                return True
-            if key == Qt.Key_Left:
-                delta = 1 if is_rtl else -1
-                self.move_focus_delta(obj, delta)
-                return True
+        if obj in self.inputs:
+            if event.type() == QEvent.FocusIn:
+                self._set_input_focus_style(obj, True)
+                return False
+            if event.type() == QEvent.FocusOut:
+                self._set_input_focus_style(obj, False)
+                return False
+            if event.type() == QEvent.KeyPress:
+                key = event.key()
+                if key in (Qt.Key_Return, Qt.Key_Enter):
+                    self.handle_enter_key(obj)
+                    return True
+                is_rtl = self.layoutDirection() == Qt.RightToLeft
+                if key == Qt.Key_Space:
+                    delta = -1 if is_rtl else 1
+                    self.move_focus_delta(obj, delta)
+                    return True
+                if key == Qt.Key_Right:
+                    delta = -1 if is_rtl else 1
+                    self.move_focus_delta(obj, delta)
+                    return True
+                if key == Qt.Key_Left:
+                    delta = 1 if is_rtl else -1
+                    self.move_focus_delta(obj, delta)
+                    return True
         return super().eventFilter(obj, event)
 
     def handle_back_shortcut(self):
@@ -462,7 +537,7 @@ class MainWindow(QMainWindow):
             edit.setFont(QFont("Arial", 18))
             edit.setAlignment(Qt.AlignCenter)
             edit.setLayoutDirection(Qt.LeftToRight)
-            edit.setStyleSheet("border-radius:10px; background:white;")
+            self._set_input_focus_style(edit, False)
             edit.setMinimumWidth(180)
             edit.setPlaceholderText("مثال: 25.0 mm" if self.lang == "fa" else "e.g. 25.0 mm")
             edit.installEventFilter(self)
@@ -472,7 +547,7 @@ class MainWindow(QMainWindow):
             fields_layout.addLayout(box)
             self.inputs.append(edit)
             self.input_map[eng] = edit
-            search_anim_widgets.extend([lbl, edit])
+            search_anim_widgets.append(lbl)
 
         v.addLayout(fields_layout)
 
