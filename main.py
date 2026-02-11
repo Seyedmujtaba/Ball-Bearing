@@ -8,18 +8,22 @@ import subprocess
 from PyQt5.QtCore import (
     QEasingCurve,
     QEvent,
+    QPoint,
     QParallelAnimationGroup,
     QPauseAnimation,
+    QRect,
     QPropertyAnimation,
     QSequentialAnimationGroup,
     Qt,
 )
-from PyQt5.QtGui import QColor, QFont, QKeySequence, QPixmap
+from PyQt5.QtGui import QColor, QFont, QKeySequence, QPainter, QPixmap
 from PyQt5.QtWidgets import (
     QAbstractItemView,
     QApplication,
     QBoxLayout,
     QFrame,
+    QGraphicsBlurEffect,
+    QGraphicsDropShadowEffect,
     QGraphicsOpacityEffect,
     QHBoxLayout,
     QLabel,
@@ -37,9 +41,9 @@ from PyQt5.QtWidgets import (
 # --- استایل بصری برنامه ---
 CARD_STYLE = """
 QWidget#CardFrame {
-    background-color: rgba(0, 0, 0, 210);
+    background-color: rgba(10, 16, 24, 145);
     border-radius: 30px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 1.5px solid rgba(255, 255, 255, 0.28);
 }
 """
 
@@ -134,6 +138,7 @@ class MainWindow(QMainWindow):
         self._active_anim_group = None
         self._output_fade_anim = None
         self._pulse_group = None
+        self._glass_cards = []
 
         self.setWindowTitle("Bearing Finder")
         self.setMinimumSize(960, 640)
@@ -158,6 +163,10 @@ class MainWindow(QMainWindow):
     def resizeEvent(self, event):
         super().resizeEvent(event)
         self.bg_label.setGeometry(self.central.rect())
+        for card in list(self._glass_cards):
+            if card is None or not card.isVisible():
+                continue
+            self._update_glass_backdrop(card)
 
     def t(self, key):
         return TEXTS[self.lang].get(key, key)
@@ -172,12 +181,90 @@ class MainWindow(QMainWindow):
         if self._pulse_group:
             self._pulse_group.stop()
             self._pulse_group = None
+        for card in list(self._glass_cards):
+            self._detach_glass_backdrop(card)
+        self._glass_cards.clear()
+        for backdrop in self.central.findChildren(QLabel, "GlassBackdrop"):
+            backdrop.hide()
+            backdrop.clear()
+            backdrop.setParent(None)
+            backdrop.deleteLater()
         self._hover_buttons = getattr(self, "_hover_buttons", set())
         self._hover_buttons.clear()
         while self.main_layout.count():
             item = self.main_layout.takeAt(0)
             if item.widget():
+                item.widget().hide()
+                item.widget().setParent(None)
                 item.widget().deleteLater()
+        self.central.update()
+        self.central.repaint()
+
+    def _apply_glass_card_effect(self, card):
+        shadow = QGraphicsDropShadowEffect(card)
+        shadow.setBlurRadius(36)
+        shadow.setOffset(0, 10)
+        shadow.setColor(QColor(0, 0, 0, 95))
+        card.setGraphicsEffect(shadow)
+        if card not in self._glass_cards:
+            self._glass_cards.append(card)
+        card.installEventFilter(self)
+
+    def _detach_glass_backdrop(self, card):
+        backdrop = getattr(card, "_bb_backdrop_label", None)
+        if backdrop is None:
+            return
+        backdrop.hide()
+        backdrop.clear()
+        backdrop.setParent(None)
+        backdrop.deleteLater()
+        card._bb_backdrop_label = None
+
+    def _update_glass_backdrop(self, card):
+        if not hasattr(self, "bg_pixmap"):
+            return
+        if card is None:
+            return
+        top_left = card.mapTo(self.central, QPoint(0, 0))
+        card_rect = QRect(top_left, card.size())
+        if card_rect.width() <= 0 or card_rect.height() <= 0:
+            return
+
+        backdrop = getattr(card, "_bb_backdrop_label", None)
+        if backdrop is None:
+            backdrop = QLabel(self.central)
+            backdrop.setObjectName("GlassBackdrop")
+            backdrop.setAttribute(Qt.WA_TransparentForMouseEvents, True)
+            blur = QGraphicsBlurEffect(backdrop)
+            blur.setBlurRadius(30)
+            backdrop.setGraphicsEffect(blur)
+            card._bb_backdrop_label = backdrop
+
+        scaled_bg = self.bg_pixmap.scaled(
+            self.central.size(),
+            Qt.IgnoreAspectRatio,
+            Qt.SmoothTransformation,
+        )
+        rect = QRect(card_rect)
+        if rect.right() >= scaled_bg.width():
+            rect.setRight(scaled_bg.width() - 1)
+        if rect.bottom() >= scaled_bg.height():
+            rect.setBottom(scaled_bg.height() - 1)
+        if rect.left() < 0 or rect.top() < 0 or rect.width() <= 0 or rect.height() <= 0:
+            return
+
+        patch = scaled_bg.copy(rect)
+        painter = QPainter(patch)
+        painter.fillRect(patch.rect(), QColor(0, 0, 0, 34))
+        painter.end()
+
+        backdrop.setGeometry(card_rect)
+        backdrop.setPixmap(patch)
+        backdrop.setScaledContents(True)
+        backdrop.show()
+        self.bg_label.lower()
+        backdrop.raise_()
+        card.raise_()
 
     def init_shortcuts(self):
         self.shortcut_back = QShortcut(QKeySequence("Esc"), self)
@@ -257,91 +344,44 @@ class MainWindow(QMainWindow):
     def animate_card_entrance(self, card, inner_widgets=None, delay_before_inner=80):
         """ورود کارت با فید این و در صورت تمایل انیمیشن پلکانی المان‌های داخلی."""
         self.main_layout.activate()
-        effect = self._ensure_opacity_effect(card, 0.0)
-
-        fade = QPropertyAnimation(effect, b"opacity", self)
-        fade.setDuration(360)
-        fade.setStartValue(0.0)
-        fade.setEndValue(1.0)
-        fade.setEasingCurve(QEasingCurve.OutCubic)
-
+        self._update_glass_backdrop(card)
+        effect = self._ensure_opacity_effect(card, 1.0)
+        effect.setOpacity(1.0)
+        card.show()
         if inner_widgets:
             for w in inner_widgets:
-                inner_effect = w.graphicsEffect()
-                if isinstance(inner_effect, QGraphicsOpacityEffect):
-                    inner_effect.setOpacity(1.0)
                 w.show()
-                w.update()
-
-        self._active_anim_group = fade
-        fade.start()
+        self._active_anim_group = None
 
     def _button_hover_anim(self, button, enter):
-        """انیمیشن hover دکمه: کمی بزرگ‌تر شدن با ورود موس."""
+        """تغییر سایز فوری دکمه روی hover (بدون انیمیشن)."""
         is_hovered = getattr(button, "_bb_is_hovered", False)
         if enter == is_hovered:
             return
         button._bb_is_hovered = enter
 
-        base_h = getattr(button, "_bb_base_height", 70)
-        base_w = getattr(button, "_bb_base_width", max(button.minimumWidth(), button.sizeHint().width()))
-        target_h = base_h + 14 if enter else base_h
-        target_w = base_w + 36 if enter else base_w
-        anim_h = QPropertyAnimation(button, b"minimumHeight", self)
-        anim_h.setDuration(240)
-        anim_h.setStartValue(button.minimumHeight())
-        anim_h.setEndValue(target_h)
-        anim_h.setEasingCurve(QEasingCurve.OutCubic)
-        anim_w = QPropertyAnimation(button, b"minimumWidth", self)
-        anim_w.setDuration(240)
-        anim_w.setStartValue(button.minimumWidth())
-        anim_w.setEndValue(target_w)
-        anim_w.setEasingCurve(QEasingCurve.OutCubic)
-        if getattr(button, "_bb_hover_anim_h", None):
-            button._bb_hover_anim_h.stop()
-        if getattr(button, "_bb_hover_anim_w", None):
-            button._bb_hover_anim_w.stop()
-        button._bb_hover_anim_h = anim_h
-        button._bb_hover_anim_w = anim_w
-        anim_h.start()
-        anim_w.start()
+        base_h = getattr(button, "_bb_base_height", max(button.minimumHeight(), 1))
+        base_w = getattr(button, "_bb_base_width", max(button.minimumWidth(), button.sizeHint().width(), 1))
+        if enter:
+            button.setMinimumHeight(base_h + 14)
+            button.setMinimumWidth(base_w + 36)
+        else:
+            button.setMinimumHeight(base_h)
+            button.setMinimumWidth(base_w)
 
     def _button_press_anim(self, button, pressed):
-        base_h = getattr(button, "_bb_base_height", button.minimumHeight())
-        base_w = getattr(button, "_bb_base_width", max(button.width(), button.minimumWidth()))
-        hover_h = base_h + 14
-        hover_w = base_w + 36
-        pressed_h = max(base_h - 4, 48)
-        pressed_w = max(base_w - 10, 120)
-
+        base_h = getattr(button, "_bb_base_height", max(button.minimumHeight(), 1))
+        base_w = getattr(button, "_bb_base_width", max(button.minimumWidth(), button.sizeHint().width(), 1))
         if pressed:
-            target_h = pressed_h
-            target_w = pressed_w
+            button.setMinimumHeight(max(base_h - 4, 48))
+            button.setMinimumWidth(max(base_w - 10, 120))
         else:
-            is_hovered = button.underMouse()
-            target_h = hover_h if is_hovered else base_h
-            target_w = hover_w if is_hovered else base_w
-
-        press_h = QPropertyAnimation(button, b"minimumHeight", self)
-        press_h.setDuration(120)
-        press_h.setStartValue(button.minimumHeight())
-        press_h.setEndValue(target_h)
-        press_h.setEasingCurve(QEasingCurve.OutCubic)
-
-        press_w = QPropertyAnimation(button, b"minimumWidth", self)
-        press_w.setDuration(120)
-        press_w.setStartValue(button.minimumWidth())
-        press_w.setEndValue(target_w)
-        press_w.setEasingCurve(QEasingCurve.OutCubic)
-
-        if getattr(button, "_bb_press_anim_h", None):
-            button._bb_press_anim_h.stop()
-        if getattr(button, "_bb_press_anim_w", None):
-            button._bb_press_anim_w.stop()
-        button._bb_press_anim_h = press_h
-        button._bb_press_anim_w = press_w
-        press_h.start()
-        press_w.start()
+            if getattr(button, "_bb_is_hovered", False):
+                button.setMinimumHeight(base_h + 14)
+                button.setMinimumWidth(base_w + 36)
+            else:
+                button.setMinimumHeight(base_h)
+                button.setMinimumWidth(base_w)
 
     def _set_input_focus_style(self, edit, focused):
         border = "2px solid rgba(52, 152, 219, 0.95)" if focused else "2px solid rgba(255,255,255,0.18)"
@@ -351,16 +391,61 @@ class MainWindow(QMainWindow):
         if base_height is None:
             base_height = button.minimumHeight()
         button._bb_base_height = base_height
-        button._bb_base_width = max(button.minimumWidth(), button.sizeHint().width())
+        button._bb_base_width = max(button.minimumWidth(), button.sizeHint().width(), 1)
         button._bb_is_hovered = False
-        self._ensure_opacity_effect(button, 1.0)
+        button.setMinimumHeight(base_height)
+        button.setMinimumWidth(button._bb_base_width)
         button.installEventFilter(self)
         button.pressed.connect(lambda b=button: self._button_press_anim(b, True))
         button.released.connect(lambda b=button: self._button_press_anim(b, False))
         self._hover_buttons = getattr(self, "_hover_buttons", set())
         self._hover_buttons.add(button)
 
+    def _freeze_card_size(self, card, buttons=None):
+        """Freeze card size so button hover/press cannot resize the page card."""
+        buttons = buttons or []
+        saved_sizes = []
+        for b in buttons:
+            saved_sizes.append((b, b.minimumWidth(), b.minimumHeight()))
+            base_h = getattr(b, "_bb_base_height", b.minimumHeight())
+            base_w = getattr(b, "_bb_base_width", max(b.minimumWidth(), b.sizeHint().width(), 1))
+            b.setMinimumHeight(base_h + 14)
+            b.setMinimumWidth(base_w + 36)
+
+        self.main_layout.activate()
+        if card.layout():
+            card.layout().activate()
+        card.adjustSize()
+        hint = card.sizeHint()
+
+        min_w = card.minimumWidth() if card.minimumWidth() > 0 else hint.width()
+        min_h = card.minimumHeight() if card.minimumHeight() > 0 else hint.height()
+        max_w = card.maximumWidth() if card.maximumWidth() < 16777215 else hint.width()
+        max_h = card.maximumHeight() if card.maximumHeight() < 16777215 else hint.height()
+
+        target_w = max(min_w, hint.width())
+        target_h = max(min_h, hint.height())
+        target_w = min(target_w, max_w)
+        target_h = min(target_h, max_h)
+        card.setFixedSize(target_w, target_h)
+
+        for b, old_w, old_h in saved_sizes:
+            b.setMinimumWidth(old_w)
+            b.setMinimumHeight(old_h)
+
     def eventFilter(self, obj, event):
+        if obj in self._glass_cards:
+            if event.type() in (QEvent.Hide, QEvent.Close):
+                self._detach_glass_backdrop(obj)
+                return False
+            if event.type() in (
+                QEvent.Move,
+                QEvent.Resize,
+                QEvent.Show,
+                QEvent.LayoutRequest,
+            ):
+                self._update_glass_backdrop(obj)
+                return False
         if getattr(self, "_hover_buttons", None) and obj in self._hover_buttons:
             if event.type() == QEvent.Enter:
                 self._button_hover_anim(obj, True)
@@ -412,6 +497,7 @@ class MainWindow(QMainWindow):
         card.setMinimumSize(520, 320)
         card.setMaximumWidth(700)
         card.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self._apply_glass_card_effect(card)
 
         v = QVBoxLayout(card)
         v.setContentsMargins(40, 40, 40, 40)
@@ -437,12 +523,14 @@ class MainWindow(QMainWindow):
         en_btn.clicked.connect(lambda: self.set_language("en"))
 
         v.addLayout(h)
+        v.addStretch(1)
         self.main_layout.addStretch()
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
         self.main_layout.addStretch()
 
         for btn in (fa_btn, en_btn):
             self._install_button_hover(btn, 80)
+        self._freeze_card_size(card, [fa_btn, en_btn])
         self.animate_card_entrance(card, [title, fa_btn, en_btn], 60)
 
     def set_language(self, lang):
@@ -458,6 +546,7 @@ class MainWindow(QMainWindow):
         card.setMinimumSize(600, 460)
         card.setMaximumWidth(780)
         card.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self._apply_glass_card_effect(card)
 
         v = QVBoxLayout(card)
         v.setContentsMargins(50, 50, 50, 50)
@@ -490,12 +579,14 @@ class MainWindow(QMainWindow):
         h_btn.clicked.connect(lambda: self.start_search("housing"))
         l_btn.clicked.connect(self.show_language_screen)
 
+        v.addStretch(1)
         self.main_layout.addStretch()
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
         self.main_layout.addStretch()
 
         for btn in menu_buttons:
             self._install_button_hover(btn, 80)
+        self._freeze_card_size(card, menu_buttons)
         self.animate_card_entrance(card, [title] + menu_buttons, 80)
 
     def show_search_screen(self):
@@ -507,6 +598,7 @@ class MainWindow(QMainWindow):
         card.setMinimumHeight(620)
         card.setMaximumWidth(1280)
         card.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self._apply_glass_card_effect(card)
 
         v = QVBoxLayout(card)
         v.setContentsMargins(40, 40, 40, 40)
@@ -608,12 +700,14 @@ class MainWindow(QMainWindow):
         self.check_btn.setAutoDefault(True)
 
         v.addLayout(btn_h)
+        v.addStretch(1)
         self.main_layout.addStretch()
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
         self.main_layout.addStretch()
 
         for btn in search_buttons:
             self._install_button_hover(btn, 70)
+        self._freeze_card_size(card, search_buttons)
         self.animate_card_entrance(card, search_anim_widgets, 100)
 
     def start_search(self, mode):
@@ -849,31 +943,12 @@ class MainWindow(QMainWindow):
         return found_models
 
     def _start_search_pulse(self):
-        """شروع انیمیشن پالس روی دکمه جستجو."""
-        effect = self._ensure_opacity_effect(self.check_btn, 0.85)
-        a1 = QPropertyAnimation(effect, b"opacity", self)
-        a1.setDuration(900)
-        a1.setStartValue(0.7)
-        a1.setEndValue(1.0)
-        a1.setEasingCurve(QEasingCurve.InOutSine)
-        a2 = QPropertyAnimation(effect, b"opacity", self)
-        a2.setDuration(900)
-        a2.setStartValue(1.0)
-        a2.setEndValue(0.7)
-        a2.setEasingCurve(QEasingCurve.InOutSine)
-        self._pulse_group = QSequentialAnimationGroup(self)
-        self._pulse_group.addAnimation(a1)
-        self._pulse_group.addAnimation(a2)
-        self._pulse_group.setLoopCount(-1)
-        self._pulse_group.start()
+        """برای دکمه‌ها انیمیشن غیرفعال است."""
+        return
 
     def _stop_search_pulse(self):
-        """توقف انیمیشن پالس و بازگرداندن opacity به ۱."""
-        if getattr(self, "_pulse_group", None):
-            self._pulse_group.stop()
-            self._pulse_group = None
-        if hasattr(self, "check_btn") and self.check_btn.graphicsEffect():
-            self.check_btn.graphicsEffect().setOpacity(1.0)
+        """برای دکمه‌ها انیمیشن غیرفعال است."""
+        return
 
     def check_result(self):
         db_path = resource_path("DataBase/DataBase.json")
