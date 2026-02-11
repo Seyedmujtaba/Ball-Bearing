@@ -5,7 +5,13 @@ import sys
 import unicodedata
 import subprocess
 
-from PyQt5.QtCore import QEasingCurve, QEvent, QPropertyAnimation, QSequentialAnimationGroup, Qt
+from PyQt5.QtCore import (
+    QEasingCurve,
+    QEvent,
+    QPropertyAnimation,
+    QSequentialAnimationGroup,
+    Qt,
+)
 from PyQt5.QtGui import QColor, QFont, QKeySequence, QPixmap
 from PyQt5.QtWidgets import (
     QAbstractItemView,
@@ -123,6 +129,9 @@ class MainWindow(QMainWindow):
         self.inputs = []
         self.input_map = {}
         self.current_screen = None
+        self._active_anim_group = None
+        self._output_fade_anim = None
+        self._pulse_group = None
 
         self.setWindowTitle("Bearing Finder")
         self.setMinimumSize(960, 640)
@@ -152,6 +161,17 @@ class MainWindow(QMainWindow):
         return TEXTS[self.lang].get(key, key)
 
     def clear_layout(self):
+        if self._active_anim_group:
+            self._active_anim_group.stop()
+            self._active_anim_group = None
+        if self._output_fade_anim:
+            self._output_fade_anim.stop()
+            self._output_fade_anim = None
+        if self._pulse_group:
+            self._pulse_group.stop()
+            self._pulse_group = None
+        self._hover_buttons = getattr(self, "_hover_buttons", set())
+        self._hover_buttons.clear()
         while self.main_layout.count():
             item = self.main_layout.takeAt(0)
             if item.widget():
@@ -179,22 +199,126 @@ class MainWindow(QMainWindow):
         item = QListWidgetItem(text)
         item.setForeground(QColor(color))
         self.output.addItem(item)
+        self._fade_in_output()
+
+    def _fade_in_output(self):
+        """انیمیشن فیداین برای لیست خروجی بعد از به‌روزرسانی نتایج."""
+        if not hasattr(self, "output"):
+            return
+        effect = self._ensure_opacity_effect(self.output, 0.4)
+        anim = QPropertyAnimation(effect, b"opacity", self)
+        anim.setDuration(600)
+        anim.setStartValue(0.4)
+        anim.setEndValue(1.0)
+        anim.setEasingCurve(QEasingCurve.OutCubic)
+        anim.start()
+        self._output_fade_anim = anim
+
+    def _ensure_opacity_effect(self, widget, start_opacity=0.0):
+        effect = widget.graphicsEffect()
+        if effect is None or not isinstance(effect, QGraphicsOpacityEffect):
+            effect = QGraphicsOpacityEffect(widget)
+            widget.setGraphicsEffect(effect)
+        effect.setOpacity(start_opacity)
+        return effect
 
     def animate_widgets(self, widgets, duration=180):
         self._active_anim_group = QSequentialAnimationGroup(self)
         for w in widgets:
-            effect = QGraphicsOpacityEffect(w)
-            w.setGraphicsEffect(effect)
-            effect.setOpacity(0.0)
-
+            effect = self._ensure_opacity_effect(w, 0.0)
             anim = QPropertyAnimation(effect, b"opacity", self)
             anim.setDuration(duration)
             anim.setStartValue(0.0)
             anim.setEndValue(1.0)
             anim.setEasingCurve(QEasingCurve.OutCubic)
             self._active_anim_group.addAnimation(anim)
-
         self._active_anim_group.start()
+
+    def animate_widgets_staggered(self, widgets, duration=280, stagger_ms=70):
+        """انیمیشن ظاهر شدن پشت سر هم با تأخیر کوتاه بین هر ویجت."""
+        self.animate_widgets(widgets, duration=440)
+
+    def animate_card_entrance(self, card, inner_widgets=None, delay_before_inner=80):
+        """ورود کارت با فید این و در صورت تمایل انیمیشن پلکانی المان‌های داخلی."""
+        effect = self._ensure_opacity_effect(card, 0.0)
+        fade = QPropertyAnimation(effect, b"opacity", self)
+        fade.setDuration(520)
+        fade.setStartValue(0.0)
+        fade.setEndValue(1.0)
+        fade.setEasingCurve(QEasingCurve.OutCubic)
+        if inner_widgets:
+            for w in inner_widgets:
+                eff = w.graphicsEffect()
+                if isinstance(eff, QGraphicsOpacityEffect):
+                    eff.setOpacity(1.0)
+        self._active_anim_group = fade
+        fade.start()
+
+    def _button_hover_anim(self, button, enter):
+        """انیمیشن hover دکمه: کمی بزرگ‌تر شدن با ورود موس."""
+        base_h = getattr(button, "_bb_base_height", 70)
+        current_w = max(button.width(), button.minimumWidth(), button.sizeHint().width())
+        base_w = getattr(button, "_bb_base_width", current_w)
+        if enter:
+            base_w = max(base_w, current_w)
+            button._bb_base_width = base_w
+        target_h = base_h + 14 if enter else base_h
+        target_w = base_w + 36 if enter else base_w
+        anim_h = QPropertyAnimation(button, b"minimumHeight", self)
+        anim_h.setDuration(240)
+        anim_h.setStartValue(button.minimumHeight())
+        anim_h.setEndValue(target_h)
+        anim_h.setEasingCurve(QEasingCurve.OutCubic)
+        anim_w = QPropertyAnimation(button, b"minimumWidth", self)
+        anim_w.setDuration(240)
+        anim_w.setStartValue(button.minimumWidth())
+        anim_w.setEndValue(target_w)
+        anim_w.setEasingCurve(QEasingCurve.OutCubic)
+        if getattr(button, "_bb_hover_anim_h", None):
+            button._bb_hover_anim_h.stop()
+        if getattr(button, "_bb_hover_anim_w", None):
+            button._bb_hover_anim_w.stop()
+        button._bb_hover_anim_h = anim_h
+        button._bb_hover_anim_w = anim_w
+        anim_h.start()
+        anim_w.start()
+
+    def _install_button_hover(self, button, base_height=None):
+        if base_height is None:
+            base_height = button.minimumHeight()
+        button._bb_base_height = base_height
+        button._bb_base_width = 0
+        button.installEventFilter(self)
+        self._hover_buttons = getattr(self, "_hover_buttons", set())
+        self._hover_buttons.add(button)
+
+    def eventFilter(self, obj, event):
+        if getattr(self, "_hover_buttons", None) and obj in self._hover_buttons:
+            if event.type() == QEvent.Enter:
+                self._button_hover_anim(obj, True)
+                return False
+            if event.type() == QEvent.Leave:
+                self._button_hover_anim(obj, False)
+                return False
+        if obj in self.inputs and event.type() == QEvent.KeyPress:
+            key = event.key()
+            if key in (Qt.Key_Return, Qt.Key_Enter):
+                self.handle_enter_key(obj)
+                return True
+            is_rtl = self.layoutDirection() == Qt.RightToLeft
+            if key == Qt.Key_Space:
+                delta = -1 if is_rtl else 1
+                self.move_focus_delta(obj, delta)
+                return True
+            if key == Qt.Key_Right:
+                delta = -1 if is_rtl else 1
+                self.move_focus_delta(obj, delta)
+                return True
+            if key == Qt.Key_Left:
+                delta = 1 if is_rtl else -1
+                self.move_focus_delta(obj, delta)
+                return True
+        return super().eventFilter(obj, event)
 
     def handle_back_shortcut(self):
         if self.current_screen == "search":
@@ -241,6 +365,10 @@ class MainWindow(QMainWindow):
         self.main_layout.addStretch()
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
         self.main_layout.addStretch()
+
+        for btn in (fa_btn, en_btn):
+            self._install_button_hover(btn, 80)
+        self.animate_card_entrance(card, [title, fa_btn, en_btn], 60)
 
     def set_language(self, lang):
         self.lang = lang
@@ -290,16 +418,19 @@ class MainWindow(QMainWindow):
         self.main_layout.addStretch()
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
         self.main_layout.addStretch()
-        self.animate_widgets([title] + menu_buttons)
+
+        for btn in menu_buttons:
+            self._install_button_hover(btn, 80)
+        self.animate_card_entrance(card, [title] + menu_buttons, 80)
 
     def show_search_screen(self):
         self.clear_layout()
         self.current_screen = "search"
         card = QFrame()
         card.setObjectName("CardFrame")
-        card.setMinimumWidth(1080)
-        card.setMinimumHeight(760)
-        card.setMaximumWidth(1500)
+        card.setMinimumWidth(860)
+        card.setMinimumHeight(620)
+        card.setMaximumWidth(1280)
         card.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         v = QVBoxLayout(card)
@@ -308,8 +439,10 @@ class MainWindow(QMainWindow):
 
         fields_layout = QHBoxLayout()
         fields_layout.setDirection(QBoxLayout.LeftToRight)
+        fields_layout.setSpacing(16)
         self.inputs = []
         self.input_map = {}
+        search_anim_widgets = []
 
         if self.search_type == "bearing":
             configs = [("d", self.t("inner")), ("D", self.t("outer")), ("B", self.t("width"))]
@@ -330,7 +463,7 @@ class MainWindow(QMainWindow):
             edit.setAlignment(Qt.AlignCenter)
             edit.setLayoutDirection(Qt.LeftToRight)
             edit.setStyleSheet("border-radius:10px; background:white;")
-            edit.setMinimumWidth(220)
+            edit.setMinimumWidth(180)
             edit.setPlaceholderText("مثال: 25.0 mm" if self.lang == "fa" else "e.g. 25.0 mm")
             edit.installEventFilter(self)
 
@@ -339,6 +472,7 @@ class MainWindow(QMainWindow):
             fields_layout.addLayout(box)
             self.inputs.append(edit)
             self.input_map[eng] = edit
+            search_anim_widgets.extend([lbl, edit])
 
         v.addLayout(fields_layout)
 
@@ -374,8 +508,10 @@ class MainWindow(QMainWindow):
             """
         )
         v.addWidget(self.output)
+        search_anim_widgets.append(self.output)
 
         btn_h = QHBoxLayout()
+        search_buttons = []
         for text, style, func in [
             (self.t("check"), PRIMARY_BUTTON_STYLE, self.check_result),
             (self.t("clear"), SECONDARY_BUTTON_STYLE, self.clear_inputs),
@@ -385,8 +521,11 @@ class MainWindow(QMainWindow):
             b.setMinimumHeight(70)
             b.setFont(QFont("Arial", 16, QFont.Bold))
             b.setStyleSheet(style)
+            b.setCursor(Qt.PointingHandCursor)
             b.clicked.connect(func)
             btn_h.addWidget(b)
+            search_buttons.append(b)
+            search_anim_widgets.append(b)
             if func == self.check_result:
                 self.check_btn = b
 
@@ -398,6 +537,10 @@ class MainWindow(QMainWindow):
         self.main_layout.addWidget(card, alignment=Qt.AlignCenter)
         self.main_layout.addStretch()
 
+        for btn in search_buttons:
+            self._install_button_hover(btn, 70)
+        self.animate_card_entrance(card, search_anim_widgets, 100)
+
     def start_search(self, mode):
         self.search_type = mode
         self.show_search_screen()
@@ -407,27 +550,6 @@ class MainWindow(QMainWindow):
             self.inputs[index + 1].setFocus()
         else:
             self.check_result()
-
-    def eventFilter(self, obj, event):
-        if obj in self.inputs and event.type() == QEvent.KeyPress:
-            key = event.key()
-            if key in (Qt.Key_Return, Qt.Key_Enter):
-                self.handle_enter_key(obj)
-                return True
-            is_rtl = self.layoutDirection() == Qt.RightToLeft
-            if key == Qt.Key_Space:
-                delta = -1 if is_rtl else 1
-                self.move_focus_delta(obj, delta)
-                return True
-            if key == Qt.Key_Right:
-                delta = -1 if is_rtl else 1
-                self.move_focus_delta(obj, delta)
-                return True
-            if key == Qt.Key_Left:
-                delta = 1 if is_rtl else -1
-                self.move_focus_delta(obj, delta)
-                return True
-        return super().eventFilter(obj, event)
 
     def handle_enter_key(self, current):
         if current not in self.inputs:
@@ -651,10 +773,38 @@ class MainWindow(QMainWindow):
 
         return found_models
 
+    def _start_search_pulse(self):
+        """شروع انیمیشن پالس روی دکمه جستجو."""
+        effect = self._ensure_opacity_effect(self.check_btn, 0.85)
+        a1 = QPropertyAnimation(effect, b"opacity", self)
+        a1.setDuration(900)
+        a1.setStartValue(0.7)
+        a1.setEndValue(1.0)
+        a1.setEasingCurve(QEasingCurve.InOutSine)
+        a2 = QPropertyAnimation(effect, b"opacity", self)
+        a2.setDuration(900)
+        a2.setStartValue(1.0)
+        a2.setEndValue(0.7)
+        a2.setEasingCurve(QEasingCurve.InOutSine)
+        self._pulse_group = QSequentialAnimationGroup(self)
+        self._pulse_group.addAnimation(a1)
+        self._pulse_group.addAnimation(a2)
+        self._pulse_group.setLoopCount(-1)
+        self._pulse_group.start()
+
+    def _stop_search_pulse(self):
+        """توقف انیمیشن پالس و بازگرداندن opacity به ۱."""
+        if getattr(self, "_pulse_group", None):
+            self._pulse_group.stop()
+            self._pulse_group = None
+        if hasattr(self, "check_btn") and self.check_btn.graphicsEffect():
+            self.check_btn.graphicsEffect().setOpacity(1.0)
+
     def check_result(self):
         db_path = resource_path("DataBase/DataBase.json")
         self.check_btn.setEnabled(False)
         self.check_btn.setText(self.t("searching"))
+        self._start_search_pulse()
         QApplication.processEvents()
 
         try:
@@ -707,12 +857,14 @@ class MainWindow(QMainWindow):
                         sep.setForeground(QColor("#95a5a6"))
                         sep.setFlags(Qt.NoItemFlags)
                         self.output.addItem(sep)
+                self._fade_in_output()
             else:
                 self.set_output_message(self.t("not_found"), "#ff8a80")
 
         except Exception as e:
             self.set_output_message(f"{self.t('critical_error')}: {e}", "#ff8a80")
         finally:
+            self._stop_search_pulse()
             self.check_btn.setEnabled(True)
             self.check_btn.setText(self.t("check"))
 
