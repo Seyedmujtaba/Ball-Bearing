@@ -39,7 +39,6 @@ from PyQt5.QtWidgets import (
     QWidget,
 )
 
-# --- استایل بصری برنامه ---
 CARD_STYLE = """
 QWidget#CardFrame {
     background-color: rgba(10, 16, 24, 145);
@@ -523,7 +522,6 @@ class MainWindow(QMainWindow):
         elif self.current_screen == "start":
             self.show_language_screen()
 
-    # --- صفحات برنامه ---
     def show_language_screen(self):
         self.clear_layout()
         self.current_screen = "language"
