@@ -14,6 +14,7 @@ from PyQt5.QtCore import (
     QRect,
     QPropertyAnimation,
     QSequentialAnimationGroup,
+    QTimer,
     Qt,
 )
 from PyQt5.QtGui import QColor, QFont, QKeySequence, QPainter, QPixmap
@@ -291,17 +292,27 @@ class MainWindow(QMainWindow):
         self._fade_in_output()
 
     def _fade_in_output(self):
-        """انیمیشن فیداین برای لیست خروجی بعد از به‌روزرسانی نتایج."""
+        """پایدارسازی رندر خروجی (بدون افکت opacity برای جلوگیری از مشکل repaint)."""
         if not hasattr(self, "output"):
             return
-        effect = self._ensure_opacity_effect(self.output, 0.4)
-        anim = QPropertyAnimation(effect, b"opacity", self)
-        anim.setDuration(600)
-        anim.setStartValue(0.4)
-        anim.setEndValue(1.0)
-        anim.setEasingCurve(QEasingCurve.OutCubic)
-        anim.start()
-        self._output_fade_anim = anim
+        effect = self.output.graphicsEffect()
+        if isinstance(effect, QGraphicsOpacityEffect):
+            self.output.setGraphicsEffect(None)
+        self._output_fade_anim = None
+        self._flush_output_render()
+
+    def _flush_output_render(self):
+        """Ensure output list repaints immediately without requiring mouse movement."""
+        if not hasattr(self, "output"):
+            return
+        self.output.doItemsLayout()
+        self.output.update()
+        self.output.viewport().update()
+        self.output.repaint()
+        self.output.viewport().repaint()
+        QApplication.processEvents()
+        QTimer.singleShot(0, self.output.viewport().update)
+        QTimer.singleShot(20, self.output.viewport().update)
 
     def _ensure_opacity_effect(self, widget, start_opacity=0.0):
         effect = widget.graphicsEffect()
@@ -344,14 +355,40 @@ class MainWindow(QMainWindow):
     def animate_card_entrance(self, card, inner_widgets=None, delay_before_inner=80):
         """ورود کارت با فید این و در صورت تمایل انیمیشن پلکانی المان‌های داخلی."""
         self.main_layout.activate()
-        self._update_glass_backdrop(card)
         effect = self._ensure_opacity_effect(card, 1.0)
         effect.setOpacity(1.0)
         card.show()
         if inner_widgets:
             for w in inner_widgets:
                 w.show()
+        self._refresh_initial_render(card, inner_widgets)
         self._active_anim_group = None
+
+    def _refresh_initial_render(self, card, inner_widgets=None):
+        """Force a stable first paint so widgets are visible without hover/mouse movement."""
+        widgets = list(inner_widgets or [])
+
+        def do_refresh():
+            if card is None:
+                return
+            if not card.isVisible():
+                card.show()
+            for w in widgets:
+                if w is None:
+                    continue
+                if not w.isVisible():
+                    w.show()
+                w.update()
+            self.main_layout.activate()
+            if card.layout():
+                card.layout().activate()
+            self._update_glass_backdrop(card)
+            card.update()
+            self.central.update()
+
+        do_refresh()
+        QTimer.singleShot(0, do_refresh)
+        QTimer.singleShot(40, do_refresh)
 
     def _button_hover_anim(self, button, enter):
         """تغییر سایز فوری دکمه روی hover (بدون انیمیشن)."""
@@ -715,20 +752,10 @@ class MainWindow(QMainWindow):
         self.show_search_screen()
 
     def on_return_pressed(self, index):
-        if index < len(self.inputs) - 1:
-            self.inputs[index + 1].setFocus()
-        else:
-            self.check_result()
+        self.check_result()
 
     def handle_enter_key(self, current):
-        if current not in self.inputs:
-            self.check_result()
-            return
-        index = self.inputs.index(current)
-        if index < len(self.inputs) - 1:
-            self.inputs[index + 1].setFocus()
-        else:
-            self.check_result()
+        self.check_result()
 
     def move_focus_delta(self, current, delta):
         if current not in self.inputs or len(self.inputs) < 2:
@@ -1008,11 +1035,14 @@ class MainWindow(QMainWindow):
                         sep.setFlags(Qt.NoItemFlags)
                         self.output.addItem(sep)
                 self._fade_in_output()
+                self._flush_output_render()
             else:
                 self.set_output_message(self.t("not_found"), "#ff8a80")
+                self._flush_output_render()
 
         except Exception as e:
             self.set_output_message(f"{self.t('critical_error')}: {e}", "#ff8a80")
+            self._flush_output_render()
         finally:
             self._stop_search_pulse()
             self.check_btn.setEnabled(True)
